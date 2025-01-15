@@ -38,7 +38,7 @@ const Service = () => {
     // Initialize animations
     const initAnimation = (isDesktop) => {
         const timeline = masterTimeline.current;
-        // timeline.clear(); // Clear any previous animations
+        timeline.clear(); // Clear any previous animations
         // ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Clear existing ScrollTriggers
 
         if (isDesktop) {

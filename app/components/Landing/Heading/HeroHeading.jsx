@@ -8,9 +8,10 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
-import TransitionComponent from "@/app/components/Landing/Heading/TransitionComponent";
+import thumbsup from "@/app/assets/landing/thumbsup.webp";
+
 import AnimateImage from "@/app/components/AnimateImage";
-import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
+// import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -213,12 +214,14 @@ export default function Home() {
 
           <AnimateImage className="media-container"><Spectrum /></AnimateImage>
           <div className={landingStyles.landing_circle}>
-            <LottiePlayer
-              src="/assets/images/landing/thumbsup.json"
+          <Image
+              className="animHead"
+              src={thumbsup}
+              alt="Thumbs Up"
               background="transparent"
               speed={0.7}
               loop
-              autoplay
+              autoPlay
             />
           </div>
         </div>

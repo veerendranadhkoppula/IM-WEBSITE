@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import MouseMagnetRepel from '@/app/components/Thinking/RepelImage';
 import styles from '@/app/styles/Thinking.module.css'; // Import CSS module
 import SlideUpText from "@/app/components/SlideUpText";
-import thumbsup from "@/app/assets/landing/thumbsup.json";
+
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
 // import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
-// import thumbsup from "@/app/assets/landing/thumbsup.webp";
+import thumbsup from "@/app/assets/landing/thumbsup.webp";
 
 import Image from "next/legacy/image";
 

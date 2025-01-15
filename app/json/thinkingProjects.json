@@ -1,0 +1,309 @@
+[
+  {
+    "id": "project1",
+    "src": "/assets/images/thinking/lamborghini/1.webp",
+    "thumbnail" : ["/assets/images/thinking/lamborghini/1.webp", "/assets/images/thinking/lamborghini/2.webp"],
+    "alt": "Project 1",
+    "title": "Lamborghini",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      {
+        "src": [
+          { "src": "/assets/images/thinking/lamborghini/6.webp"},
+          { "src": "/assets/images/thinking/lamborghini/9.webp"}
+        ],
+        "type": "double"
+      },
+      { "src": "/assets/images/thinking/lamborghini/8.webp", "type": "landscape" },
+      { "src": "/assets/images/thinking/lamborghini/2.webp", "type": "landscape" },
+      { "src": "/assets/images/thinking/lamborghini/10.webp", "type": "landscape" }
+    ]
+  },
+  {
+    "id": "project2",
+    "src": "/assets/images/thinking/tesouro/1.webp",
+    "thumbnail" : ["/assets/images/thinking/tesouro/1.webp", "/assets/images/thinking/tesouro/2.webp"],
+    "alt": "Project 2",
+    "title": "Tesouro",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/tesouro/17.webp", "type": "landscape" },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/tesouro/6.webp"},
+          { "src": "/assets/images/thinking/tesouro/2.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/tesouro/4.webp"},
+          { "src": "/assets/images/thinking/tesouro/7.webp"}
+        ],
+        "type": "double"
+      },
+      { "src": "/assets/images/thinking/tesouro/18.webp", "type": "landscape" },
+      { "src": "/assets/images/thinking/tesouro/19.mp4", "type": "square" , "mediaType": "video"   }
+    ]
+  },
+  {
+    "id": "project3",
+    "src": "/assets/images/thinking/36DaysOfType/1.webp",
+    "thumbnail" : ["/assets/images/thinking/ich/1.webp", "/assets/images/thinking/ich/2.webp"],
+    "alt": "Project 3",
+    "title": "Indian Coffee House",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/ich/10.webp", "type": "landscape" },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/ich/9.webp"},
+          { "src": "/assets/images/thinking/ich/12.webp"}
+        ],
+        "type": "double"
+      },
+
+      {
+        "src": [
+          { "src": "/assets/images/thinking/ich/2.webp"},
+          { "src": "/assets/images/thinking/ich/4.webp"}
+        ],
+        "type": "double"
+      },
+
+      {
+        "src": [
+          { "src": "/assets/images/thinking/ich/3.webp"},
+          { "src": "/assets/images/thinking/ich/13.webp"}
+        ],
+        "type": "double"
+      }
+
+    ]
+  },
+  {
+    "id": "project4",
+    "src": "/assets/images/thinking/starbucks/1.webp",
+    "thumbnail" : ["/assets/images/thinking/starbucks/1.webp", "/assets/images/thinking/starbucks/2.webp"],
+    "alt": "Project 4",
+    "title": "Starbucks",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/starbucks/4.webp", "type": "landscape" },
+      
+      {
+        "src": [
+          { "src": "/assets/images/thinking/starbucks/1.webp"},
+          { "src": "/assets/images/thinking/starbucks/2.webp"}
+        ],
+        "type": "double"
+      },
+
+      { "src": "/assets/images/thinking/starbucks/5.webp", "type": "landscape" }
+
+    ]
+  },
+  {
+    "id": "project5",
+    "src": "/assets/images/thinking/stanlee/1.webp",
+    "thumbnail" : ["/assets/images/thinking/stanlee/1.webp", "/assets/images/thinking/stanlee/2.webp"],
+    "alt": "Project 5",
+    "title": "Stanlee",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/stanlee/8.mp4", "type": "landscape", "mediaType": "video" },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/stanlee/3.webp"},
+          { "src": "/assets/images/thinking/stanlee/4.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/stanlee/1.webp"},
+          { "src": "/assets/images/thinking/stanlee/5.webp"}
+        ],
+        "type": "double"
+      },
+
+      { "src": "/assets/images/thinking/stanlee/2.webp", "type": "landscape" },
+     
+      {
+        "src": [
+          { "src": "/assets/images/thinking/stanlee/6.webp"},
+          { "src": "/assets/images/thinking/stanlee/7.webp"}
+        ],
+        "type": "double"
+      }
+    ]
+  },
+  {
+    "id": "project6",
+    "src": "/assets/images/thinking/milano/1.webp",
+    "thumbnail" : ["/assets/images/thinking/milano/1.webp", "/assets/images/thinking/milano/2.webp"],
+    "alt": "Project 6",
+    "title": "Milano",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/milano/3.webp", "type": "landscape" },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/milano/1.webp"},
+          { "src": "/assets/images/thinking/milano/4.webp"}
+        ],
+        "type": "double"
+      },
+      
+      { "src": "/assets/images/thinking/milano/2.webp", "type": "landscape" }
+     
+    ]
+  },
+  {
+    "id": "project7",
+    "src": "/assets/images/thinking/book/1.webp",
+    "thumbnail" : ["/assets/images/thinking/book/1.webp", "/assets/images/thinking/book/2.webp"],
+    "alt": "Project 7",
+    "title": "Book",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      {
+        "src": [
+          { "src": "/assets/images/thinking/book/2.webp"},
+          { "src": "/assets/images/thinking/book/3.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/book/4.webp"},
+          { "src": "/assets/images/thinking/book/5.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/book/6.webp"},
+          { "src": "/assets/images/thinking/book/7.webp"}
+        ],
+        "type": "double"
+      },
+
+      { "src": "/assets/images/thinking/book/1.webp", "type": "square" }
+     
+    ]
+  },
+  {
+    "id": "project8",
+    "src": "/assets/images/thinking/fanta/1.webp",
+    "thumbnail" : ["/assets/images/thinking/fanta/1.webp", "/assets/images/thinking/fanta/2.webp"],
+    "alt": "Project 8",
+    "title": "Fanta",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/fanta/3.webp", "type": "landscape" },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/fanta/4.webp"},
+          { "src": "/assets/images/thinking/fanta/6.webp"}
+        ],
+        "type": "double"
+      },
+      { "src": "/assets/images/thinking/fanta/5.webp", "type": "landscape" },
+      { "src": "/assets/images/thinking/fanta/2.webp", "type": "square" }
+     
+    ]
+  },
+  {
+    "id": "project9",
+    "src": "/assets/images/thinking/dreamProject/1.webp",
+    "thumbnail" : ["/assets/images/thinking/dreamProject/1.webp", "/assets/images/thinking/dreamProject/2.webp"],
+    "alt": "Project 9",
+    "title": "Dream Project",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/dreamProject/8.webp", "type": "landscape" },
+
+      {
+        "src": [
+          { "src": "/assets/images/thinking/dreamProject/7.webp"},
+          { "src": "/assets/images/thinking/dreamProject/4.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/dreamProject/2.webp"},
+          { "src": "/assets/images/thinking/dreamProject/9.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/dreamProject/11gif.webp"},
+          { "src": "/assets/images/thinking/dreamProject/10gif.webp"}
+        ],
+        "type": "double"
+      }
+     
+    ]
+  },
+  {
+    "id": "project10",
+    "src": "/assets/images/thinking/pill/1.webp",
+    "thumbnail" : ["/assets/images/thinking/pill/3.webp", "/assets/images/thinking/pill/2.webp"],
+    "alt": "Project 10",
+    "title": "Pill",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      {
+        "src": [
+          { "src": "/assets/images/thinking/pill/1.mp4", "mediaType": "video"},
+          { "src": "/assets/images/thinking/pill/9.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/pill/11.webp"},
+          { "src": "/assets/images/thinking/pill/3.webp"}
+        ],
+        "type": "double"
+      },
+      {
+        "src": [
+          { "src": "/assets/images/thinking/pill/5.webp"},
+          { "src": "/assets/images/thinking/pill/7.webp"}
+        ],
+        "type": "double"
+      }
+     
+    ]
+  },
+  {
+    "id": "project11",
+    "src": "/assets/images/thinking/ravana/1.webp",
+    "thumbnail" : ["/assets/images/thinking/ravana/1.webp", "/assets/images/thinking/ravana/2.webp"],
+    "alt": "Project 11",
+    "title": "Ravana",
+    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "images": [
+      { "src": "/assets/images/thinking/ravana/1.webp", "type": "landscape" },
+
+      {
+        "src": [
+          { "src": "/assets/images/thinking/ravana/4.webp"},
+          { "src": "/assets/images/thinking/ravana/3.webp"}
+        ],
+        "type": "double"
+      },
+      { "src": "/assets/images/thinking/ravana/2.webp", "type": "landscape" },
+
+      { "src": "/assets/images/thinking/ravana/5.mp4", "mediaType": "video", "type": "landscape" }
+
+     
+    ]
+  }
+    
+  ]
+  

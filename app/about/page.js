@@ -36,6 +36,9 @@ function About() {
   // const [startAnimations, setStartAnimations] = useState(false);
   const textRef = useRef(null);
 
+  useEffect(() => {
+    document.title = 'About Us | Integra Magna | Design Agency';
+  })
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

@@ -64,11 +64,40 @@ const Service = () => {
                     endTrigger: serviceCards.current[serviceCards.current.length - 1],
                     end: "top 10%",
                     pin: serviceTitle.current,
+                    onUpdate: () => {
+                        serviceTitle.current.style.transform = "translate(0,0)";
+                    },
+                    onLeave: () => {
+
+                        var offHeight = 0;
+                        // serviceCards.current.forEach((serviceCard, i) => {
+                        //     const height = serviceCard.offsetHeight; // Get the height of the element
+                        //     console.log(`Service Card ${i} Height:`, height);
+                        //     if (serviceCards.current.length == i) {
+                        //         console.log(serviceCards.current.length);
+
+                        //         offHeight = offHeight + height
+                        //     }
+                        // })
+
+                        for (let index = 0; index < serviceCards.current.length - 1; index++) {
+                            const height = serviceCards.current[index].offsetHeight; // Get the height of the element
+                            console.log(`Service Card ${index} Height:`, height);
+                            offHeight = offHeight + height
+                            // const element = array[index];
+
+                        }
+                        offHeight -= -78
+                        serviceTitle.current.style.transform = `translate(0,${offHeight}px)`;
+
+                    },
                     pinSpacing: false,
+                    markers: true,
                     scrub: 0.5,
                     id: "Service",
                 },
             });
+
 
             gsap.utils.toArray(serviceCards.current).forEach((service, index) => {
                 timeline.fromTo(
@@ -88,6 +117,7 @@ const Service = () => {
                             id: `card-${index}`,
                         },
                     }
+                    , "<"
                 );
             });
         }

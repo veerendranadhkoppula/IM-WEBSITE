@@ -507,6 +507,8 @@ line-height: 0;
     transition: transform .6s cubic-bezier(.65, .05, .36, 1);
 }
 
+
+
 .thumbnail_holder:hover .w_g_c_container {
     transform: translateY(-15px);
 }
@@ -574,6 +576,7 @@ line-height: 0;
         background-color: unset;
         width: 100%;
         padding: 0;
+        padding-top: 5px;
         border-radius: unset;
     }
 

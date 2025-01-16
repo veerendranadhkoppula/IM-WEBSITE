@@ -3,7 +3,7 @@ import AWS from 'aws-sdk';
 import Image from "next/legacy/image";
 import crossIcon from "@/app/assets/career/cross-icon.svg";
 import careerStyles from "@/app/styles/Career.module.css";
-import { useUploadThing } from "@/app/utils/uploadthing";
+// import { useUploadThing } from "@/app/utils/uploadthing";
 
 const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const [step, setStep] = useState(1);
@@ -20,19 +20,19 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const [uploadProgress, setUploadProgress] = useState(0);
 
 
-  const { startUpload, isUploading } = useUploadThing("resumeUploader", {
-    onClientUploadComplete: (res) => {
-      console.log("Files: ", res);
-      setUploadProgress(100);
-    },
-    onUploadError: (error) => {
-      console.error("Error: ", error);
-      setSubmitError(error.message || "Error uploading file");
-    },
-    onUploadProgress: (progress) => {
-      setUploadProgress(progress);
-    },
-  });
+  // const { startUpload, isUploading } = useUploadThing("resumeUploader", {
+  //   onClientUploadComplete: (res) => {
+  //     console.log("Files: ", res);
+  //     setUploadProgress(100);
+  //   },
+  //   onUploadError: (error) => {
+  //     console.error("Error: ", error);
+  //     setSubmitError(error.message || "Error uploading file");
+  //   },
+  //   onUploadProgress: (progress) => {
+  //     setUploadProgress(progress);
+  //   },
+  // });
 
 
   const validateStep = () => {

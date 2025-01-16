@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     // Your name
-    const name = "Made By Integra Magna";
+    const name = "© Integra Magna 2025";
 
     // Styling for the console box
     const style = `
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      background: white;
       color: black;
       padding: 10px 20px;
       font-size: 16px;

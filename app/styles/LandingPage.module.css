@@ -311,7 +311,7 @@ line-height: 0;
     opacity: 0;
     z-index: 9999;
     /* Make sure it appears on top of other content */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
 }
 
 .custom_cursor svg {

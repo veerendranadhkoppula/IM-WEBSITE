@@ -102,10 +102,15 @@ export async function POST(req) {
   try {
     const { fullName, email, contact, resumeLink, portfolioLink, position } = await req.json();
 
+    // Validate required fields
     if (!fullName || !email || !contact || !resumeLink) {
-      return NextResponse.json({ success: false, message: 'Missing required fields' }, { status: 400 });
+      return NextResponse.json(
+        { success: false, message: 'Missing required fields' }, 
+        { status: 400 }
+      );
     }
 
+    // Create email transporter
     const transporter = nodemailer.createTransport({
       host: 'smtp.elasticemail.com',
       port: 2525,
@@ -115,24 +120,37 @@ export async function POST(req) {
       },
     });
 
+    // Configure email content
     const mailOptions = {
       from: 'hi@integramagna.com',
       to: 'hi@integramagna.com',
       subject: `New Job Application - ${position}`,
       html: `
         <h3>New Job Application</h3>
+        <p><b>Position Applied:</b> ${position}</p>
         <p><b>Full Name:</b> ${fullName}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Contact:</b> ${contact}</p>
         <p><b>Resume:</b> <a href="${resumeLink}" target="_blank">Download</a></p>
         <p><b>Portfolio Link:</b> ${portfolioLink || 'Not provided'}</p>
+        <p><small>This application was submitted on ${new Date().toLocaleString()}</small></p>
       `,
     };
 
+    // Send email
     await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true, message: 'Form submitted successfully' }, { status: 200 });
+
+    // Return success response
+    return NextResponse.json(
+      { success: true, message: 'Form submitted successfully' }, 
+      { status: 200 }
+    );
+
   } catch (error) {
     console.error('Error in form submission:', error);
-    return NextResponse.json({ success: false, message: 'Form submission failed' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: 'Form submission failed' }, 
+      { status: 500 }
+    );
   }
 }

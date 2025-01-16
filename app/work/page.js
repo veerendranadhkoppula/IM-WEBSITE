@@ -12,7 +12,7 @@ import { gsap } from "gsap";
 import workGraphic from '@/app/assets/work/work_graphic.webp';
 import caseStudies from "@/app/json/caseStudies.json"; // Import JSON file with case study data
 import AnimateImage from "@/app/components/AnimateImage";
-
+import Head from 'next/head';
 
 const Footer = dynamic(() => import('@/app/components/Footer/FinalFooter'), { ssr: false });
 
@@ -60,6 +60,90 @@ const Work = () => {
 
   return (
     <>
+      <Head>
+        <title>Work | Integra Magna | Design Agency</title>
+        <meta charSet="UTF-8" />
+        <meta name="keywords" content="UX UI, Web design, UI Design, UX Design, Website design, Website development, Branding, Logo Design, Website,  Brand Identity, Marketing, Marketing Designs, Brand Strategy, Marketing Campaigns" />
+        <meta name="author" content="Integra Magna" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://integramagna.com/work" />
+        <link rel="shortcut icon" href="/assets/integramagna-fevicon.ico" type="image/x-icon" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Integra Magna",
+            "url": "https://integramagna.com/",
+            "logo": "https://integramagna.com/assets/social_thumbnail.png",
+            "sameAs": [
+              "https://x.com/Integra_Magna/",
+              "https://www.linkedin.com/company/integramagna",
+              "https://www.instagram.com/integra.magna",
+              "https://www.behance.net/integra_magna/",
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 7772003322",
+                "contactType": "Office",
+                "areaServed": "International",
+                "email": "hi@integramagna.com",
+              },
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://integramagna.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://integramagna.com/work" },
+            ],
+          })}
+        </script>
+
+        {/* Facebook Pixel Code */}
+        <script>
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1034189087944346');
+            fbq('track', 'PageView');
+          `}
+        </script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1034189087944346&ev=PageView&noscript=1"
+          />
+        </noscript>
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZT78R1EN8"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PZT78R1EN8', {
+              'page_path': window.location.pathname,
+              'page_title': document.title
+            });
+          `}
+        </script>
+
+      </Head>
       <div id="content">
         <section className={workStyles.workHeaderSection}>
           <div className={workStyles.workHeaderContainer}>
@@ -116,8 +200,8 @@ const Work = () => {
                         playsInline
                         loop
                         className={`${workStyles.thumbnailImage} ${study.layout === 'landscape'
-                            ? workStyles.landscapeRatio
-                            : workStyles.squareRatio
+                          ? workStyles.landscapeRatio
+                          : workStyles.squareRatio
                           }`}
                         poster={study.thumbnail}
                       >

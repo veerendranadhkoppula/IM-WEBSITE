@@ -69,7 +69,120 @@ export default function Home() {
     <>
       <Head>
         <title>Integra Magna | Branding, Strategy, and UX UI Design Agency</title>
-        {/* Add other meta tags and links as needed */}
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
+        <meta property="og:url" content="https://integramagna.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Integra Magna" />
+
+        <meta itemprop="name" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
+        <meta itemprop="description"
+          content="Integra Magna is a strategic design agency that creates the digital product and brand experiences that elevate companies to their next exciting chapter." />
+        <meta itemprop="image" content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta name="twitter:card"
+          content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+        <meta name="twitter:title" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
+        <meta name="twitter:site" content="@Integra_Magna" />
+        <meta name="p:domain_verify" content="805f252a9d4ede6c6a9a0dfbcca2183c" />
+
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta name="image" property="image"
+          content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+
+        <meta name="image" property="og:image"
+          content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+        <meta name="description"
+          content="Integra Magna is a strategic design agency that creates the digital product and brand experiences that elevate companies to their next exciting chapter." />
+        <meta name="keywords"
+          content="Creative Design agency, UX UI Design, website development, best website design, Product design, UX Design, UI Design, branding, Marketing plans, Integra Magna, design" />
+        <meta name="author" content="Integra Magna" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://integramagna.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Integra Magna",
+            "url": "https://integramagna.com/",
+            "logo": "https://integramagna.com/assets/social_thumbnail.png",
+            "sameAs": [
+              "https://x.com/Integra_Magna/",
+              "https://www.linkedin.com/company/integramagna",
+              "https://www.instagram.com/integra.magna",
+              "https://www.behance.net/integra_magna/",
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 7772003322",
+                "contactType": "Office",
+                "areaServed": "International",
+                "email": "hi@integramagna.com",
+              },
+            ],
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://integramagna.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://integramagna.com/work" },
+              { "@type": "ListItem", "position": 3, "name": "Services", "item": "https://integramagna.com/services" },
+              { "@type": "ListItem", "position": 4, "name": "Thinking", "item": "https://integramagna.com/thinking" },
+              { "@type": "ListItem", "position": 5, "name": "Career", "item": "https://integramagna.com/career" },
+              { "@type": "ListItem", "position": 6, "name": "About", "item": "https://integramagna.com/about" },
+              { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://integramagna.com/contact" },
+            ],
+          })}
+        </script>
+
+        {/* Facebook Pixel Code */}
+        <script>
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1034189087944346');
+            fbq('track', 'PageView');
+          `}
+        </script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1034189087944346&ev=PageView&noscript=1"
+          />
+        </noscript>
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZT78R1EN8"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PZT78R1EN8', {
+              'page_path': window.location.pathname,
+              'page_title': document.title
+            });
+          `}
+        </script>
       </Head>
       <div className={landingStyles.content}>
 

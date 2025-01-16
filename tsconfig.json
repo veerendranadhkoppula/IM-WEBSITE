@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "animations.js", "app/layout.jsx", "components/TransitionLink.jsx", "app/template.jsx", "app/page.js", "app/about/page.js", "app/career/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "animations.js", "app/layout.jsx", "components/TransitionLink.jsx", "app/template.jsx", "app/page.js", "app/about/page.js", "app/career/page.js", "app/api/uploadthing/core.jsx"],
   "exclude": ["node_modules"]
 }

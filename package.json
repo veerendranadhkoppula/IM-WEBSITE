@@ -18,6 +18,7 @@
     "@prismicio/react": "^2.9.1",
     "@splidejs/splide": "^4.1.4",
     "@types/flickity": "^2.2.11",
+    "@uploadthing/react": "^7.1.5",
     "aws-sdk": "^2.1692.0",
     "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.5.1",
@@ -34,7 +35,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-lottie": "^1.2.10",
-    "split-type": "^0.3.4"
+    "split-type": "^0.3.4",
+    "uploadthing": "^7.4.4"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.61",

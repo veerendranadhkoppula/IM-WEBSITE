@@ -961,6 +961,7 @@ line-height: 0;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 120px;
+    z-index: 11;
 }
 
 .embla__container {

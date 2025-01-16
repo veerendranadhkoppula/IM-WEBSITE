@@ -683,7 +683,7 @@ body.no-scroll {
 .workInternalMain {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   padding: 4rem 0;
   justify-self: center;
   max-width: 860px;

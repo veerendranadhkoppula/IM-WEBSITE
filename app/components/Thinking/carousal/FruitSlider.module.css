@@ -13,11 +13,13 @@
   justify-content: center;
 }
 
-.sliderInner a, .sliderInner button{
+.sliderInner a,
+.sliderInner button {
   display: flex;
   justify-content: center;
   user-select: none;
 }
+
 .fruitCard {
   position: absolute;
   width: 350px;
@@ -64,10 +66,11 @@
   .fruitCard {
     width: 250px;
   }
-  .buttonFeatureWorks{
+
+  .buttonFeatureWorks {
     padding: 1rem 2rem;
   }
-  
+
 }
 
 
@@ -91,18 +94,21 @@
   background-color: #0009;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
+
 /* Popup content styling */
 .popupContent {
   background-color: #fff;
   border-radius: 2rem;
   display: grid;
   grid-template-rows: 3rem 1fr;
-  max-height: 95vh; /* Prevent overflow */
+  max-height: 95vh;
+  /* Prevent overflow */
   height: 100%;
-  overflow-y: scroll; /* Enable scrolling */
+  overflow-y: scroll;
+  /* Enable scrolling */
   padding: 1rem 0;
   /* scrollbar-width: thin; */
   scrollbar-color: transparent transparent;
@@ -148,18 +154,20 @@
   padding: 4rem 0;
   justify-self: center;
   max-width: 860px;
-  width: 100%;  
+  width: 100%;
 }
 
 @media screen and (max-width: 960px) {
   .workInternalMain {
     padding: 2rem 4px;
   }
+
   .closeButton {
     margin: 20px;
   }
-  
+
 }
+
 .workHeadContent {
   align-items: center;
   display: flex;
@@ -193,7 +201,8 @@
   gap: 1rem;
   margin-bottom: 50px;
 }
-.radioButton{
+
+.radioButton {
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -202,6 +211,7 @@
   border-radius: 8px;
   padding: 10px 12px;
 }
+
 .workCategory,
 .blogCategory {
 
@@ -358,7 +368,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   border-radius: 8px;
 
 }
@@ -368,10 +378,12 @@
   height: auto;
   border-radius: 8px;
 }
-.popupSingleImage video{
+
+.popupSingleImage video {
   border-radius: 8px;
 }
-.landscapeVideo{
+
+.landscapeVideo {
   border-radius: 8px;
 
 }
@@ -383,7 +395,8 @@
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
-.popupTwoImages video{
+
+.popupTwoImages video {
   border-radius: 8px;
 
 }
@@ -422,6 +435,7 @@
   gap: 1rem;
   width: 100%;
 }
+
 .popupGridItem.square {
   aspect-ratio: 1;
   overflow: hidden;
@@ -442,6 +456,7 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
 .popupNavigation {
   display: flex;
   justify-content: space-between;
@@ -452,6 +467,20 @@
   padding-right: 20px;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+@media screen and (max-width: 960px) {
+  .popupNavigation {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Popup content styling */
+  .popupContent {
+    max-height: 95vh;
+    padding: 0;
+    padding-bottom: 30px;
+  }
 }
 
 .arrowLeft,
@@ -470,4 +499,27 @@
 .arrowLeft:hover,
 .arrowRight:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 960px) {
+  .blogGrid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 0 0;
+  }
+
+  .blogWaiting {
+    padding: 42px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .workInternalMain {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+  .popup{
+    padding: 0px 10px 0 !important;
+  }
+
 }

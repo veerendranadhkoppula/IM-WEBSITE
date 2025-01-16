@@ -16,7 +16,8 @@ body.no-scroll {
 
 @media screen and (max-width: 960px) {
   .main {
-    padding: 120px 20px;
+    padding: 170px 20px;
+    padding-bottom: 50px;
     gap: 6rem;
   }
 
@@ -242,7 +243,11 @@ body.no-scroll {
   }
 
   .workInternalMain {
-    padding: 4rem 4px !important;
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+  .popup{
+    padding: 0px 10px 0 !important;
   }
 
 }
@@ -340,8 +345,8 @@ body.no-scroll {
   opacity: 0.5;
   /* Default opacity for out-of-viewport items */
   width: 100%;
-  --shadow: 0px 9px 21px rgba(0, 0, 0, 0.05), 0px 38px 38px rgba(0, 0, 0, 0.045),
-    0px 85px 51px rgba(0, 0, 0, 0.025), 0px 151px 60px rgba(0, 0, 0, 0.005);
+  --shadow: 0px 9px 21px rgba(0, 0, 0, 0.05), 0px 38px 8px rgba(0, 0, 0, 0.02),
+  0px 0px 0px rgba(0, 0, 0, 0.0), 0px 1px 0px rgba(0, 0, 0, 0.005)
 }
 
 .project.active {
@@ -509,7 +514,16 @@ body.no-scroll {
   /* height: 300px; Adjust as needed */
   margin-left: -5%;
 }
-
+@media screen and (max-width: 960px) {
+  .wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+  .heroContainer {
+    height: 50vh;
+  }
+  
+}
 .image {
   width: 100%;
   height: 100%;
@@ -893,7 +907,7 @@ body.no-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .popupSingleImage .singleImage {
@@ -985,6 +999,13 @@ body.no-scroll {
     width: 100%;
     position: relative;
   }
+  /* Popup content styling */
+.popupContent {
+  max-height: 95vh;
+  padding: 0;
+  padding-bottom: 30px;
+}
+
 
 }
 

@@ -9,6 +9,7 @@ import Header from "@/app/components/Header/Header";
 import CaseStudyHeader from "@/app/components/Case-Studies/CaseStudyHeader";
 import { animatePageIn, animatePageOut } from "@/animations"; // Ensure path is correct
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
         {isCaseStudyPage ? <CaseStudyHeader /> : <Header />}
         <main>{children}</main>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

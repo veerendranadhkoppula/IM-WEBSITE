@@ -17,6 +17,25 @@ export default function RootLayout({ children }) {
   const [isInitialLoad, setIsInitialLoad] = useState(true); // Track the first load
   const [prevPathname, setPrevPathname] = useState(null); // Track previous pathname for route change
 
+
+  useEffect(() => {
+    // Your name
+    const name = "Made By Integra Magna";
+
+    // Styling for the console box
+    const style = `
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-weight: bold;
+    `;
+
+    // Display name in the console
+    console.log(`%c ${name} `, style);
+  }, []);
+  
   useEffect(() => {
     setIsCaseStudyPage(pathname.startsWith("/work/"));
   }, [pathname]);

@@ -21,14 +21,13 @@ const WorkItem = ({ link, videoSrc, thumb, alt, title, heading, category, index,
     <div className={`${landingStyles[`w_g_container_${index + 1}`]} ${isDesktop ? landingStyles.thumbnail_holder : ""} textAnim`}>
         <AnimateImage className="media-container" data-links={heading}>
             <TransitionLink href={link} className={landingStyles.w_g_t_link}>
-                <figure>
-                    <video
+                       <video
                         autoPlay
                         muted
                         loop
                         playsInline
                         webkit-playsinline
-                        preload="auto" // Add this attribute
+                        preload="auto"
                         className={`${landingStyles.thumbnail_image} animTxt`}
                         poster={thumb}
                         alt={alt}
@@ -37,7 +36,6 @@ const WorkItem = ({ link, videoSrc, thumb, alt, title, heading, category, index,
                         <source src={videoSrc} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </figure>
             </TransitionLink>
         </AnimateImage>
         <a className={landingStyles.w_g_c_container} href={link}>
@@ -76,7 +74,7 @@ function Work() {
         {
             link: "/work/neelam-foresteria",
             videoSrc: NeelamForesteriaVideo,
-            thumb: NeelamForesteriaThumb,
+            thumb: "/assets/images/work-thumbnails/neelam-landing-thumb.webp",
             alt: "Neelam Foresteria Resort Brand Identity",
             title: "Neelam Foresteria Resort Brand Identity",
             heading: "Neelam Foresteria",
@@ -85,7 +83,7 @@ function Work() {
         {
             link: "/work/boat",
             videoSrc: BoatVideo,
-            thumb: BoatThumb,
+            thumb: "/assets/images/work-thumbnails/boat-landing-thumb.webp",
             alt: "boAt Audiotech company Screen Billboard Marketing",
             title: "boAt Audiotech company Screen Billboard Marketing",
             heading: "Boat",
@@ -94,7 +92,7 @@ function Work() {
         {
             link: "/work/royal-legacy",
             videoSrc: RoyalLegacyVideo,
-            thumb: RoyalLegacyThumb,
+            thumb: "/assets/images/work-thumbnails/royal-legacy-landing-thumb.webp",
             alt: "Royal Legacy Branding",
             title: "Royal Legacy Branding",
             heading: "Royal Legacy",
@@ -103,7 +101,7 @@ function Work() {
         {
             link: "/work/decathlon",
             videoSrc: DecathlonVideo,
-            thumb: DecathlonThumb,
+            thumb: "/assets/images/work-thumbnails/decathlon-landing-thumb.webp",
             alt: "Decathlon Sports Brand OOH Marketing",
             title: "Decathlon Sports Brand OOH Marketing",
             heading: "Decathlon",

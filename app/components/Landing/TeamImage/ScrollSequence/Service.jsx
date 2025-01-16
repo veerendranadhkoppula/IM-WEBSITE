@@ -92,7 +92,7 @@ const Service = () => {
 
                     },
                     pinSpacing: false,
-                    markers: true,
+                    // markers: true,
                     scrub: 0.5,
                     id: "Service",
                 },

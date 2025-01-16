@@ -536,7 +536,7 @@ body.no-scroll {
   aspect-ratio: 1 /1;
   border-radius: 1rem;
   width: clamp(6rem, 100%, 14cqi);
-  box-shadow: var(--shadow);
+  box-shadow: 16px 22px 36.5px 0px rgba(0, 0, 0, 0.31);
   pointer-events: auto;
 }
 

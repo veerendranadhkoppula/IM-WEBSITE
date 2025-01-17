@@ -3,7 +3,6 @@ import AWS from 'aws-sdk';
 import Image from "next/legacy/image";
 import crossIcon from "@/app/assets/career/cross-icon.svg";
 import careerStyles from "@/app/styles/Career.module.css";
-// import { useUploadThing } from "@/app/utils/uploadthing";
 
 const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const [step, setStep] = useState(1);
@@ -17,23 +16,6 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [uploadProgress, setUploadProgress] = useState(0);
-
-
-  // const { startUpload, isUploading } = useUploadThing("resumeUploader", {
-  //   onClientUploadComplete: (res) => {
-  //     console.log("Files: ", res);
-  //     setUploadProgress(100);
-  //   },
-  //   onUploadError: (error) => {
-  //     console.error("Error: ", error);
-  //     setSubmitError(error.message || "Error uploading file");
-  //   },
-  //   onUploadProgress: (progress) => {
-  //     setUploadProgress(progress);
-  //   },
-  // });
-
 
   const validateStep = () => {
     let newErrors = {};
@@ -72,53 +54,39 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const handleChange = (e) => {
     const { name, value, files } = e.target;
   
-  if (name === "resume" && files) {
-      const file = files[0];
-      if (file) {
-        // Check file type
-        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-        if (!allowedTypes.includes(file.type)) {
-          setErrors({ ...errors, resume: "Please upload a PDF or Word document" });
-          return;
-        }
-        // Check file size (4MB)
-        if (file.size > 4 * 1024 * 1024) {
-          setErrors({ ...errors, resume: "File size should be less than 4MB" });
-          return;
-        }
-        setFormData({ ...formData, resume: file });
-        setErrors({ ...errors, resume: undefined });
-      }
+    if (name === "resume" && files) {
+      console.log("File selected:", files[0]);
+      setFormData({ ...formData, resume: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
     }
   };
-
-  // const fileuplode = async () => {
-  //   try {
-  //     console.log('Preparing file upload...');
-  //     const uploadData = new FormData();
-  //     uploadData.append('resume', formData.resume); // Ensure 'resume' matches the backend key
   
-  //     const response = await fetch('/api/uploadResume', {
-  //       method: 'POST',
-  //       body: uploadData, // FormData automatically sets the correct Content-Type
-  //     });
+  const fileuplode = async () => {
+    try {
+      console.log('Preparing file upload...');
+      const uploadData = new FormData();
+      uploadData.append('resume', formData.resume); // Ensure 'resume' matches the backend key
   
-  //     console.log('Response received, status:', response.status);
+      const response = await fetch('/api/uploadResume', {
+        method: 'POST',
+        body: uploadData, // FormData automatically sets the correct Content-Type
+      });
   
-  //     const result = await response.json();
-  //     if (!response.ok) {
-  //       throw new Error(result.error || 'File upload failed');
-  //     }
+      console.log('Response received, status:', response.status);
   
-  //     console.log('Upload successful:', result);
-  //     return result.filePath;
-  //   } catch (error) {
-  //     console.error('Error uploading file:', error);
-  //     throw error;
-  //   }
-  // };
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error || 'File upload failed');
+      }
+  
+      console.log('Upload successful:', result);
+      return result.filePath;
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      throw error;
+    }
+  };
   
 
 
@@ -128,44 +96,51 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
     const isValid = validateStep();
     if (isValid) {
       setIsSubmitting(true);
-      setSubmitError("");
+      setSubmitError('');
   
       try {
-        // Step 1: Upload resume using UploadThing
-        let fileUrl = "";
-        if (formData.resume) {
-          const uploadResult = await startUpload([formData.resume]);
-          if (!uploadResult?.[0]?.url) {
-            throw new Error("Failed to upload resume");
-          }
-          fileUrl = uploadResult[0].url;
+        // Step 1: Upload Resume
+        console.log('Uploading resume...');
+        const uploadData = new FormData();
+        uploadData.append('resume', formData.resume);
+  
+        const uploadResponse = await fetch('/api/uploadResume', {
+          method: 'POST',
+          body: uploadData,
+        });
+  
+        if (!uploadResponse.ok) {
+          const uploadError = await uploadResponse.json();
+          throw new Error(uploadError.error || 'Failed to upload resume');
         }
   
-        // Step 2: Submit form data and send email
+        const uploadResult = await uploadResponse.json();
+        console.log('Resume uploaded to:', uploadResult.fileUrl);
+  
+        // Step 2: Submit Form Data
+        console.log('Submitting form...');
         const formDataToSend = {
           fullName: formData.fullName,
           email: formData.email,
           contact: formData.contact,
-          resumeLink: fileUrl,
-          portfolioLink: formData.portfolioLink || "Not provided",
+          resumeLink: uploadResult.fileUrl, // Use the uploaded file URL
+          portfolioLink: formData.portfolioLink || 'Not provided',
           position: formName,
         };
   
-        const response = await fetch("/api/submitCareerForm", {
-          method: "POST",
+        const formResponse = await fetch('/api/submitCareerForm', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(formDataToSend),
         });
   
-        const result = await response.json();
-        
-        if (!response.ok) {
-          throw new Error(result.message || "Failed to submit form");
+        if (!formResponse.ok) {
+          const formError = await formResponse.json();
+          throw new Error(formError.message || 'Failed to submit form');
         }
-
-        
+  
         console.log('Form submitted successfully');
         setStep(6); // Move to the success step
       } catch (error) {
@@ -329,11 +304,6 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
                   onChange={handleChange}
                   accept=".pdf,.doc,.docx"
                 />
-                {uploadProgress > 0 && uploadProgress < 100 && (
-                  <div className={careerStyles.upload_progress}>
-                    Uploading: {uploadProgress}%
-                  </div>
-                )}
                 {errors.resume && (
                   <div className={careerStyles.form_error}>{errors.resume}</div>
                 )}

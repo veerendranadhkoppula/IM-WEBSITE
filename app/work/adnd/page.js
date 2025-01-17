@@ -48,7 +48,7 @@ const imagePaths = {
 const ADND = () => {
     useGsapScroll("#case_study_circular_text");
     useEffect(() => {
-        document.title = 'ADND | Integra Magna | Design Agency'; // Set the document title
+        document.title = 'ADND | Web Design | Integra Magna'; // Set the document title
       }, []);
     
     return (

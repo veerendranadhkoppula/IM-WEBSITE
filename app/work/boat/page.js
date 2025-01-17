@@ -50,7 +50,7 @@ gsap.registerPlugin(ScrollTrigger);
 const BOAT = () => {
   useGsapScroll("#case_study_circular_text");
   useEffect(() => {
-    document.title = 'boAt | Integra Magna | Design Agency'; // Set the document title
+    document.title = 'boAt | Strategy | Integra Magna'; // Set the document title
   }, []);
   
 

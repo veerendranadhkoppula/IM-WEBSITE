@@ -41,7 +41,7 @@ const imagePaths = {
 const Decathlon = () => {
     useGsapScroll("#circular_text");
     useEffect(() => {
-        document.title = 'Decathlon | Integra Magna | Design Agency'; // Set the document title
+        document.title = 'Decathlon | Strategy | Integra Magna'; // Set the document title
       }, []);
     
 

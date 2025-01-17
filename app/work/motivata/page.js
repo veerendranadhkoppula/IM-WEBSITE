@@ -40,7 +40,7 @@ const imagePaths = {
 const Motivata = () => {
     useGsapScroll("#case_study_circular_text");
     useEffect(() => {
-        document.title = 'Motivata | Integra Magna | Design Agency'; // Set the document title
+        document.title = 'Motivata | Branding | Integra Magna'; // Set the document title
       }, []);
     
     return (

@@ -39,7 +39,7 @@ const imagePaths = {
 const Tilx = () => {
     useGsapScroll("#case_study_circular_text");
     useEffect(() => {
-        document.title = 'TILX | Integra Magna | Design Agency'; // Set the document title
+        document.title = 'TILX | Strategy | Integra Magna'; // Set the document title
       }, []);
     return (
         <>

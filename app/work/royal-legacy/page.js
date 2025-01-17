@@ -43,7 +43,7 @@ const imagePaths = {
 const Tilx = () => {
     useGsapScroll("#case_study_circular_text");
     useEffect(() => {
-        document.title = 'Royal Legacy | Integra Magna | Design Agency'; // Set the document title
+        document.title = 'Royal Legacy | Branding | Integra Magna'; // Set the document title
       }, []);
     
     return (

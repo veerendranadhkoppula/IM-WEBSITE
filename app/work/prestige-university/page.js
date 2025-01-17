@@ -9,6 +9,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SlideUpText from '@/app/components/SlideUpText';
 import AnimateImage from '@/app/components/AnimateImage';
+useEffect(() => {
+    document.title = 'Prestige University | Integra Magna | Design Agency'; // Set the document title
+  }, []);
 
 
 gsap.registerPlugin(ScrollTrigger);

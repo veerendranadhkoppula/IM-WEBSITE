@@ -10,6 +10,10 @@ import NextPrestigeUniversity from '@/app/components/Case-Studies/Next-Case-Stud
 import SlideUpText from '@/app/components/SlideUpText';
 import AnimateImage from '@/app/components/AnimateImage';
 gsap.registerPlugin(ScrollTrigger);
+useEffect(() => {
+    document.title = 'ADND | Integra Magna | Design Agency'; // Set the document title
+  }, []);
+
 
 // Organize all images and video assets in one object
 const imagePaths = {

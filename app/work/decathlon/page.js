@@ -9,6 +9,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'; // Ensure this is installed
 import SlideUpText from '@/app/components/SlideUpText';
 import AnimateImage from '@/app/components/AnimateImage';
+useEffect(() => {
+    document.title = 'Decathlon | Integra Magna | Design Agency'; // Set the document title
+  }, []);
 
 gsap.registerPlugin(ScrollTrigger);
 

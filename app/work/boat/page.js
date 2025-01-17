@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from 'react';
 import Head from 'next/head';
 import useGsapScroll from '@/app/components/hooks/useGsapScroll';
 import ProjectOverview from '@/app/components/Case-Studies/ProjectOverview';
@@ -9,9 +10,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'; // Ensure this is installed
 import SlideUpText from '@/app/components/SlideUpText';
 import AnimateImage from '@/app/components/AnimateImage';
-useEffect(() => {
-  document.title = 'boAt | Integra Magna | Design Agency'; // Set the document title
-}, []);
 
 // Import your image assets from the public folder
 const imagePaths = {
@@ -51,7 +49,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BOAT = () => {
   useGsapScroll("#case_study_circular_text");
-
+  useEffect(() => {
+    document.title = 'boAt | Integra Magna | Design Agency'; // Set the document title
+  }, []);
+  
 
   return (
     <>

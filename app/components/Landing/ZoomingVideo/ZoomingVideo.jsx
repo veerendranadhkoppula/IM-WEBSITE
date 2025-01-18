@@ -73,7 +73,7 @@ const ZoomingVideo = () => {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/gjkVNzM5wYw?autoplay=1&controls=0"
+                                src="https://www.youtube.com/embed/gjkVNzM5wYw?autoplay=1&controls=0&vq=hd1080"
                                 title="INTEGRA MAGNA"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay;"

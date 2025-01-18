@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
 import thumbsup from "@/app/assets/landing/thumbsup.webp";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
 import AnimateImage from "@/app/components/AnimateImage";
 // import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
 
@@ -214,17 +214,15 @@ export default function Home() {
 
           <AnimateImage className="media-container"><Spectrum /></AnimateImage>
           <div className={landingStyles.landing_circle}>
-
-            <Player
-              autoplay
-              loop
-              src="/assets/images/landing/thumbsup.json"
+          <Image
               className="animHead"
+              src={thumbsup}
               alt="Thumbs Up"
               background="transparent"
               speed={0.7}
-            >
-            </Player>
+              loop
+              autoPlay
+            />
           </div>
         </div>
         <div className={landingStyles.dive_into_detail} id="divedetailarrow">

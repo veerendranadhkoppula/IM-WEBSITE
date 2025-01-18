@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import MouseMagnetRepel from '@/app/components/Thinking/RepelImage';
 import styles from '@/app/styles/Thinking.module.css'; // Import CSS module
 import SlideUpText from "@/app/components/SlideUpText";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
 // import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
@@ -48,16 +47,15 @@ export default function Hero() {
             </div>
             <div className={styles.landing_circle}>
 
-              <Player
-                autoplay
-                loop
-                src="/assets/images/landing/thumbsup.json"
+              <Image
                 className="animHead"
+                src={thumbsup}
                 alt="Thumbs Up"
                 background="transparent"
                 speed={0.7}
-              >
-              </Player>
+                loop
+                autoPlay
+              />
 
             </div>
           </div>

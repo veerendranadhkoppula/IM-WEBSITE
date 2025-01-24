@@ -65,7 +65,7 @@ export async function POST(req) {
       fileUrl,
     });
   } catch (error) {
-    console.error('Error uploading file to Google Drive:', error.message, error.stack);
+    // console.error('Error uploading file to Google Drive:', error.message, error.stack);
     return NextResponse.json({ error: 'Failed to upload file' }, { status: 500 });
   }
 }

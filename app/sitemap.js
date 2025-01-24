@@ -68,6 +68,10 @@ export default function sitemap() {
         url: 'https://integramagna.com/work/taskey',
         lastModified: new Date(),
       },
+      {
+        url: 'https://integramagna.com/work/hari-keshri',
+        lastModified: new Date(),
+      },
     ];
   }
   

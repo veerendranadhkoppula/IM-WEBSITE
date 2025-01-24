@@ -85,14 +85,14 @@ const Career = () => {
   const openFormModule = (key) => {
     const formKey = designationKey.find((item) => item.Key === key);
     if (formKey) {
-      console.log("Opening form for:", formKey.Designation); // Debugging log
+      // console.log("Opening form for:", formKey.Designation); // Debugging log
       setFormName(formKey.Designation);
       setFormVisible(true);
     }
   };
 
   const closeFormModule = () => {
-    console.log("Closing form"); // Debugging log
+    // console.log("Closing form"); // Debugging log
     setFormVisible(false);
   };
 

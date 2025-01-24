@@ -79,6 +79,15 @@
       "thumbnail": "/assets/images/work/taskey/taskey-work-thumbnail.webp",
       "video": "/assets/images/work/taskey/taskey-work-thumbnail.mp4",
       "layout": "square"
+    },
+    {
+      "title": "Hari Keshri",
+      "client": "Hari Keshri",
+      "category": "Branding | Food",
+      "link": "/work/hari-keshri",
+      "thumbnail": "/assets/images/work/hari-keshri/hari-keshri-thumbnail.webp",
+      "video": "/assets/images/work/hari-keshri/hari-keshri-thumbnail.mp4",
+      "layout": "square"
     }
   ]
   

@@ -7,6 +7,7 @@ import ProjectOverview from '@/app/components/Case-Studies/ProjectOverview';
 import casestudyStyles from '@/app/styles/Case-Study.module.css';
 import Footer from '@/app/components/Footer/FinalFooter';
 import NextBoat from '@/app/components/Case-Studies/Next-Case-Study/NextBoat';
+import NextHariKeshri from '@/app/components/Case-Studies/Next-Case-Study/NextHariKeshri';  
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SlideUpText from '@/app/components/SlideUpText';
@@ -245,7 +246,7 @@ const Tilx = () => {
             </section>
 
 
-            <NextBoat />
+            <NextHariKeshri />
 
             {/* <Form /> */}
             <Footer />

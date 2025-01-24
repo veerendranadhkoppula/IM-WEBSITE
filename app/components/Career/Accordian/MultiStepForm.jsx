@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import AWS from 'aws-sdk';
 import Image from "next/legacy/image";
 import crossIcon from "@/app/assets/career/cross-icon.svg";
 import careerStyles from "@/app/styles/Career.module.css";
+import { UploadButton } from "@/app/utils/uploadthing";
+import { upload } from '@vercel/blob/client';
+import { put } from "@vercel/blob";
+
 
 const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
   const [step, setStep] = useState(1);
+  const inputFileRef = useRef(null);
+  const [blob, setBlob] = useState(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -33,7 +39,7 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
     if (step === 3 && !/^\d{10}$/.test(formData.contact)) {
       newErrors.contact = "Please enter a valid 10-digit mobile number";
     }
-    if (step === 4 && !formData.resume) {
+    if (step === 4 && (!formData.resume || !formData.resume.startsWith("https://"))) {
       newErrors.resume = "Please upload your resume";
     }
 
@@ -53,81 +59,80 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-  
+
     if (name === "resume" && files) {
-      console.log("File selected:", files[0]);
+      // console.log("File selected:", files[0]);
       setFormData({ ...formData, resume: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
     }
   };
-  
-  const fileuplode = async () => {
+
+  const handleFileUpload = async () => {
+    if (!inputFileRef.current?.files?.[0]) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        resume: "Please select a file to upload.",
+      }));
+      return false;
+    }
+
+    const file = inputFileRef.current.files[0];
+
     try {
-      console.log('Preparing file upload...');
-      const uploadData = new FormData();
-      uploadData.append('resume', formData.resume); // Ensure 'resume' matches the backend key
-  
-      const response = await fetch('/api/uploadResume', {
-        method: 'POST',
-        body: uploadData, // FormData automatically sets the correct Content-Type
-      });
-  
-      console.log('Response received, status:', response.status);
-  
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error || 'File upload failed');
+      // Retrieve the token from environment variables
+      const token = process.env.NEXT_PUBLIC_BLOB_READ_WRITE_TOKEN;
+
+      if (!token) {
+        throw new Error("BLOB_READ_WRITE_TOKEN is not set in environment variables.");
       }
-  
-      console.log('Upload successful:', result);
-      return result.filePath;
+
+      // Upload the file using Vercel Blob
+      const { url } = await put(file.name, file, {
+        access: "public",
+        token,
+      });
+
+      // console.log("File uploaded successfully:", url);
+      formData.resume = url;
+      // Save the uploaded file URL in formData
+      setFormData((prevData) => ({
+        ...prevData,
+        resume: url, // Update formData.resume with the uploaded file URL
+      }));
+
+      return true; // File upload successful
     } catch (error) {
-      console.error('Error uploading file:', error);
-      throw error;
+      // console.error("File upload failed:", error);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        resume: "File upload failed. Please try again.",
+      }));
+      return false; // File upload failed
     }
   };
-  
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const isValid = validateStep();
     if (isValid) {
       setIsSubmitting(true);
       setSubmitError('');
-  
+
       try {
-        // Step 1: Upload Resume
-        console.log('Uploading resume...');
-        const uploadData = new FormData();
-        uploadData.append('resume', formData.resume);
-  
-        const uploadResponse = await fetch('/api/uploadResume', {
-          method: 'POST',
-          body: uploadData,
-        });
-  
-        if (!uploadResponse.ok) {
-          const uploadError = await uploadResponse.json();
-          throw new Error(uploadError.error || 'Failed to upload resume');
-        }
-  
-        const uploadResult = await uploadResponse.json();
-        console.log('Resume uploaded to:', uploadResult.fileUrl);
-  
+
         // Step 2: Submit Form Data
-        console.log('Submitting form...');
+        // console.log('Submitting form...');
         const formDataToSend = {
           fullName: formData.fullName,
           email: formData.email,
           contact: formData.contact,
-          resumeLink: uploadResult.fileUrl, // Use the uploaded file URL
+          resumeLink: formData.resume, // Ensure this is the uploaded file URL
           portfolioLink: formData.portfolioLink || 'Not provided',
           position: formName,
         };
-  
+
         const formResponse = await fetch('/api/submitCareerForm', {
           method: 'POST',
           headers: {
@@ -135,25 +140,25 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
           },
           body: JSON.stringify(formDataToSend),
         });
-  
+
         if (!formResponse.ok) {
           const formError = await formResponse.json();
           throw new Error(formError.message || 'Failed to submit form');
         }
-  
-        console.log('Form submitted successfully');
+
+        // console.log('Form submitted successfully');
         setStep(6); // Move to the success step
       } catch (error) {
-        console.error('Error during submission:', error);
+        // console.error('Error during submission:', error);
         setSubmitError(error.message || 'An error occurred. Please try again.');
       } finally {
         setIsSubmitting(false);
       }
     }
   };
-  
 
-  
+
+
   return (
     <section className={careerStyles.popupform_s_c} onClick={closeFormModule}>
       <div
@@ -296,14 +301,8 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
             <fieldset className={careerStyles.form_field_set}>
               <div className={careerStyles.lable_input_container}>
                 <label htmlFor="resume">Upload your resume</label>
-                <input
-                  type="file"
-                  id="resume"
-                  name="resume"
-                  className={careerStyles.input_field}
-                  onChange={handleChange}
-                  accept=".pdf,.doc,.docx"
-                />
+                <input name="file" ref={inputFileRef} type="file" required />
+
                 {errors.resume && (
                   <div className={careerStyles.form_error}>{errors.resume}</div>
                 )}
@@ -320,7 +319,12 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
                 <button
                   type="button"
                   className={careerStyles.action_button}
-                  onClick={handleNext}
+                  onClick={async () => {
+                    const isUploaded = await handleFileUpload();
+                    if (isUploaded) {
+                      handleNext(); // Proceed to the next step
+                    }
+                  }}
                 >
                   Next
                 </button>

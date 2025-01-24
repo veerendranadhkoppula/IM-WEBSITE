@@ -132,7 +132,7 @@ export async function POST(req) {
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true, message: 'Form submitted successfully' }, { status: 200 });
   } catch (error) {
-    console.error('Error in form submission:', error);
+    // console.error('Error in form submission:', error);
     return NextResponse.json({ success: false, message: 'Form submission failed' }, { status: 500 });
   }
 }

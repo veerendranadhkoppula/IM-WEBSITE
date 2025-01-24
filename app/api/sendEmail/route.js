@@ -70,7 +70,7 @@ export async function POST(req) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error in API route:", error);
+    // console.error("Error in API route:", error);
     return new Response(
       JSON.stringify({ success: false, message: "Internal server error" }),
       { status: 500 }

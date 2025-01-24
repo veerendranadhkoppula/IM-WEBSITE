@@ -98,14 +98,14 @@ export default function Feature() {
                 }`}
               onClick={() => handleCategoryChange('work')}
             >
-              Works
+              Work
             </button>
             <button id="btn_submit"
               className={`${styles.blogCategory} ${activeCategory === 'blogs' ? styles.active : ''
                 }`}
               onClick={() => handleCategoryChange('blogs')}
             >
-              Blogs
+              Blog
             </button>
           </div>
         </div>

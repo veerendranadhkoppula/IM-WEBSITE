@@ -19,7 +19,7 @@ export default function Hero() {
         <div className={styles.heroContainer}>
           <div className={styles.heroHeading}>
             {/* <h1>INTEGRA MAGNA</h1> */}
-            <SlideUpText text="BEYOND ORDINARY" ref={textRef} tag='h1' delay={0.5} />
+            <SlideUpText text="CONCEPT LAB" ref={textRef} tag='h1' delay={0.5} />
           </div>
           <div className={styles.interImage}>
             {['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map((img, i) => (
@@ -43,7 +43,7 @@ export default function Hero() {
 
             <div className={styles.heroHeading}>
               {/* <h2>ILLUSTRATOR, DESIGNER & MURALIST</h2> */}
-              <SlideUpText text="DESIGNS THAT LINGER, STORIES THAT SPEAK." ref={textRef} tag='h2' delay={0.9} />
+              <SlideUpText text="BREEDING IDEAS, CRAFTING STORIES" ref={textRef} tag='h2' delay={0.9} />
             </div>
             <div className={styles.landing_circle}>
 

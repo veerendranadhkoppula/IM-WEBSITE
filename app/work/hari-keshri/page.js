@@ -202,7 +202,7 @@ const BOAT = () => {
 
             <section className={casestudyStyles.text_Heading_Only}>
                 <p className="selectedTrans">
-                    From educational posts highlighting the health benefits of rice bran oil to captivating product promotions, we created a consistent and impactful digital narrative. Also by aligning social media designs with the new brand identity, we ensured a seamless transition of Hari Keshri's values into the digital space.
+                    From educational posts highlighting the health benefits of rice bran oil to captivating product promotions, we created a consistent and impactful digital narrative. Also by aligning social media designs with the new brand identity, we ensured a seamless transition of Hari Keshri&apos;s values into the digital space.
                 </p>
             </section>
 

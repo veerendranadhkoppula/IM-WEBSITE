@@ -4,7 +4,7 @@ import Head from 'next/head';
 import useGsapScroll from '@/app/components/hooks/useGsapScroll';
 import ProjectOverview from '@/app/components/Case-Studies/ProjectOverview';
 import casestudyStyles from "@/app/styles/Case-Study.module.css";
-import NextMarriott from '@/app/components/Case-Studies/Next-Case-Study/NextMarriott';
+import NextMotivata from '@/app/components/Case-Studies/Next-Case-Study/NextMotivata';
 import Footer from '@/app/components/Footer/FinalFooter';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'; // Ensure this is installed
@@ -28,7 +28,7 @@ const imagePaths = {
     marriottTen: '/assets/images/case-studies/marriott/10.avif',
     marriottEleven: '/assets/images/case-studies/marriott/11.avif',
     marriottTwelve: '/assets/images/case-studies/marriott/12.avif',
-    marriottThirteen: '/assets/images/case-studies/marriott/13.avif',
+    marriottThirteen: '/assets/images/case-studies/marriott/13.avifs',
     marriottFourteen: '/assets/images/case-studies/marriott/14.avif',
     marriottFifteen: '/assets/images/case-studies/marriott/15.avif',
     marriottSixteen: '/assets/images/case-studies/marriott/16.avif',
@@ -323,7 +323,7 @@ const Marriott = () => {
 
 
             </section>
-            <NextMarriott />
+            <NextMotivata />
 
 
 

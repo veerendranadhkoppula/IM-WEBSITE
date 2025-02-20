@@ -6,7 +6,7 @@ import Head from 'next/head';
 import ProjectOverview from '@/app/components/Case-Studies/ProjectOverview';
 import casestudyStyles from '@/app/styles/Case-Study.module.css';
 import Footer from '@/app/components/Footer/FinalFooter';
-import NextTaskey from '@/app/components/Case-Studies/Next-Case-Study/NextTaskey';
+import NextNeelamForesteria from '@/app/components/Case-Studies/Next-Case-Study/NextNeelamForesteria';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SlideUpText from '@/app/components/SlideUpText';
@@ -164,7 +164,7 @@ const Tilx = () => {
             </section>
 
 
-            <NextTaskey />
+            <NextNeelamForesteria />
 
             {/* <Form /> */}
             <Footer />

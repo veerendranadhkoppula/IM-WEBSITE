@@ -87,7 +87,7 @@ const Tilx = () => {
             <section className={casestudyStyles.image_conten_section}>
                 <div className={casestudyStyles.image_container_grid}>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
-                        <img src={imagePaths.bagOnTable} alt="Prestige University Auditorium" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
+                        <img src={imagePaths.bagOnTable} alt="Royal Legacy’s signature paper bag sits elegantly on a wooden table, set against lush greenery, reflecting a refined dining experience." layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img src={imagePaths.juiceBottle} alt="Prestige University Student Community" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
@@ -117,10 +117,10 @@ const Tilx = () => {
             <section className={casestudyStyles.image_conten_section}>
                 <div className={casestudyStyles.image_container_grid}>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
-                        <img src={imagePaths.diningTable} alt="Students Studying Together at Prestige University" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
+                        <img src={imagePaths.diningTable} alt="A luxurious dining space with beautifully set tables, plush seating, and a sophisticated ambiance adorned with chandeliers." layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
-                        <img src={imagePaths.menuCardMock} alt="Directional signpost at Prestige University" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
+                        <img src={imagePaths.menuCardMock} alt="Stylish menu card from Royal Legacy, featuring a classic design, set against a luxurious dining ambiance with deep green and red hues" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img src={imagePaths.ladyInRoyalLegacy} alt="Prestige University Backpack" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
@@ -155,7 +155,7 @@ const Tilx = () => {
                         <img src={imagePaths.posterStandee} alt="Directional signpost at Prestige University" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
-                        <img src={imagePaths.foodInBowl} alt="Prestige University Backpack" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
+                        <img src={imagePaths.foodInBowl} alt="A rich and creamy hummus dish garnished with chickpeas, paprika, and rosemary, served on an ornate metal platter with aromatic spices on the side" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                 </div>
             </section>
@@ -171,7 +171,7 @@ const Tilx = () => {
                         <img src={imagePaths.stampCard} alt="Students Studying Together at Prestige University" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
-                        <img src={imagePaths.blueCounchAndTable} alt="Directional signpost at Prestige University" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
+                        <img src={imagePaths.blueCounchAndTable} alt="A cozy café corner with a blue velvet couch, a wooden table set with tea, desserts, and a reserved sign by the window." layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img src={imagePaths.glassStandMock} alt="Prestige University Backpack" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />

@@ -7,8 +7,8 @@ import AnimateImage from "@/app/components/AnimateImage";
 import TransitionLink from "@/app/components/TransitionLink";
 
 
-import NeelamForesteriaThumb from "@/app/assets/work-thumbnails/neelam-landing-thumb.webp";
-import NeelamForesteriaVideo from "@/app/assets/work-thumbnails/neelam-landing-work-thumbnail.mp4";
+import MarriottThumb from "@/app/assets/work-thumbnails/marriott-landing-thumbnail.avif";
+import MarriottVideo from "@/app/assets/work-thumbnails/marriott-landing-thumbnail.mp4";
 import BoatThumb from "@/app/assets/work-thumbnails/boat-landing-thumb.webp";
 import BoatVideo from "@/app/assets/work-thumbnails/boat-landing-work-thumbnail.mp4";
 import DecathlonThumb from "@/app/assets/work-thumbnails/decathlon-landing-thumb.webp";
@@ -72,13 +72,13 @@ function Work() {
 
     const workItems = [
         {
-            link: "/work/neelam-foresteria",
-            videoSrc: NeelamForesteriaVideo,
-            thumb: "/assets/images/work-thumbnails/neelam-landing-thumb.webp",
-            alt: "Neelam Foresteria Resort Brand Identity",
-            title: "Neelam Foresteria Resort Brand Identity",
-            heading: "Neelam Foresteria",
-            category: "Branding | Hospitality",
+            link: "/work/marriott",
+            videoSrc: MarriottVideo,
+            thumb: "/assets/images/work-thumbnails/marriott-landing-thumbnail.avif",
+            alt: "Marriott Packaging Design",
+            title: "Marriott Packaging Design",
+            heading: "Marriott",
+            category: "Packaging Design | Food",
         },
         {
             link: "/work/boat",

@@ -12,7 +12,7 @@ const Accordiannew = ({ openFormModule }) => {
         {
             title: "Sales and Marketing",
             type: "Internship",
-            mode: "Remote",
+            mode: "In-office",
             key: "sami",  // Add the key for each job to map to form
             content: (
                 <>
@@ -34,7 +34,7 @@ const Accordiannew = ({ openFormModule }) => {
                     <h4>- Only those candidates can apply who:</h4>
                     <br />
                     <ul>
-                        <li>Are available for a full-time (remote) internship.</li>
+                        <li>Are available for a full-time (In-office) internship.</li>
                         <li>Can start the internship immediately or within 15 days.</li>
                         <li>Are available for a duration of 3 months (minimum).</li>
                     </ul>
@@ -100,6 +100,54 @@ const Accordiannew = ({ openFormModule }) => {
                     <button
                         className={accordianStyles.apply_button}
                         onClick={() => openFormModule("uui")}
+                    >
+                        <strong>APPLY NOW</strong>
+                    </button>
+                </>
+            ),
+        },
+        {
+            title: "Graphic Designer",
+            type: "Internship",
+            mode: "In-office",
+            key: "gdi",  // Add the key for each job to map to form
+            content: (
+                <>
+                    <p>
+                        This is an internship role for a Graphic Design Internship at Integra Magna, located in Indore. As an intern, you will be responsible for assisting in the creation of visually compelling graphic designs for various projects. You will collaborate with the design team to brainstorm ideas, create mockups, and bring designs to life. This is an on-site role that offers hands-on experience in a fast-paced design environment.
+                    </p>
+                    <br />
+                    <h4>- Responsibilities and Duties:</h4>
+                    <br />
+                    <ul>
+                        <li>Good knowledge of design principles, typography, and color theory.</li>
+                        <li>Proficiency in graphic design software such as Adobe Photoshop, Illustrator, and After Effects.</li>
+                        <li>Intermediate with motion graphics and video editing.</li>
+                        <li>Creativity and a keen eye for detail.</li>
+                        <li>Strong communication and teamwork skills.</li>
+                        <li>Portfolio showcasing your graphic design work so far.</li>
+                        <li>Pursuing or recently completed a degree in graphic design or a related field.</li>
+                        <li>Participate in brainstorming sessions.</li>
+                    </ul>
+                    <br />
+                    <h4>- Only those candidates can apply who:</h4>
+                    <br />
+                    <ul>
+                        <li>Are available for full time (in-office) internship.</li>
+                        <li>Can start the internship immediately or within 15 days.</li>
+                        <li>Are available for a duration of 6 months (minimum).</li>
+                    </ul>
+                    <br />
+                    <h4>- Required Experience and Qualifications:</h4>
+                    <br />
+                    <ul>
+                        <li>Good knowledge of design principles, typography, and color theory.</li>
+                        <li>Proficiency in graphic design software such as Adobe Photoshop, Illustrator, and After Effects.</li>
+                    </ul>
+
+                    <button
+                        className={accordianStyles.apply_button}
+                        onClick={() => openFormModule("gdi")}
                     >
                         <strong>APPLY NOW</strong>
                     </button>
@@ -189,6 +237,61 @@ const Accordiannew = ({ openFormModule }) => {
                     <button
                         className={accordianStyles.apply_button}
                         onClick={() => openFormModule("smmi")}
+                    >
+                        <strong>APPLY NOW</strong>
+                    </button>
+                </>
+            ),
+        },
+        {
+            title: "Web Developer",
+            type: "Internship",
+            mode: "In-office",
+            key: "wdi",
+            content: (
+                <>
+
+                    <p>
+                        As a Web Developer Intern, you will play a crucial role in supporting our web development projects and building stunning digital experiences. This internship is designed for individuals passionate about web development, offering the opportunity to gain practical experience in front-end and back-end development, debugging, and creating responsive websites.
+                    </p>
+                    <br />
+                    <h4>- Responsibilities and Duties:</h4>
+                    <br />
+                    <ul>
+                        <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
+                        <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
+                        <li>Work on both front-end and back-end development tasks.</li>
+                        <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
+                        <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
+                        <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
+                        <li>Work on both front-end and back-end development tasks.</li>
+                        <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
+                    </ul>
+                    <br />
+                    <h4>- Only those candidates can apply who:</h4>
+                    <br />
+                    <ul>
+                        <li>Are available for a full-time (in-office) internship.</li>
+                        <li>Can start the internship immediately or within 15 days.</li>
+                        <li>Are available for a duration of 3 months (minimum).</li>
+                    </ul>
+                    <br />
+                    <h4>- Required Experience and Qualifications:</h4>
+                    <br />
+                    <ul>
+                        <li>Proficiency in HTML, CSS, and JavaScript (core front-end skills).</li>
+                        <li>Familiarity with React or Next.js for modern web applications.</li>
+                        <li>Basic understanding of Node.js for back-end development.</li>
+                        <li>Proficiency in building responsive websites that adapt seamlessly across devices and screen sizes.</li>
+                        <li>Strong debugging skills to identify and resolve code issues efficiently.</li>
+
+                    </ul>
+
+
+
+                    <button
+                        className={accordianStyles.apply_button}
+                        onClick={() => openFormModule("wdi")}
                     >
                         <strong>APPLY NOW</strong>
                     </button>

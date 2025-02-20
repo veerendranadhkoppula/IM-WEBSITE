@@ -84,9 +84,9 @@ const Tilx = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img src={imagePaths.invitationCard} alt="Prestige University Auditorium" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>
-                    <dAnimateImageiv className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
+                    <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img src={imagePaths.stairs} alt="Prestige University Student Community" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
-                    </dAnimateImageiv>
+                    </AnimateImage>
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img src={imagePaths.streetBillboard} alt="Prestige University Student Community" layout="responsive" className={`${casestudyStyles.image_content} lazy animTxt`} />
                     </AnimateImage>

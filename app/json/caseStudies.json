@@ -44,6 +44,16 @@
       "video": "/assets/images/work/prestige-university-branding/pu-thumbnail.mp4",
       "layout": "square"
     },
+
+    {
+      "title": "Marriott",
+      "client": "Marriott",
+      "category": "Packaging Design | Food",
+      "link": "/work/marriott",
+      "thumbnail": "/assets/images/work/marriott/marriott-landing-thumbnail.avif",
+      "video": "/assets/images/work/marriott/marriott-landing-thumbnail.mp4",
+      "layout": "landscape"
+    },
     {
       "title": "Motivata",
       "client": "Motivata",
@@ -51,7 +61,17 @@
       "link": "/work/motivata",
       "thumbnail": "/assets/images/work/motivata/motivata-thumbnail.webp",
       "video": "/assets/images/work/motivata/motivata-thumbnail.mp4",
-      "layout": "landscape"
+      "layout": "square"
+    },
+    
+    {
+      "title": "TILX",
+      "client": "TILX",
+      "category": "Strategy | Lifestyle",
+      "link": "/work/tilx",
+      "thumbnail": "/assets/images/work/tilx/tilx-thumbnail.webp",
+      "video": "/assets/images/work/tilx/tilx-thumbnail.mp4",
+      "layout": "square"
     },
     {
       "title": "Neelam Foresteria",
@@ -60,15 +80,6 @@
       "link": "/work/neelam-foresteria",
       "thumbnail": "/assets/images/work/neelam-foresteria/neelam-thumbnail.webp",
       "video": "/assets/images/work/neelam-foresteria/neelam-thumbnail.mp4",
-      "layout": "square"
-    },
-    {
-      "title": "TILX",
-      "client": "TILX",
-      "category": "Strategy | Lifestyle",
-      "link": "/work/tilx",
-      "thumbnail": "/assets/images/work/tilx/tilx-thumbnail.webp",
-      "video": "/assets/images/work/tilx/tilx-thumbnail.mp4",
       "layout": "square"
     },
     {
@@ -85,9 +96,9 @@
       "client": "Hari Keshri",
       "category": "Branding | Food",
       "link": "/work/hari-keshri",
-      "thumbnail": "/assets/images/work/hari-keshri/hari-keshri-thumbnail.webp",
+      "thumbnail": "/assets/images/work/hari-keshri/hari-keshri-thumbnail.avif",
       "video": "/assets/images/work/hari-keshri/hari-keshri-thumbnail.mp4",
-      "layout": "square"
+      "layout": "landscape"
     }
   ]
   

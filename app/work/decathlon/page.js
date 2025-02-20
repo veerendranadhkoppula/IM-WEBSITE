@@ -55,7 +55,7 @@ const Decathlon = () => {
             <div className={`${casestudyStyles.case_Study_hero_container} ${casestudyStyles.case_Study_hero_image_Decathlon}`} style={{ backgroundImage: `url(${imagePaths.hero})` }}>
                 <div className={casestudyStyles.Case_Stydy_hero_text}>
 
-                    <h2><SlideUpText text="Decathlon is the largest sporting goods retailer in the world with over 2,080 stores in 56 countries." delay={0.9} /></h2>
+                    <h2><SlideUpText text="Decathlon is a French sporting goods retailer. With over 2,080 stores in 56 countries and regions, it is the largest sporting goods retailer in the world." delay={0.9} /></h2>
                     <h1><SlideUpText text="Decathlon" delay={1.4} /></h1>
                 </div>
                 <div className={casestudyStyles.challange_move}>
@@ -66,7 +66,7 @@ const Decathlon = () => {
             {/* Project Overview */}
             <ProjectOverview
                 title="Discovering India's Playground with Decathlon."
-                description="Decathlon's campaign illuminated the presence of its stores across India, bringing sports closer to enthusiasts with ease."
+                description="Why search far and wide for sports gear? Decathlon is just around the corner. Decathlon's campaign illuminated the presence of its stores across India, bringing sports closer to enthusiasts with ease. Through engaging social media initiatives and innovative location-based advertising, we connected individuals to their nearest sporting haven. This strategic approach not only amplified store awareness but also fostered a community eager to embark on their fitness journeys."
                 category="Sports"
                 service="Strategy, GTM Plan"
             />

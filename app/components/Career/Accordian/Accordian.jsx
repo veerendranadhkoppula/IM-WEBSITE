@@ -10,7 +10,7 @@ const Accordion = ({ openFormModule }) => {
     {
       title: "Sales and Marketing",
       type: "Internship",
-      mode: "Remote",
+      mode: "In-office",
       key: "sami",  // Add the key for each job to map to form
       content: (
         <>
@@ -32,7 +32,7 @@ const Accordion = ({ openFormModule }) => {
           <h4>- Only those candidates can apply who:</h4>
           <br />
           <ul>
-            <li>Are available for a full-time (remote) internship.</li>
+            <li>Are available for a full-time (In-office) internship.</li>
             <li>Can start the internship immediately or within 15 days.</li>
             <li>Are available for a duration of 3 months (minimum).</li>
           </ul>
@@ -98,6 +98,57 @@ const Accordion = ({ openFormModule }) => {
           <button
             className={accordianStyles.apply_button}
             onClick={() => openFormModule("uui")}
+          >
+            <strong>APPLY NOW</strong>
+          </button>
+        </>
+      ),
+    },
+    {
+      title: "Graphic Designer",
+      type: "Internship",
+      mode: "In-office",
+      key: "gdi",  // Add the key for each job to map to form
+      content: (
+        <>
+          <p>
+            We are looking for a UX UI Intern at Integra Magna located in Indore. As a UX UI Intern, you will be involved in the day-to-day tasks of designing and implementing user interfaces for our clients. This is an on-site role that requires you to be based in Indore.
+          </p>
+          <br />
+          <h4>- Responsibilities and Duties:</h4>
+          <br />
+          <ul>
+            <li>Assist in user research and usability testing.</li>
+            <li>Create wireframes and interactive prototypes.</li>
+            <li>Design visual elements and maintain consistency.</li>
+            <li>Collaborate with cross-functional teams.</li>
+            <li>Conduct competitive analysis.</li>
+            <li>Support ongoing projects and make revisions.</li>
+            <li>Communicate design ideas and respond to feedback.</li>
+            <li>Organize and manage design files.</li>
+            <li>Participate in brainstorming sessions.</li>
+            <li>Conduct user testing and iterate designs.</li>
+          </ul>
+          <br />
+          <h4>- Only those candidates can apply who:</h4>
+          <br />
+          <ul>
+            <li>Are available for full time (in-office) internship.</li>
+            <li>Can start the internship immediately or within 15 days.</li>
+            <li>Are available for a duration of 6 months (minimum).</li>
+          </ul>
+          <br />
+          <h4>- Required Experience and Qualifications:</h4>
+          <br />
+          <ul>
+            <li>Proficiency in design software tools such as Adobe Creative Suite, Figma.</li>
+            <li>Experience with wireframing and prototyping tools.</li>
+            <li>Knowledge of responsive design and mobile-first approach.</li>
+          </ul>
+
+          <button
+            className={accordianStyles.apply_button}
+            onClick={() => openFormModule("gdi")}
           >
             <strong>APPLY NOW</strong>
           </button>

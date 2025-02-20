@@ -5,15 +5,15 @@ const NextHariKeshri = () => {
   const images = [
     {
       src: '/assets/images/case-studies/hari-keshri/1.webp',
-      alt: 'Newspaper Marketing Ad of Decathlon by Integra Magna',
+      alt: 'Hari Keshri Rice Bran Oil products displayed in vibrant green and yellow packaging by Integra Magna.',
     },
     {
       src: '/assets/images/case-studies/hari-keshri/8.webp',
-      alt: 'OOH Marketing of a man playing basketball in Decathlon merch.',
+      alt: 'Woman pouring oil into a pan while preparing food in a traditional Indian kitchen.',
     },
     {
       src: '/assets/images/case-studies/hari-keshri/16.webp',
-      alt: 'Map of the illustration of the island created for Decathlon',
+      alt: 'Hari Keshri brochure highlighting the benefits of rice bran oil alongside product images.',
     },
   ];
 

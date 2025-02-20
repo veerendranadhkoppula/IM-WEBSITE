@@ -8,7 +8,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -40,7 +40,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -62,7 +62,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -83,7 +83,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -109,7 +109,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -140,7 +140,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -162,7 +162,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -182,7 +182,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -210,7 +210,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -241,7 +241,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -263,7 +263,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -283,7 +283,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -309,7 +309,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -340,7 +340,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -362,7 +362,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -381,7 +381,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -407,7 +407,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -438,7 +438,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -460,7 +460,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -480,7 +480,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -506,7 +506,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -537,7 +537,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -559,7 +559,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -579,7 +579,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -605,7 +605,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -636,7 +636,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -658,7 +658,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -678,7 +678,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {
@@ -704,7 +704,7 @@ const fruits = [
     src: '/assets/images/thinking/ich/1.webp',
     alt: "Project 3",
     title: "Indian Coffee House",
-    description: "hello",
+    description: "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     images: [
       { src: '/assets/images/thinking/ich/10.webp', type: 'landscape' },
       {
@@ -735,7 +735,7 @@ const fruits = [
     src: "/assets/images/thinking/lamborghini/1.webp",
     alt: "Project 1",
     title: "Lamborghini",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     images: [
       {
         src: [
@@ -757,7 +757,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/starbucks/1.webp"],
     alt: "Project 4",
     title: "Starbucks",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     images: [
       { src: "/assets/images/thinking/starbucks/4.webp", type: "landscape" },
       {
@@ -777,7 +777,7 @@ const fruits = [
     thumbnail: ["/assets/images/thinking/tesouro/1.webp"],
     alt: "Project 2",
     title: "Tesouro",
-    description: "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    description: "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     images: [
       { src: "/assets/images/thinking/tesouro/17.webp", type: "landscape" },
       {

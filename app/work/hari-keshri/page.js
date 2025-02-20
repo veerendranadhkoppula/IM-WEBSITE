@@ -37,17 +37,17 @@ const imagePaths = {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BOAT = () => {
+const HariKeshri = () => {
     useGsapScroll("#case_study_circular_text");
     useEffect(() => {
-        document.title = 'Hari Keshri | Strategy | Integra Magna'; // Set the document title
+        document.title = 'Hari Keshri | Branding | Integra Magna'; // Set the document title
     }, []);
 
 
     return (
         <>
             <Head>
-                <title>Hari Keshri | Strategy | Integra Magna</title>
+                <title>Hari Keshri | Branding | Integra Magna</title>
             </Head>
 
             <div
@@ -79,7 +79,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriOne}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Hari Keshri Rice Bran Oil products"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -98,7 +98,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriTwo}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Notebook with Hari Keshri logo design concepts sketched "
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -107,7 +107,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriEighteen}
-                            alt="A man wearing boAt watch near a water marketing design"
+                            alt="Pouring golden oil into a glass bowl, symbolizing purity and health."
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -115,7 +115,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriThree}
-                            alt="3D visuals of Lunar Eclipse boat brand for marketing"
+                            alt="Logo composition of Hari Keshri brand "
                             layout="responsive"
                             className={`${casestudyStyles.image_content} animTxt`}
                         />
@@ -123,7 +123,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriFour}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Pattern of Hari Keshri Rice Bran Oil bottles"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -143,7 +143,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriFive}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Glass container with rice bran oil and raw rice grains"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -152,7 +152,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriSix}
-                            alt="A man wearing boAt watch near a water marketing design"
+                            alt="Hari Keshri Rice Bran Oil packet with green and yellow branding"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -161,7 +161,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriSeven}
-                            alt="3D visuals of Lunar Eclipse boat brand for marketing"
+                            alt="Close-up of hands folding a dosa filled with spiced potato mix"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} animTxt`}
                         />
@@ -170,7 +170,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriEight}
-                            alt="A man wearing boAt watch near a water marketing design"
+                            alt="Woman pouring oil into a pan while preparing food"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -179,7 +179,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriNine}
-                            alt="3D visuals of Lunar Eclipse boat brand for marketing"
+                            alt="Hari Keshri Rice Bran Oil bottle"
                             layout="responsive"
                             className={`${casestudyStyles.image_content} animTxt`}
                         />
@@ -190,7 +190,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image_right} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriTen}
-                            alt="weather, stopwatch, alarm, and countdown feature of the watch for meta ads"
+                            alt="Hari Keshri promotional designs emphasizing good health."
 
 
                             layout="responsive"
@@ -211,7 +211,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriEleven}
-                            alt="Experience the world boAt campaign on a billboard"
+                            alt="Hari Keshri billboard featuring the logo."
 
 
                             layout="responsive"
@@ -222,7 +222,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriTwelve}
-                            alt="boAt watch features a bus stand kiosk"
+                            alt="Hari Keshri Instagram post showcasing lemon rice with branding and product range."
 
 
                             layout="responsive"
@@ -233,7 +233,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriThirteen}
-                            alt="boAt watch features a metro board"
+                            alt="Lush green agricultural field extending toward a distant horizon."
 
 
                             layout="responsive"
@@ -254,7 +254,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriFourteen}
-                            alt="boAt watch features a bus stand kiosk"
+                            alt="Harvested grain in a field with a tractor under a bright blue sky."
 
 
                             layout="responsive"
@@ -265,7 +265,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.double_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriFifteen}
-                            alt="boAt watch features a metro board"
+                            alt="Hari Keshri promotional design with scenic farmland, logo, and flowing oil."
 
 
                             layout="responsive"
@@ -276,7 +276,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriSixteen}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Hari Keshri brochure highlighting the benefits of rice bran oil alongside product images."
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -284,7 +284,7 @@ const BOAT = () => {
                     <AnimateImage className={`${casestudyStyles.contaitner_fex} ${casestudyStyles.single_image} textAnim`}>
                         <img
                             src={imagePaths.hariKeshriSeventeen}
-                            alt="boAt watch feature wall mural board marketing design"
+                            alt="Hari Keshri-branded delivery truck featuring logo and scenic design."
                             layout="responsive"
                             className={`${casestudyStyles.image_content} lazy animTxt`}
                         />
@@ -303,4 +303,4 @@ const BOAT = () => {
     );
 };
 
-export default BOAT;
+export default HariKeshri;

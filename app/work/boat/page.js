@@ -82,7 +82,7 @@ const BOAT = () => {
         title="Ticking Towards Tomorrow with boAt Lifestyle&apos;s Smartwatch Revolution."
         description="For a smartwatch launch, we orchestrated an innovative campaign that seamlessly blended outdoor activations with digital dynamism, positioning boAt at the forefront of India&apos;s wearable technology scene. This dual-channel approach not only amplified the launch but also engaged consumers in a conversation about the future of connectivity and style, establishing boAt&apos;s smartwatches as the must-have accessory for the tech-savvy and fashion-forward."
         category="Tech"
-        service="Strategy, GTM Plan"
+        service="Marketing Campagin"
       />
 
       <section className={casestudyStyles.image_conten_section}>

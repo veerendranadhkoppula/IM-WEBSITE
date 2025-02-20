@@ -5,7 +5,7 @@
     "thumbnail" : ["/assets/images/thinking/lamborghini/1.webp", "/assets/images/thinking/lamborghini/2.webp"],
     "alt": "Project 1",
     "title": "Lamborghini",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "An editorial piece capturing the essence of Lamborghini’s legacy and craftsmanship in a timeless format.",
     "images": [
       {
         "src": [
@@ -25,7 +25,7 @@
     "thumbnail" : ["/assets/images/thinking/tesouro/1.webp", "/assets/images/thinking/tesouro/2.webp"],
     "alt": "Project 2",
     "title": "Tesouro",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "An elegant fusion of fine wine and Indian craftsmanship, blending tradition with timeless design.",
     "images": [
       { "src": "/assets/images/thinking/tesouro/17.webp", "type": "landscape" },
       {
@@ -52,7 +52,7 @@
     "thumbnail" : ["/assets/images/thinking/ich/1.webp", "/assets/images/thinking/ich/2.webp"],
     "alt": "Project 3",
     "title": "Indian Coffee House",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A timeless design appreciating the legacy of Indian Coffee House and its heritage with a minimal approach.",
     "images": [
       { "src": "/assets/images/thinking/ich/10.webp", "type": "landscape" },
       {
@@ -87,7 +87,7 @@
     "thumbnail" : ["/assets/images/thinking/starbucks/1.webp", "/assets/images/thinking/starbucks/2.webp"],
     "alt": "Project 4",
     "title": "Starbucks",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A refined identity infused with global coffee culture, introducing new flavors inspired by Turkish and Italian traditions.",
     "images": [
       { "src": "/assets/images/thinking/starbucks/4.webp", "type": "landscape" },
       
@@ -109,7 +109,7 @@
     "thumbnail" : ["/assets/images/thinking/stanlee/1.webp", "/assets/images/thinking/stanlee/2.webp"],
     "alt": "Project 5",
     "title": "Stanlee",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A creative tribute honoring the visionary legacy of Stan Lee, celebrating storytelling, imagination, and heroism.",
     "images": [
       { "src": "/assets/images/thinking/stanlee/8.mp4", "type": "landscape", "mediaType": "video" },
       {
@@ -144,7 +144,7 @@
     "thumbnail" : ["/assets/images/thinking/milano/1.webp", "/assets/images/thinking/milano/2.webp"],
     "alt": "Project 6",
     "title": "Milano",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A sophisticated identity blending traditional elegance with contemporary packaging for a timeless brand experience.",
     "images": [
       { "src": "/assets/images/thinking/milano/3.webp", "type": "landscape" },
       {
@@ -164,8 +164,8 @@
     "src": "/assets/images/thinking/book/1.webp",
     "thumbnail" : ["/assets/images/thinking/book/1.webp", "/assets/images/thinking/book/2.webp"],
     "alt": "Project 7",
-    "title": "Book",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "title": "Must-Reads of 2022",
+    "description": "A thoughtfully crafted book design celebrating the most compelling reads of the year with a creative and immersive approach.",
     "images": [
       {
         "src": [
@@ -199,7 +199,7 @@
     "thumbnail" : ["/assets/images/thinking/fanta/1.webp", "/assets/images/thinking/fanta/2.webp"],
     "alt": "Project 8",
     "title": "Fanta",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A fresh perspective on Fanta, capturing its playful essence with a dynamic and vibrant approach.",
     "images": [
       { "src": "/assets/images/thinking/fanta/3.webp", "type": "landscape" },
       {
@@ -219,8 +219,8 @@
     "src": "/assets/images/thinking/dreamProject/1.webp",
     "thumbnail" : ["/assets/images/thinking/dreamProject/1.webp", "/assets/images/thinking/dreamProject/2.webp"],
     "alt": "Project 9",
-    "title": "Dream Project",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "title": "Essentials",
+    "description": "A sensual blend of design and fragrance, crafted to set the mood with elegance and intimacy.",
     "images": [
       { "src": "/assets/images/thinking/dreamProject/8.webp", "type": "landscape" },
 
@@ -253,8 +253,8 @@
     "src": "/assets/images/thinking/pill/1.webp",
     "thumbnail" : ["/assets/images/thinking/pill/3.webp", "/assets/images/thinking/pill/2.webp"],
     "alt": "Project 10",
-    "title": "Pill",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "title": "Workplace Pills",
+    "description": "A playful take on office life, blending humor and design into quirky &quot;cures&quot; for everyday work struggles.",
     "images": [
       {
         "src": [
@@ -286,7 +286,7 @@
     "thumbnail" : ["/assets/images/thinking/ravana/1.webp", "/assets/images/thinking/ravana/2.webp"],
     "alt": "Project 11",
     "title": "Ravana",
-    "description": "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    "description": "A modern reinterpretation of Ravana, inspired by LEGO models, blending mythology with creative modular design.",
     "images": [
       { "src": "/assets/images/thinking/ravana/1.webp", "type": "landscape" },
 

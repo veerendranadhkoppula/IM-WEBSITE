@@ -6,7 +6,7 @@ import SlideUpText from "@/app/components/SlideUpText";
 
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
 // import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
-import thumbsup from "@/app/assets/landing/thumbsup.webp";
+import thumbsup from "@/app/assets/landing/thumbsup2.webp";
 
 import Image from "next/legacy/image";
 
@@ -52,6 +52,8 @@ export default function Hero() {
                 src={thumbsup}
                 alt="Thumbs Up"
                 background="transparent"
+                quality={100}
+                unoptimized
                 speed={0.7}
                 loop
                 autoPlay

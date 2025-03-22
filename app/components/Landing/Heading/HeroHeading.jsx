@@ -9,8 +9,12 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import DiveintoDetail from "@/app/assets/landing/dive-into-detail.svg";
 import thumbsup from "@/app/assets/landing/thumbsup.webp";
+// import thumbsupRiv from "@/app/assets/landing/thumbsup.riv";
+import Rive from '@rive-app/react-canvas';
 
 import AnimateImage from "@/app/components/AnimateImage";
+// import Rive from '@rive-app/react-canvas';
+
 // import { Player as LottiePlayer } from '@lottiefiles/react-lottie-player';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -21,6 +25,8 @@ export default function Home() {
 
   const heroTexts = useRef([]);
   const pathname = usePathname();
+
+  
 
   useEffect(() => {
     let SplitType;
@@ -214,7 +220,7 @@ export default function Home() {
 
           <AnimateImage className="media-container"><Spectrum /></AnimateImage>
           <div className={landingStyles.landing_circle}>
-          <Image
+            {/* <Image
               className="animHead"
               src={thumbsup}
               alt="Thumbs Up"
@@ -222,6 +228,12 @@ export default function Home() {
               speed={0.7}
               loop
               autoPlay
+            /> */}
+            {/* <Rive src={thumbsupRiv} animations={["idle"]} autoPlay className="animHead" /> */}
+            <Rive
+              src="/assets/images/landing/Thumbsup.riv"
+              stateMachines="Brand Stories 2"
+
             />
           </div>
         </div>

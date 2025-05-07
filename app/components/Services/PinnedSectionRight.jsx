@@ -21,7 +21,7 @@ const service = [
     imageUrl: "/assets/images/service/services/strategy-icon.svg",
     description:
       "We specialize in qualitative insight research to understand you and your business.",
-    list: ["Brand Positioning", "Brand Architecture", "Creative Campaigns", "GTMM Plans"],
+    list: ["Brand Positioning", "Brand Architecture", "Creative Campaigns", "GTM Plans"],
   },
   {
     name: "UX/UI Design",

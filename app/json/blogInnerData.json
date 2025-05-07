@@ -1,107 +1,429 @@
 [
-    {
-        "id": "Hilariously Bad Packaging Fails! Seriously, Who Approved These?",
-        "title": "Hilariously Bad Packaging Fails! Seriously, Who Approved These?",
-        "slug": "Hilariously-Bad-Packaging-Fails-Seriously-Who-Approved-These",
-        "author": "Integra Magna",
-        "date": "12 Dec, 2024",
-        "readTime": "3 min",
-        "content": [
-            {
-                "type": "textBox",
-                "value": [
-                    {
-                        "type": "subTextBox",
-                        "value": "I love wandering through supermarkets - plenty of creative inspiration and, occasionally, a showcase of what not to do."
-                    },
-                    {
-                        "type": "subTextBox",
-                        "value": "But then I stumble upon these packaging disasters, and I can’t help but wonder: how do they actually get a green light from their management?"
-                    },
-                    {
-                        "type": "subTextBox",
-                        "value": "Seriously, someone in a meeting said, “Yes, let’s roll this out.” And then those same people have to double down on damage control post-launch. It’s almost like a self-inflicted PR stunt."
-                    },
-                    {
-                        "type": "subTextBox",
-                        "value": "As I always say, the devil is in the details when it comes to crafting a brand identity that sticks. Ignoring the tiny, intricate elements can quickly turn a “wow” into a “whoops.”"
-                    },
-                    {
-                        "type": "subTextBox",
-                        "value": "Here are a few prime examples that scream why R&D should come before design. It’s easy to get swept up in the aesthetics - cool fonts, flashy packaging styles - but none of that secures brand loyalty or recognition if the basics are botched."
-                    }
-                ]
-            },
-            {
-                "type": "image",
-                "value": "/assets/images/thinking/blogs/hilariously-bad-packaging-fails-seriously-who-approved-these/1.webp",
-                "alt": "Integra Magna"
-            },
-            {
-                "type": "image",
-                "value": "/assets/images/thinking/blogs/hilariously-bad-packaging-fails-seriously-who-approved-these/2.webp",
-                "alt": "Integra Magna"
-            },
-            {
-                "type": "text",
-                "value": "From colours that bleed into a nightmare to fonts that make you squint like you’re decoding a secret message — every single detail counts."
-            },
-            {
-                "type": "image",
-                "value": "/assets/images/thinking/blogs/hilariously-bad-packaging-fails-seriously-who-approved-these/3.webp",
-                "alt": "Integra Magna"
-            },
-            {
-                "type": "image",
-                "value": "/assets/images/thinking/blogs/hilariously-bad-packaging-fails-seriously-who-approved-these/4.webp",
-                "alt": "Integra Magna"
-            },
-            {
-                "type": "image",
-                "value": "/assets/images/thinking/blogs/hilariously-bad-packaging-fails-seriously-who-approved-these/5.webp",
-                "alt": "Integra Magna"
-            },
-            {
-                "type": "textBox",
-                "value": [
-                    {
-                        "type": "subTextBox",
-                        "value": "The lesson?"
-                    },
-                    {
-                        "type": "subTextBox",
-                        "value": "Design isn’t just about looking pretty; it’s about making sense."
-                    }
-                ]
-            }
+  {
+    "id": "Unlock the Power of Packaging Design",
+    "title": "Unlock the Power of Packaging Design",
+    "slug": "Unlock-the-Power-of-Packaging-Design",
+    "author": "Integra Magna",
+    "date": "10 Jan, 2023",
+    "readTime": "2 min",
+    "content": [
+      {
+        "type": "text",
+        "value": "There are 6 key points to consider when creating packaging designs for a brand. Although there are many other things to be taken care of before designing, these 5 play a major role."
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "1. Clarity and simplicity:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "The packaging should clearly convey the purpose of the product and the brand behind it."
+          },
+          {
+            "type": "subTextBox",
+            "value": "What’s this product for? What’s the brand behind it?"
+          }
         ]
-    },
-    {
-        "id": "blogInner2",
-        "title": "Blog Title 2",
-        "slug": "blog-two",
-        "author": "Integra Magna",
-        "date": "12 Dec, 2024",
-        "readTime": "3 min",
-        "content": [
-            {
-                "type": "text",
-                "value": "Detailed content for blog two."
-            }
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/1.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/2.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "2. Honesty:"
+          },
+          {
+            "type": "subTextBox",
+            "value": " It is important to accurately represent the product and not oversell it, as this can lead to disappointment and poor sales performance."
+          }
         ]
-    },
-    {
-        "id": "blogInner3",
-        "title": "Blog Title 3",
-        "slug": "blog-three",
-        "author": "Integra Magna",
-        "date": "12 Dec, 2024",
-        "readTime": "3 min",
-        "content": [
-            {
-                "type": "text",
-                "value": "Detailed content for blog Three."
-            }
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/3.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "3. Authenticity:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "To stand out, the packaging should be different and authentic, rather than generic."
+          },
+          {
+            "type": "subTextBox",
+            "value": "Consider using illustration or type-based design instead of product photography if it is a popular choice. If horizontal layouts are the norm, try using a vertical layout to stand out. If contemporary designs are common, try incorporating a retro aesthetic to add a unique touch. Don't be afraid to think outside the box and draw inspiration from unrelated product categories, such as spirit labels, for your chocolate packaging project. Remember to be bold and try something different."
+          }
         ]
-    }
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/4.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "4. Versatility:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "The packaging design should allow for the easy introduction of new product variations or sub-brands."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/5.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/6.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "One key aspect of packaging design adaptability is accommodating different product sizes or variants without needing to completely redesign the packaging."
+          },
+          {
+            "type": "subTextBox",
+            "value": "Another aspect of adaptability is being able to update the design without losing brand recognition. This allows the company to make changes to the design without alienating the customers and ensuring that they can still identify the brand and product easily."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "5. Practicality:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "The packaging should be practical, with the shape, size, and functionality of the container taken into consideration."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/Unlock-the-Power-of-Packaging-Design/7.avif",
+        "alt": "Integra Magna"
+      },
+
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "There are many things one has to consider to keep the maximum Shelf Impact. These 5 rules are the key elements which have to be there to create the perfect packaging for a brand."
+          },
+          {
+            "type": "subTextBox",
+            "value": "Tried and tested!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "The Rule of 3",
+    "title": "The Rule of 3",
+    "slug": "The-Rule-of-3",
+    "author": "Integra Magna",
+    "date": "16 Jun, 2023",
+    "readTime": "3 min",
+    "content": [
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "The Rule of 3 is a principle used in brand communication and storytelling that suggests information is more effectively conveyed when presented in groups of three."
+          },
+          {
+            "type": "subTextBox",
+            "value": "It is based on the idea that people have a tendency to remember and process information more easily when it is organized in threes."
+          },
+          {
+            "type": "subTextBox",
+            "value": "This principle has been widely used in various forms of communication, including advertising, marketing, speeches, and presentations."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Here are some examples of how the Rule of 3 is applied in brand communication:"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "1. Slogans and Taglines:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Many successful brands utilize the Rule of 3 in their slogans and taglines to make them memorable and impactful. For instance:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Nike: \"Just Do It\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "• McDonald's: \"I'm Lovin' It\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "• LifeLock: \"Lock. Alert. Restore.\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "Here, the brands distil their core message into three simple and powerful words, making them easy to remember and associate with the brand."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "2. Product Features:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "When highlighting the features or benefits of a product or service, presenting them in groups of three can be effective. This allows for a concise and focused message that is more likely to resonate with consumers."
+          },
+          {
+            "type": "subTextBox",
+            "value": "For example, Apple's marketing for the iPhone 11 emphasized three main features:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "\"All-day battery life.\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "\"A13 Bionic chip.\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "\"Advanced dual-camera system.\""
+          },
+          {
+            "type": "subTextBox",
+            "value": "By narrowing it down to three key features, Apple effectively communicates the value proposition of the product."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "3. Storytelling:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "The Rule of 3 is commonly used in storytelling to create a more engaging and memorable narrative. In brand communication, this technique can be applied to convey brand values or illustrate the customer journey. Consider the \"Hero's Journey\" structure often used in movies and storytelling:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Setup: Introduce the hero, their ordinary world, and their desires."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Confrontation: The hero faces challenges and obstacles."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Resolution: The hero overcomes the challenges and achieves their goal."
+          },
+          {
+            "type": "subTextBox",
+            "value": "By following this three-part structure, brands can craft compelling narratives that capture the audience's attention and leave a lasting impression."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "4. Presentations:"
+          },
+          {
+            "type": "subTextBox",
+            "value": "When delivering presentations or speeches, the Rule of 3 can be used to structure key points and enhance the overall impact."
+          },
+          {
+            "type": "subTextBox",
+            "value": "Speakers often organize their content into three main sections or ideas, which helps the audience follow along and remember the key takeaways."
+          },
+          {
+            "type": "subTextBox",
+            "value": "\"Steve Jobs was known for using the Rule of 3 in his iconic Apple product launches, where he would unveil a new product by highlighting three significant features or benefits.\""
+          }
+        ]
+      },
+
+      {
+        "type": "text",
+        "value": "These examples demonstrate how the Rule of 3 is applied in brand communication to create memorable messages, engage audiences, and convey information effectively. By harnessing the power of concise and structured communication, brands can increase their impact and leave a lasting impression on their target audience."
+      }
+    ]
+  },
+  {
+    "id": "Ask Vs Guess?",
+    "title": "Ask Vs Guess?",
+    "slug": "ask-vs-guess",
+    "author": "Integra Magna",
+    "date": "28 Oct, 2023",
+    "readTime": "3 min",
+    "content": [
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "Your Visual communication triggers people either to ask or to guess about you. And the best one comes when they guess yet are triggered enough to ask about it as well."
+          },
+          {
+            "type": "subTextBox",
+            "value": "Confused?"
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "How many times have you made a Perception of a billboard Ad of a brand and Moved On?"
+          },
+          {
+            "type": "subTextBox",
+            "value": "Example: A passerby sees a billboard featuring an extravagant watch, with dark, sleek imagery and a tagline catered to exclusivity. They might guess, \"This brand is probably luxurious and expensive,\" and then simply move on without further consideration because they believe the product is out of their budget or not relevant to their interests."
+          },
+
+          {
+            "type": "subTextBox",
+            "value": "The marketing strategy might be targeting a sense of luxury and exclusivity. However, it's not always effective for the general public. Without a clear call to action or some element of relatability, the message doesn't encourage further inquiry."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "value": "/assets/images/thinking/blogs/ask-vs-guess/1.avif",
+        "alt": "Integra Magna"
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "How many times have you seen and got triggered to inquire about that brand or product without thinking much about it?"
+          },
+          {
+            "type": "subTextBox",
+            "value": "Example: A consumer comes across a social media ad showing a video of a new, innovative fitness gadget, demonstrating its unique features through a dynamic workout. The ad ends with a compelling call-to-action, like a limited-time discount. Intrigued by its capabilities, the consumer is prompted to click the ad to learn more about the product."
+          },
+
+          {
+            "type": "subTextBox",
+            "value": "It captures attention with something unfamiliar (innovation) and immediately follows up with a call to action. By demonstrating value and creating a sense of urgency (limited-time offer), it encourages direct engagement, leading the consumer into the sales funnel."
+          }
+        ]
+      },
+
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "And How many times have you made a Guess and then asked about it?"
+          },
+          {
+            "type": "subTextBox",
+            "value": "Example: At a trade show, a company showcases a prototype of an environmentally-friendly vehicle, not yet on the market. It looks stylish and futuristic. Attendees might guess, \"This car must be high-tech and eco-friendly,\" but their curiosity about performance specifics, price, and availability compels them to engage with the staff at the booth."
+          },
+
+          {
+            "type": "subTextBox",
+            "value": "This approach is interactive and inviting. It allows consumers to form an initial impression, sparking curiosity, and then provides them with the opportunity for direct engagement. Here, firsthand information and real-time feedback are invaluable. This strategy builds a foundation for customer relations and brand trust."
+          },
+
+          {
+            "type": "subTextBox",
+            "value": "It's always best to hit the 3rd point in your Brand positioning and Marketing approach."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "How? Just make sure you include/ take care of these points in your GTM Plans."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Clarity and Relevance: It's not just about having a visually appealing message; it's about making it relevant. Tailoring content based on demographic and psychographic factors is key."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Engagement and Storytelling: Tell a story that your audience wants to be a part of. This strategy includes engaging content, interactive campaigns, social media engagement, and excellent customer service. It’s about creating an experience around your brand."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Consistency and Authenticity: Honest communication, upholding values, and social proof can significantly influence decision-making processes."
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Value and Call-to-Action (CTA): Always communicate the value your product or service is offering. Why should someone care about your product? Also, direct them with a clear CTA. What step should they take next, and why is it to their benefit?"
+          },
+          {
+            "type": "subTextBox",
+            "value": "• Innovation and Adaptability: Be willing to try new marketing techniques and platforms, and be ready to adapt to changing scenarios, consumer behaviours, and feedback. This flexibility helps you stay ahead in the market."
+          }
+        ]
+      },
+      {
+        "type": "textBox",
+        "value": [
+          {
+            "type": "subTextBox",
+            "value": "Good marketing and branding don't just capture attention; they engage people emotionally, build trust, and foster relationships, turning an audience into ambassadors for the brand."
+          },
+          {
+            "type": "subTextBox",
+            "value": "This is my take, have you experienced the same?"
+          }
+        ]
+      }
+    ]
+  }
 ]

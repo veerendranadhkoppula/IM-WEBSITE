@@ -68,57 +68,57 @@ const Accordiannew = ({ openFormModule }) => {
         </>
       ),
     },
-    // {
-    //     title: "UX/UI Designer",
-    //     type: "Internship",
-    //     mode: "In-office",
-    //     key: "uui",  // Add the key for each job to map to form
-    //     content: (
-    //         <>
-    //             <p>
-    //                 We are looking for a UX UI Intern at Integra Magna located in Indore. As a UX UI Intern, you will be involved in the day-to-day tasks of designing and implementing user interfaces for our clients. This is an on-site role that requires you to be based in Indore.
-    //             </p>
-    //             <br />
-    //             <h4>- Responsibilities and Duties:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Assist in user research and usability testing.</li>
-    //                 <li>Create wireframes and interactive prototypes.</li>
-    //                 <li>Design visual elements and maintain consistency.</li>
-    //                 <li>Collaborate with cross-functional teams.</li>
-    //                 <li>Conduct competitive analysis.</li>
-    //                 <li>Support ongoing projects and make revisions.</li>
-    //                 <li>Communicate design ideas and respond to feedback.</li>
-    //                 <li>Organize and manage design files.</li>
-    //                 <li>Participate in brainstorming sessions.</li>
-    //                 <li>Conduct user testing and iterate designs.</li>
-    //             </ul>
-    //             <br />
-    //             <h4>- Only those candidates can apply who:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Are available for full time (in-office) internship.</li>
-    //                 <li>Can start the internship immediately or within 15 days.</li>
-    //                 <li>Are available for a duration of 6 months (minimum).</li>
-    //             </ul>
-    //             <br />
-    //             <h4>- Required Experience and Qualifications:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Proficiency in design software tools such as Adobe Creative Suite, Figma.</li>
-    //                 <li>Experience with wireframing and prototyping tools.</li>
-    //                 <li>Knowledge of responsive design and mobile-first approach.</li>
-    //             </ul>
+    {
+        title: "UX/UI Designer",
+        type: "Internship",
+        mode: "In-office",
+        key: "uui",  // Add the key for each job to map to form
+        content: (
+            <>
+                <p>
+                    We are looking for a UX UI Intern at Integra Magna located in Indore. As a UX UI Intern, you will be involved in the day-to-day tasks of designing and implementing user interfaces for our clients. This is an on-site role that requires you to be based in Indore.
+                </p>
+                <br />
+                <h4>- Responsibilities and Duties:</h4>
+                <br />
+                <ul>
+                    <li>Assist in user research and usability testing.</li>
+                    <li>Create wireframes and interactive prototypes.</li>
+                    <li>Design visual elements and maintain consistency.</li>
+                    <li>Collaborate with cross-functional teams.</li>
+                    <li>Conduct competitive analysis.</li>
+                    <li>Support ongoing projects and make revisions.</li>
+                    <li>Communicate design ideas and respond to feedback.</li>
+                    <li>Organize and manage design files.</li>
+                    <li>Participate in brainstorming sessions.</li>
+                    <li>Conduct user testing and iterate designs.</li>
+                </ul>
+                <br />
+                <h4>- Only those candidates can apply who:</h4>
+                <br />
+                <ul>
+                    <li>Are available for full time (in-office) internship.</li>
+                    <li>Can start the internship immediately or within 15 days.</li>
+                    <li>Are available for a duration of 6 months (minimum).</li>
+                </ul>
+                <br />
+                <h4>- Required Experience and Qualifications:</h4>
+                <br />
+                <ul>
+                    <li>Proficiency in design software tools such as Adobe Creative Suite, Figma.</li>
+                    <li>Experience with wireframing and prototyping tools.</li>
+                    <li>Knowledge of responsive design and mobile-first approach.</li>
+                </ul>
 
-    //             <button
-    //                 className={accordianStyles.apply_button}
-    //                 onClick={() => openFormModule("uui")}
-    //             >
-    //                 <strong>APPLY NOW</strong>
-    //             </button>
-    //         </>
-    //     ),
-    // },
+                <button
+                    className={accordianStyles.apply_button}
+                    onClick={() => openFormModule("uui")}
+                >
+                    <strong>APPLY NOW</strong>
+                </button>
+            </>
+        ),
+    },
     {
       title: "Graphic Designer",
       type: "Internship",
@@ -378,59 +378,59 @@ const Accordiannew = ({ openFormModule }) => {
     //         </>
     //     ),
     // },
-    // {
-    //     title: "Web Developer",
-    //     type: "Internship",
-    //     mode: "In-office",
-    //     key: "wdi",
-    //     content: (
-    //         <>
+    {
+        title: "Web Developer",
+        type: "Internship",
+        mode: "In-office",
+        key: "wdi",
+        content: (
+            <>
 
-    //             <p>
-    //                 As a Web Developer Intern, you will play a crucial role in supporting our web development projects and building stunning digital experiences. This internship is designed for individuals passionate about web development, offering the opportunity to gain practical experience in front-end and back-end development, debugging, and creating responsive websites.
-    //             </p>
-    //             <br />
-    //             <h4>- Responsibilities and Duties:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
-    //                 <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
-    //                 <li>Work on both front-end and back-end development tasks.</li>
-    //                 <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
-    //                 <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
-    //                 <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
-    //                 <li>Work on both front-end and back-end development tasks.</li>
-    //                 <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
-    //             </ul>
-    //             <br />
-    //             <h4>- Only those candidates can apply who:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Are available for a full-time (in-office) internship.</li>
-    //                 <li>Can start the internship immediately or within 15 days.</li>
-    //                 <li>Are available for a duration of 3 months (minimum).</li>
-    //             </ul>
-    //             <br />
-    //             <h4>- Required Experience and Qualifications:</h4>
-    //             <br />
-    //             <ul>
-    //                 <li>Proficiency in HTML, CSS, and JavaScript (core front-end skills).</li>
-    //                 <li>Familiarity with React or Next.js for modern web applications.</li>
-    //                 <li>Basic understanding of Node.js for back-end development.</li>
-    //                 <li>Proficiency in building responsive websites that adapt seamlessly across devices and screen sizes.</li>
-    //                 <li>Strong debugging skills to identify and resolve code issues efficiently.</li>
+                <p>
+                    As a Web Developer Intern, you will play a crucial role in supporting our web development projects and building stunning digital experiences. This internship is designed for individuals passionate about web development, offering the opportunity to gain practical experience in front-end and back-end development, debugging, and creating responsive websites.
+                </p>
+                <br />
+                <h4>- Responsibilities and Duties:</h4>
+                <br />
+                <ul>
+                    <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
+                    <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
+                    <li>Work on both front-end and back-end development tasks.</li>
+                    <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
+                    <li>Develop and maintain responsive, user-friendly websites and web applications.</li>
+                    <li>Collaborate with the team to design, code, and debug modern web solutions.</li>
+                    <li>Work on both front-end and back-end development tasks.</li>
+                    <li>Contribute innovative ideas and solutions to enhance user experience and functionality.</li>
+                </ul>
+                <br />
+                <h4>- Only those candidates can apply who:</h4>
+                <br />
+                <ul>
+                    <li>Are available for a full-time (in-office) internship.</li>
+                    <li>Can start the internship immediately or within 15 days.</li>
+                    <li>Are available for a duration of 3 months (minimum).</li>
+                </ul>
+                <br />
+                <h4>- Required Experience and Qualifications:</h4>
+                <br />
+                <ul>
+                    <li>Proficiency in HTML, CSS, and JavaScript (core front-end skills).</li>
+                    <li>Familiarity with React or Next.js for modern web applications.</li>
+                    <li>Basic understanding of Node.js for back-end development.</li>
+                    <li>Proficiency in building responsive websites that adapt seamlessly across devices and screen sizes.</li>
+                    <li>Strong debugging skills to identify and resolve code issues efficiently.</li>
 
-    //             </ul>
+                </ul>
 
-    //             <button
-    //                 className={accordianStyles.apply_button}
-    //                 onClick={() => openFormModule("wdi")}
-    //             >
-    //                 <strong>APPLY NOW</strong>
-    //             </button>
-    //         </>
-    //     ),
-    // },
+                <button
+                    className={accordianStyles.apply_button}
+                    onClick={() => openFormModule("wdi")}
+                >
+                    <strong>APPLY NOW</strong>
+                </button>
+            </>
+        ),
+    },
   ];
 
   return (

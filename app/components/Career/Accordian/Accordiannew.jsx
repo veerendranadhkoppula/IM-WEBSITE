@@ -487,90 +487,90 @@ const Accordiannew = ({ openFormModule }) => {
         </>
       ),
     },
-    {
-      title: "Web Developer",
-      type: "Internship",
-      mode: "In-office",
-      key: "wdi",
-      content: (
-        <>
-          <p>
-            As a Web Developer Intern, you will play a crucial role in
-            supporting our web development projects and building stunning
-            digital experiences. This internship is designed for individuals
-            passionate about web development, offering the opportunity to gain
-            practical experience in front-end and back-end development,
-            debugging, and creating responsive websites.
-          </p>
-          <br />
-          <h4>- Responsibilities and Duties:</h4>
-          <br />
-          <ul>
-            <li>
-              Develop and maintain responsive, user-friendly websites and web
-              applications.
-            </li>
-            <li>
-              Collaborate with the team to design, code, and debug modern web
-              solutions.
-            </li>
-            <li>Work on both front-end and back-end development tasks.</li>
-            <li>
-              Contribute innovative ideas and solutions to enhance user
-              experience and functionality.
-            </li>
-            <li>
-              Develop and maintain responsive, user-friendly websites and web
-              applications.
-            </li>
-            <li>
-              Collaborate with the team to design, code, and debug modern web
-              solutions.
-            </li>
-            <li>Work on both front-end and back-end development tasks.</li>
-            <li>
-              Contribute innovative ideas and solutions to enhance user
-              experience and functionality.
-            </li>
-          </ul>
-          <br />
-          <h4>- Only those candidates can apply who:</h4>
-          <br />
-          <ul>
-            <li>Are available for a full-time (in-office) internship.</li>
-            <li>Can start the internship immediately or within 15 days.</li>
-            <li>Are available for a duration of 6 months (minimum).</li>
-          </ul>
-          <br />
-          <h4>- Required Experience and Qualifications:</h4>
-          <br />
-          <ul>
-            <li>
-              Proficiency in HTML, CSS, and JavaScript (core front-end skills).
-            </li>
-            <li>
-              Familiarity with React or Next.js for modern web applications.
-            </li>
-            <li>Basic understanding of Node.js for back-end development.</li>
-            <li>
-              Proficiency in building responsive websites that adapt seamlessly
-              across devices and screen sizes.
-            </li>
-            <li>
-              Strong debugging skills to identify and resolve code issues
-              efficiently.
-            </li>
-          </ul>
+    // {
+    //   title: "Web Developer",
+    //   type: "Internship",
+    //   mode: "In-office",
+    //   key: "wdi",
+    //   content: (
+    //     <>
+    //       <p>
+    //         As a Web Developer Intern, you will play a crucial role in
+    //         supporting our web development projects and building stunning
+    //         digital experiences. This internship is designed for individuals
+    //         passionate about web development, offering the opportunity to gain
+    //         practical experience in front-end and back-end development,
+    //         debugging, and creating responsive websites.
+    //       </p>
+    //       <br />
+    //       <h4>- Responsibilities and Duties:</h4>
+    //       <br />
+    //       <ul>
+    //         <li>
+    //           Develop and maintain responsive, user-friendly websites and web
+    //           applications.
+    //         </li>
+    //         <li>
+    //           Collaborate with the team to design, code, and debug modern web
+    //           solutions.
+    //         </li>
+    //         <li>Work on both front-end and back-end development tasks.</li>
+    //         <li>
+    //           Contribute innovative ideas and solutions to enhance user
+    //           experience and functionality.
+    //         </li>
+    //         <li>
+    //           Develop and maintain responsive, user-friendly websites and web
+    //           applications.
+    //         </li>
+    //         <li>
+    //           Collaborate with the team to design, code, and debug modern web
+    //           solutions.
+    //         </li>
+    //         <li>Work on both front-end and back-end development tasks.</li>
+    //         <li>
+    //           Contribute innovative ideas and solutions to enhance user
+    //           experience and functionality.
+    //         </li>
+    //       </ul>
+    //       <br />
+    //       <h4>- Only those candidates can apply who:</h4>
+    //       <br />
+    //       <ul>
+    //         <li>Are available for a full-time (in-office) internship.</li>
+    //         <li>Can start the internship immediately or within 15 days.</li>
+    //         <li>Are available for a duration of 6 months (minimum).</li>
+    //       </ul>
+    //       <br />
+    //       <h4>- Required Experience and Qualifications:</h4>
+    //       <br />
+    //       <ul>
+    //         <li>
+    //           Proficiency in HTML, CSS, and JavaScript (core front-end skills).
+    //         </li>
+    //         <li>
+    //           Familiarity with React or Next.js for modern web applications.
+    //         </li>
+    //         <li>Basic understanding of Node.js for back-end development.</li>
+    //         <li>
+    //           Proficiency in building responsive websites that adapt seamlessly
+    //           across devices and screen sizes.
+    //         </li>
+    //         <li>
+    //           Strong debugging skills to identify and resolve code issues
+    //           efficiently.
+    //         </li>
+    //       </ul>
 
-          <button
-            className={accordianStyles.apply_button}
-            onClick={() => openFormModule("wdi")}
-          >
-            <strong>APPLY NOW</strong>
-          </button>
-        </>
-      ),
-    },
+    //       <button
+    //         className={accordianStyles.apply_button}
+    //         onClick={() => openFormModule("wdi")}
+    //       >
+    //         <strong>APPLY NOW</strong>
+    //       </button>
+    //     </>
+    //   ),
+    // },
   ];
 
   return (

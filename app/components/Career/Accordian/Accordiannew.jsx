@@ -539,7 +539,7 @@ const Accordiannew = ({ openFormModule }) => {
           <ul>
             <li>Are available for a full-time (in-office) internship.</li>
             <li>Can start the internship immediately or within 15 days.</li>
-            <li>Are available for a duration of 3 months (minimum).</li>
+            <li>Are available for a duration of 6 months (minimum).</li>
           </ul>
           <br />
           <h4>- Required Experience and Qualifications:</h4>

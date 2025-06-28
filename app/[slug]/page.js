@@ -1,10 +1,17 @@
 import blogs from "@/app/json/blogInnerData.json";
 import BlogContent from "@/app/components/Thinking/BlogContent";
 import styles from "@/app/styles/BlogInternal.module.css";
-export default function BlogPage({ params }) {
+export default async function BlogPage({ params }) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
-  if (!blog) return <div>Blog not found</div>;
+ 
+ if (!blog) {
+    // Trigger Next.js's built-in not-found page
+    // This must be imported from 'next/navigation'
+    const { notFound } = await import('next/navigation');
+    notFound();
+  }
+
 
   return (
     <div className={styles.blogInternalMain}>

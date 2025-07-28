@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Integra Magna | Branding, Strategy, and UX UI Design Agency</title>
         <meta charset="UTF-8" />
         <meta property="og:title" content="Integra Magna | Branding & UX/UI Design Agency" />
@@ -139,7 +139,7 @@ export default function Home() {
             ],
           })}
         </script>
-        {/* Facebook Pixel Code */}
+  
         <script>
           {`
             !function(f,b,e,v,n,t,s)
@@ -162,7 +162,7 @@ export default function Home() {
             src="https://www.facebook.com/tr?id=1034189087944346&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* Google Analytics */}
+      
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZT78R1EN8"></script>
         <script>
           {`
@@ -175,7 +175,7 @@ export default function Home() {
             });
           `}
         </script>
-      </Head>
+      </Head> */}
       <div className={landingStyles.content}>
 
         <HeroHeading />

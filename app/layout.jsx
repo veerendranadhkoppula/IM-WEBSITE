@@ -10,6 +10,7 @@ import CaseStudyHeader from "@/app/components/Case-Studies/CaseStudyHeader";
 import { animatePageIn, animatePageOut } from "@/animations"; // Ensure path is correct
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import Script from 'next/script'
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -79,6 +80,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+      <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-PZT78R1EN8`}
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PZT78R1EN8', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
 
         {/* Transition Overlay */}
         <div id="transition-overlay" className={`transitionOverlay ${isInitialLoad ? "" : "hidden"}`}

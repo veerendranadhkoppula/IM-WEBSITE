@@ -70,31 +70,27 @@ export default function Home() {
       <Head>
         <title>Integra Magna | Branding, Strategy, and UX UI Design Agency</title>
         <meta charset="UTF-8" />
-        <meta property="og:title" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
+        <meta property="og:title" content="Integra Magna | Branding & UX/UI Design Agency" />
+        <meta property="og:description" content="Integra Magna is a strategic design agency that creates the digital product and brand experiences that elevate companies to their next exciting chapter." />
         <meta property="og:url" content="https://integramagna.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Integra Magna" />
-
         <meta itemprop="name" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
         <meta itemprop="description"
           content="Integra Magna is a strategic design agency that creates the digital product and brand experiences that elevate companies to their next exciting chapter." />
         <meta itemprop="image" content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-
-        <meta name="twitter:card"
-          content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
-        <meta name="twitter:title" content="Integra Magna | Branding, Strategy, and UX UI Design Agency" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+        <meta name="twitter:title" content="Integra Magna | Branding & UX/UI Design Agency" />
         <meta name="twitter:site" content="@Integra_Magna" />
         <meta name="p:domain_verify" content="805f252a9d4ede6c6a9a0dfbcca2183c" />
-
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <meta name="image" property="image"
           content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
-
-        <meta name="image" property="og:image"
-          content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
+        <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/integramagna.com/assets/social_thumbnail.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta name="description"
@@ -102,7 +98,6 @@ export default function Home() {
         <meta name="keywords"
           content="Creative Design agency, UX UI Design, website development, best website design, Product design, UX Design, UI Design, branding, Marketing plans, Integra Magna, design" />
         <meta name="author" content="Integra Magna" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://integramagna.com" />
         <script type="application/ld+json">
@@ -129,7 +124,6 @@ export default function Home() {
             ],
           })}
         </script>
-
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "http://schema.org",
@@ -145,7 +139,6 @@ export default function Home() {
             ],
           })}
         </script>
-
         {/* Facebook Pixel Code */}
         <script>
           {`
@@ -169,7 +162,6 @@ export default function Home() {
             src="https://www.facebook.com/tr?id=1034189087944346&ev=PageView&noscript=1"
           />
         </noscript>
-
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZT78R1EN8"></script>
         <script>

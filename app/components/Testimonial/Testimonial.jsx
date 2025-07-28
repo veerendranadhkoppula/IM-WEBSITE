@@ -67,12 +67,7 @@ const Testimonial = () => {
               <div className={landingStyles.body_card}>
                 <div className={landingStyles.slider_text}>
                   <p className={landingStyles.top8}>
-                    <span className={landingStyles.name}>Karan said</span> IM always has the
-                    fundamentals covered. They start painting the canvas only
-                    after understanding their customer&apos;s audience.
-                    Furthermore, the team has built deep capabilities across
-                    all dimensions of brand communication, staying up to speed
-                    with the evolving landscape Channels.
+                    <span className={landingStyles.name}>Karan said</span> Working with IM has been seamless. From sharp marketing designs for our luxury expos to stunning promo and product videos, they consistently deliver with clarity, creativity, and intent. A true creative partner who just gets it.
                   </p>
                   <div className={landingStyles.testi_identity}>
                     <div className={landingStyles.identity_img}>

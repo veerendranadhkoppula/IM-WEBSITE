@@ -36,11 +36,6 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: 'https://www.integramagna.com/privacy-policy',
-      lastModified: new Date(),
-      priority: 0.3,
-    },
-    {
       url: 'https://www.integramagna.com/work/boat',
       lastModified: new Date(),
       priority: 0.7,

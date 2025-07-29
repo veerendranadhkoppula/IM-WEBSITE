@@ -36,7 +36,7 @@ const Services = () => {
             />
 
             <SlideUpText
-              text={`We redefine corporate landscapes with our visionary design ethos. Our comprehensive services are tailored to enhance your entire business ecosystem. We&apos;re all about giving your business the edge it deserves.`}
+              text={`We redefine corporate landscapes with our visionary design ethos. Our comprehensive services are tailored to enhance your entire business ecosystem. We're all about giving your business the edge it deserves.`}
               className={`${servicesStyles.Service_hero_subheading} headTrans`}
               Tag="span"
               delay={1.3}

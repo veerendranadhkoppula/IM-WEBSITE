@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef, useState } from 'react';
 // import Image from "next/legacy/image";
 import Image from 'next/image'
@@ -11,7 +12,10 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'; // Ensure this is installed
 import SlideUpText from "@/app/components/SlideUpText";
 // import ViewporTextAnim from '@/app/components/ViewporTextAnim';
-import MultiStepForm from '@/app/components/Career/Accordian/MultiStepForm';
+const MultiStepForm = dynamic(
+  () => import('@/app/components/Career/Accordian/MultiStepForm'),
+  { ssr: false }
+);
 import Accordiannew from "@/app/components/Career/Accordian/Accordiannew";
 import AnimateImage from "@/app/components/AnimateImage";
 // Dynamic import of Accordion to improve performance
@@ -40,20 +44,20 @@ import gridImageEight from "../assets/career/grid-images/integra-magna-career-gr
 gsap.registerPlugin(ScrollTrigger);
 
 const designationKey = [
-  { Key: 'gdi', Folder: 'graphic_intern', Designation: 'Graphic Design - Internship' },
-  { Key: 'gi', Folder: 'graphic', Designation: 'Graphic Design' },
-  { Key: 'mgdi', Folder: 'motion_graphic_design_intern', Designation: 'Motion Graphic Design - Internship' },
-  { Key: 'mgd', Folder: 'motion_graphic_design', Designation: 'Motion Graphic Design' },
-  { Key: 'sami', Folder: 'sales_and_marketing_intern', Designation: 'Sales and Marketing - Internship' },
-  { Key: 'sam', Folder: 'sales_and_marketing', Designation: 'Sales and Marketing' },
-  { Key: 'smmi', Folder: 'social_media_manager_intern', Designation: 'Social Media Manager - Internship' },
-  { Key: 'smm', Folder: 'social_media_manager', Designation: 'Social Media Manager' },
-  { Key: 'sg', Folder: 'sr_graphic', Designation: 'Sr. Graphic Designer' },
-  { Key: 'smg', Folder: 'sr_motion_graphic', Designation: 'Sr. Motion Graphic Designer' },
-  { Key: 'uui', Folder: 'ux_ui_intern', Designation: 'UX UI - Internship' },
-  { Key: 'uu', Folder: 'ux_ui', Designation: 'UX UI' },
-  { Key: 'wdi', Folder: 'web_development_intern', Designation: 'Web Development - Internship' },
-  { Key: 'wd', Folder: 'web_development', Designation: 'Web Development' }
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/21bf64476322818aa13ff0ef5092f272' , Key: 'gdi', Folder: 'graphic_intern', Designation: 'Graphic Design - Internship' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/214f6447632281589e89ef4e4b93641b' , Key: 'gi', Folder: 'graphic', Designation: 'Graphic Design' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281d48f1cd290e5c3b34f' , Key: 'mgdi', Folder: 'motion_graphic_design_intern', Designation: 'Motion Graphic Design - Internship' },
+  { notion: '-' , Key: 'mgd', Folder: 'motion_graphic_design', Designation: 'Motion Graphic Design' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/224f64476322816ebf60e07eac7ada49' , Key: 'sami', Folder: 'sales_and_marketing_intern', Designation: 'Sales and Marketing - Internship' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281b08d4beb661deb8249' , Key: 'sam', Folder: 'sales_and_marketing', Designation: 'Sales and Marketing' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281339b06f8aefdf430c6' , Key: 'smmi', Folder: 'social_media_manager_intern', Designation: 'Social Media Manager - Internship' },
+  { notion: '-' , Key: 'smm', Folder: 'social_media_manager', Designation: 'Social Media Manager' },
+  { notion: '-' , Key: 'sg', Folder: 'sr_graphic', Designation: 'Sr. Graphic Designer' },
+  { notion: '-' , Key: 'smg', Folder: 'sr_motion_graphic', Designation: 'Sr. Motion Graphic Designer' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/216f644763228110848ee6762e9ff6be' , Key: 'uui', Folder: 'ux_ui_intern', Designation: 'UX UI - Internship' },
+  { notion: '-' , Key: 'uu', Folder: 'ux_ui', Designation: 'UX UI' },
+  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/217f644763228165a251d46e0ea47b13' , Key: 'wdi', Folder: 'web_development_intern', Designation: 'Web Development - Internship' },
+  { notion: '-' , Key: 'wd', Folder: 'web_development', Designation: 'Web Development' }
 ];
 
 const Career = () => {
@@ -85,8 +89,8 @@ const Career = () => {
   const openFormModule = (key) => {
     const formKey = designationKey.find((item) => item.Key === key);
     if (formKey) {
-      // console.log("Opening form for:", formKey.Designation); // Debugging log
-      setFormName(formKey.Designation);
+      // console.log("Opening form for: ", formKey.notion);
+      setFormName(formKey.notion);
       setFormVisible(true);
     }
   };
@@ -96,6 +100,42 @@ const Career = () => {
     setFormVisible(false);
   };
 
+  useEffect(() => {
+    let scrollY = 0;
+
+    if (formVisible) {
+      // Store scroll position
+      scrollY = window.scrollY;
+
+      // Lock scroll
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+
+      // Block touch scrolling on iOS
+      const preventTouch = (e) => e.preventDefault();
+      document.addEventListener('touchmove', preventTouch, { passive: false });
+
+      return () => {
+        // Unlock scroll
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+
+        // Restore scroll position
+        window.scrollTo(0, scrollY);
+
+        // Remove touch block
+        document.removeEventListener('touchmove', preventTouch);
+      };
+    }
+  }, [formVisible]);
 
   return (
     <>

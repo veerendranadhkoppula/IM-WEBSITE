@@ -1,163 +1,66 @@
-import { useState, useRef } from "react";
-import AWS from 'aws-sdk';
+"use client";
 import Image from "next/legacy/image";
 import crossIcon from "@/app/assets/career/cross-icon.svg";
 import careerStyles from "@/app/styles/Career.module.css";
-import { UploadButton } from "@/app/utils/uploadthing";
-import { upload } from '@vercel/blob/client';
-import { put } from "@vercel/blob";
-
+import { useEffect, useRef } from "react";
 
 const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
-  const [step, setStep] = useState(1);
-  const inputFileRef = useRef(null);
-  const [blob, setBlob] = useState(null);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    contact: "",
-    resume: null,
-    portfolioLink: "",
-  });
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState("");
-
-  const validateStep = () => {
-    let newErrors = {};
-
-    if (step === 1 && !formData.fullName) {
-      newErrors.fullName = "Please enter your full name";
-    }
-    if (step === 2) {
-      if (!formData.email) {
-        newErrors.email = "Please enter your email address";
-      } else if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
-        newErrors.email = "Please enter a valid email address";
-      }
-    }
-    if (step === 3 && !/^\d{10}$/.test(formData.contact)) {
-      newErrors.contact = "Please enter a valid 10-digit mobile number";
-    }
-    if (step === 4 && (!formData.resume || !formData.resume.startsWith("https://"))) {
-      newErrors.resume = "Please upload your resume";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleNext = () => {
-    if (validateStep()) {
-      setStep((prevStep) => prevStep + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    setStep((prevStep) => prevStep - 1);
-  };
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-
-    if (name === "resume" && files) {
-      // console.log("File selected:", files[0]);
-      setFormData({ ...formData, resume: files[0] });
+  const modalRef = useRef(null);
+  // Scroll lock
+  useEffect(() => {
+    if (formVisible) {
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     } else {
-      setFormData({ ...formData, [name]: value });
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     }
-  };
+    return () => {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
+  }, [formVisible]);
 
-  const handleFileUpload = async () => {
-    if (!inputFileRef.current?.files?.[0]) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        resume: "Please select a file to upload.",
-      }));
-      return false;
-    }
+    useEffect(() => {
+    if (!formVisible || !modalRef.current) return;
 
-    const file = inputFileRef.current.files[0];
+    const focusableSelectors = [
+      'a[href]',
+      'button',
+      'textarea',
+      'input',
+      'select',
+      'iframe',
+      '[tabindex]:not([tabindex="-1"])'
+    ];
 
-    try {
-      // Retrieve the token from environment variables
-      const token = process.env.NEXT_PUBLIC_BLOB_READ_WRITE_TOKEN;
+    const focusableEls = modalRef.current.querySelectorAll(focusableSelectors.join(','));
+    const firstEl = focusableEls[0];
+    const lastEl = focusableEls[focusableEls.length - 1];
 
-      if (!token) {
-        throw new Error("BLOB_READ_WRITE_TOKEN is not set in environment variables.");
-      }
+    if (firstEl) firstEl.focus();
 
-      // Upload the file using Vercel Blob
-      const { url } = await put(file.name, file, {
-        access: "public",
-        token,
-      });
-
-      // console.log("File uploaded successfully:", url);
-      formData.resume = url;
-      // Save the uploaded file URL in formData
-      setFormData((prevData) => ({
-        ...prevData,
-        resume: url, // Update formData.resume with the uploaded file URL
-      }));
-
-      return true; // File upload successful
-    } catch (error) {
-      // console.error("File upload failed:", error);
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        resume: "File upload failed. Please try again.",
-      }));
-      return false; // File upload failed
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const isValid = validateStep();
-    if (isValid) {
-      setIsSubmitting(true);
-      setSubmitError('');
-
-      try {
-
-        // Step 2: Submit Form Data
-        // console.log('Submitting form...');
-        const formDataToSend = {
-          fullName: formData.fullName,
-          email: formData.email,
-          contact: formData.contact,
-          resumeLink: formData.resume, // Ensure this is the uploaded file URL
-          portfolioLink: formData.portfolioLink || 'Not provided',
-          position: formName,
-        };
-
-        const formResponse = await fetch('/api/submitCareerForm', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formDataToSend),
-        });
-
-        if (!formResponse.ok) {
-          const formError = await formResponse.json();
-          throw new Error(formError.message || 'Failed to submit form');
+    function handleKeyDown(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          // Shift + Tab
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          // Tab
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
         }
-
-        // console.log('Form submitted successfully');
-        setStep(6); // Move to the success step
-      } catch (error) {
-        // console.error('Error during submission:', error);
-        setSubmitError(error.message || 'An error occurred. Please try again.');
-      } finally {
-        setIsSubmitting(false);
       }
     }
-  };
 
-
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [formVisible]);
 
   return (
     <section className={careerStyles.popupform_s_c} onClick={closeFormModule}>
@@ -174,210 +77,19 @@ const MultiStepForm = ({ formName, closeFormModule, formVisible }) => {
             <Image src={crossIcon} alt="Close" />
           </button>
         </div>
-
-        <div className={careerStyles.popupform_heading_s}>
-          <div className={careerStyles.h_page_progress_number_c}>
-            <h3 className={careerStyles.p_f_h_designation}>{formName}</h3>
-            <div className={careerStyles.form_progress_counter}>{step}/6</div>
-          </div>
-          <p className={careerStyles.form_faq}>
-            Please complete all sections of this application form. Ensure your contact information is accurate as this will be our primary means of communication with you.
-          </p>
+        <div className={careerStyles.form_holder}>
+          <iframe
+            src={`${formName}?theme=light`}
+            width="100%"
+            style={{
+              background: '#ffffff', /* Force light background */
+              colorScheme: 'light' /* Force browser light UI for form controls */
+            }}
+            height="800px"
+            frameBorder="0"
+            allowFullScreen
+          />
         </div>
-
-        {submitError && (
-          <div className={careerStyles.form_error}>
-            {submitError}
-          </div>
-        )}
-
-        <form className={careerStyles.form_holder} onSubmit={handleSubmit}>
-          {step === 1 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <div className={careerStyles.lable_input_container}>
-                <label htmlFor="fullName">Your full name</label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  className={careerStyles.input_field}
-                  value={formData.fullName}
-                  onChange={handleChange}
-                />
-                {errors.fullName && (
-                  <div className={careerStyles.form_error}>
-                    {errors.fullName}
-                  </div>
-                )}
-              </div>
-
-              <div className={careerStyles.nex_prev_button_c}>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
-              </div>
-            </fieldset>
-          )}
-
-          {step === 2 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <div className={careerStyles.lable_input_container}>
-                <label htmlFor="email">Your email address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className={careerStyles.input_field}
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && (
-                  <div className={careerStyles.form_error}>{errors.email}</div>
-                )}
-              </div>
-
-              <div className={careerStyles.nex_prev_button_c}>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handlePrevious}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
-              </div>
-            </fieldset>
-          )}
-
-          {step === 3 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <div className={careerStyles.lable_input_container}>
-                <label htmlFor="contact">Your mobile number</label>
-                <input
-                  type="tel"
-                  id="contact"
-                  name="contact"
-                  className={careerStyles.input_field}
-                  value={formData.contact}
-                  onChange={handleChange}
-                />
-                {errors.contact && (
-                  <div className={careerStyles.form_error}>
-                    {errors.contact}
-                  </div>
-                )}
-              </div>
-
-              <div className={careerStyles.nex_prev_button_c}>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handlePrevious}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
-              </div>
-            </fieldset>
-          )}
-
-          {step === 4 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <div className={careerStyles.lable_input_container}>
-                <label htmlFor="resume">Upload your resume</label>
-                <input name="file" ref={inputFileRef} type="file" required />
-
-                {errors.resume && (
-                  <div className={careerStyles.form_error}>{errors.resume}</div>
-                )}
-              </div>
-
-              <div className={careerStyles.nex_prev_button_c}>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handlePrevious}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={async () => {
-                    const isUploaded = await handleFileUpload();
-                    if (isUploaded) {
-                      handleNext(); // Proceed to the next step
-                    }
-                  }}
-                >
-                  Next
-                </button>
-              </div>
-            </fieldset>
-          )}
-
-          {step === 5 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <div className={careerStyles.lable_input_container}>
-                <label htmlFor="portfolioLink">
-                  Share your portfolio (optional)
-                </label>
-                <input
-                  type="url"
-                  id="portfolioLink"
-                  name="portfolioLink"
-                  className={careerStyles.input_field}
-                  value={formData.portfolioLink}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className={careerStyles.nex_prev_button_c}>
-                <button
-                  type="button"
-                  className={careerStyles.action_button}
-                  onClick={handlePrevious}
-                >
-                  Previous
-                </button>
-                <button
-                  type="submit"
-                  className={careerStyles.action_button}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
-                </button>
-              </div>
-            </fieldset>
-          )}
-
-          {step === 6 && (
-            <fieldset className={careerStyles.form_field_set}>
-              <h5>Thank You for Your Application!</h5>
-              <p>
-                We appreciate your interest in Integra Magna. Our team will
-                review your application and contact you if we need further
-                information or to schedule an interview. Good luck!
-              </p>
-            </fieldset>
-          )}
-        </form>
       </div>
     </section>
   );

@@ -719,8 +719,8 @@
   .form_close_button_c {
     transform: rotate(45deg);
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 15px;
   }
   
   .form_close_button_c button {
@@ -731,7 +731,7 @@
   
   .form_container {
     background-color: #fff;
-    padding: 40px;
+    padding: 40px 0px;
     position: relative;
     max-width: 600px;
     width: 100%;
@@ -827,7 +827,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 40px;
+    padding: 40px 0px;
     background: #fff;
     border-radius: 8px;
   }

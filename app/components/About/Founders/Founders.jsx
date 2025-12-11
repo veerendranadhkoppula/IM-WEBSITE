@@ -72,7 +72,7 @@ function Founders() {
           </div>
           <div className={aboutStyles.meetTheFoundersMisbahQureshiimg}>
             <img
-              src="/assets/images/about/founder/misbah-image.png"
+              src="/assets/images/about/founder/misbha.jpg"
               alt="Misbah Qureshi Founder Integra Magna and Product Experience Architect"
               height={576}
               width={576}

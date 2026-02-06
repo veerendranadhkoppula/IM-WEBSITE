@@ -56,7 +56,7 @@ export default function Content() {
                 <p>Privacy Policy</p>
               </TransitionLink>
             </div>
-            <p>Copyright © 2025 Integra Magna</p>
+            <p>Copyright © 2026 Integra Magna</p>
           </div>
 
           <div className="image_changing_footer">

@@ -48,8 +48,6 @@ const designationKey = [
   { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/214f6447632281589e89ef4e4b93641b' , Key: 'gi', Folder: 'graphic', Designation: 'Graphic Design' },
   { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281d48f1cd290e5c3b34f' , Key: 'mgdi', Folder: 'motion_graphic_design_intern', Designation: 'Motion Graphic Design - Internship' },
   { notion: '-' , Key: 'mgd', Folder: 'motion_graphic_design', Designation: 'Motion Graphic Design' },
-  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/224f64476322816ebf60e07eac7ada49' , Key: 'sami', Folder: 'sales_and_marketing_intern', Designation: 'Sales and Marketing - Internship' },
-  { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281b08d4beb661deb8249' , Key: 'sam', Folder: 'sales_and_marketing', Designation: 'Sales and Marketing' },
   { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281339b06f8aefdf430c6' , Key: 'smmi', Folder: 'social_media_manager_intern', Designation: 'Social Media Manager - Internship' },
   { notion: '-' , Key: 'smm', Folder: 'social_media_manager', Designation: 'Social Media Manager' },
   { notion: '-' , Key: 'sg', Folder: 'sr_graphic', Designation: 'Sr. Graphic Designer' },
@@ -57,6 +55,30 @@ const designationKey = [
   { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/216f644763228110848ee6762e9ff6be' , Key: 'uui', Folder: 'ux_ui_intern', Designation: 'UX UI - Internship' },
   { notion: '-' , Key: 'uu', Folder: 'ux_ui', Designation: 'UX UI' },
   { notion: 'https://massive-snapdragon-8fe.notion.site/ebd/217f644763228165a251d46e0ea47b13' , Key: 'wdi', Folder: 'web_development_intern', Designation: 'Web Development - Internship' },
+  { 
+  notion: 'https://massive-snapdragon-8fe.notion.site/ebd/225f6447632281b08d4beb661deb8249',
+  Key: 'bde',
+  Folder: 'business_development_executive',
+  Designation: 'Business Development Executive'
+},
+{ 
+  notion: 'https://massive-snapdragon-8fe.notion.site/ebd/224f64476322816ebf60e07eac7ada49',
+  Key: 'bdei',
+  Folder: 'business_development_executive_intern',
+  Designation: 'Business Development Executive_ Intern'
+},
+{ 
+  notion: 'https://massive-snapdragon-8fe.notion.site/ebd/28ff6447632281e094eecc7843eb9cf2',
+  Key: 'bdi',
+  Folder: 'backend_intern',
+  Designation: 'Backedn Development Intern'
+},
+{ 
+  notion: 'https://massive-snapdragon-8fe.notion.site/ebd/28cf644763228121b9c8fca3f6e9a4a9',
+  Key: 'sei',
+  Folder: 'seo_intern',
+  Designation: 'Seo Intern'
+},
   { notion: '-' , Key: 'wd', Folder: 'web_development', Designation: 'Web Development' }
 ];
 

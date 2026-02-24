@@ -7,145 +7,461 @@ import crossIcon from "./cross-icon.svg"; // Ensure this path is correct
 
 const Accordiannew = ({ openFormModule }) => {
   const accordionData = [
-    {
-      title: "Sales and Marketing",
-      type: "Internship",
-      mode: "In-office",
-      key: "sami", // Add the key for each job to map to form
-      content: (
-        <>
-          <p>
-            We are looking for a qualified sales intern to assist in various
-            stages of the sales funnel, including creating awareness of new
-            offerings, generating leads, and retaining customers. You&apos;ll
-            gain hands-on experience working on challenging, meaningful
-            projects.
-          </p>
-          <br />
-          <h4>- Responsibilities and Duties:</h4>
-          <br />
-          <ul>
-            <li>Research and generate lists of potential customers.</li>
-            <li>
-              Provide input on customer briefs, presentations, and sales
-              literature.
-            </li>
-            <li>
-              Help develop client relationships and retain existing accounts.
-            </li>
-            <li>Assist in evaluating new sponsorship opportunities.</li>
-            <li>Learn and apply sales techniques.</li>
-            <li>Maintain sales records.</li>
-          </ul>
-          <br />
-          <h4>- Only those candidates can apply who:</h4>
-          <br />
-          <ul>
-            <li>Are available for a full-time (In-office) internship.</li>
-            <li>Can start the internship immediately or within 15 days.</li>
-            <li>Are available for a duration of 3 months (minimum).</li>
-          </ul>
-          <br />
-          <h4>- Required Experience and Qualifications:</h4>
-          <br />
-          <ul>
-            <li>
-              Basic understanding of international customers, markets &
-              businesses.
-            </li>
-            <li>
-              Some Ideas about the creative industry (animation, video, etc.)
-              would be an added advantage.
-            </li>
-          </ul>
+   {
+  title: "Business Development Executive",
+  type: "Full-Time",
+  mode: "In-office",
+  key: "bde",
+  content: (
+    <>
+      <p>
+        We are looking for a Business Development Executive / Growth and Outreach Strategist
+        at Integra Magna located in Indore. In this role, you will be responsible for initiating
+        conversations, building meaningful connections, and identifying new business
+        opportunities across global markets. This is a full-time, on-site role that requires
+        you to be based in Indore, MP.
+      </p>
 
-          <button
-            className={accordianStyles.apply_button}
-            onClick={() => openFormModule("sami")}
-          >
-            <strong>APPLY NOW</strong>
-          </button>
-        </>
-      ),
-    },
-    {
-      title: "Sales and Marketing",
-      type: "Full-Time",
-      mode: "In-office",
-      key: "sam", // Add the key for each job to map to form
-      content: (
-        <>
-          <p>
-            We are seeking an energetic, enthusiastic and responsible Sales
-            Specialist to join our growing team. We are a creative design studio
-            based in Indore looking for someone who can join us in our journey
-            to the next level. We are looking for a go-getter who actually
-            brings good conversions and not just promises, who is a real
-            business developer!
-          </p>
-          <br />
-          <h4>- Responsibilities and Duties:</h4>
-          <br />
-          <ul>
-            <li>Excellent negotiation and relationship-building skills.</li>
-            <li>Writing proposals and negotiating contracts.</li>
-            <li>Achieve category wise monthly Sales targets.</li>
-            <li>
-              Excellent command of written and spoken (business) English – other
-              languages is an advantage.
-            </li>
-            <li>
-              Sound commercial awareness, excellent organizational skills.
-            </li>
-            <li>Strong sense of urgency and results orientation.</li>
-            <li>
-              Should be a team player, working alongside people from all walks
-              of life.
-            </li>
-            <li>
-              Leadership and Influencing skills: Identity, builds, and use a
-              wide network of contacts with people at all levels, internally and
-              externally. Achieves a good result through a well-planned
-              approach.
-            </li>
-          </ul>
-          <br />
-          <h4>- Only those candidates can apply who:</h4>
-          <br />
-          <ul>
-            <li>Are available for a full-time (In-office) job.</li>
-            <li>Can start the job immediately or within 15 days.</li>
-          </ul>
-          <br />
-          <h4>- Required Experience and Qualifications:</h4>
-          <br />
-          <ul>
-            <li>Strong communication & presentation skills.</li>
-            <li>
-              Proven experience in B2B sales or creative agency/client
-              servicing.
-            </li>
-            <li>Ability to identify, qualify and convert leads.</li>
-            <li>
-              Confidence in pitching design, branding, and marketing solutions.
-            </li>
-            <li>Comfortable with follow-ups, meetings & closing deals.</li>
-            <li>CRM knowledge.</li>
-            <li>Prior agency experience is an added advantage.</li>
-            <li>
-              Good command over English and Hindi (bonus if other languages too).
-            </li>
-          </ul>
+      <br />
 
-          <button
-            className={accordianStyles.apply_button}
-            onClick={() => openFormModule("sam")}
-          >
-            <strong>APPLY NOW</strong>
-          </button>
-        </>
-      ),
-    },
+      <h4>- Responsibilities and Duties:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Research, identify, and reach out to potential clients via LinkedIn,
+          email campaigns, industry platforms, and professional networks.
+        </li>
+        <li>
+          Drive outbound growth across global markets, from prospecting
+          to first meaningful conversation.
+        </li>
+        <li>
+          Execute structured and personalized outreach campaigns (no templated spam).
+        </li>
+        <li>
+          Build, manage, and optimize a scalable lead pipeline using CRM and outreach tools.
+        </li>
+        <li>
+          Personalize messaging based on industry, business stage, and brand context.
+        </li>
+        <li>
+          Collaborate with strategy and design teams to prepare proposals and pitch decks.
+        </li>
+        <li>
+          Track outreach performance, response rates, and conversions to continuously improve.
+        </li>
+        <li>
+          Take ownership of defined lead generation and growth targets.
+        </li>
+        <li>
+          Monitor industry trends, competitor activity, and market shifts
+          to identify new opportunities.
+        </li>
+        <li>
+          Coordinate communication across time zones for international markets.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Only those candidates can apply who:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Have 2–4 years of hands-on experience in Business Development,
+          Growth, Sales, or Outreach roles.
+        </li>
+        <li>
+          Are available for full-time (in-office) role at Indore, MP.
+        </li>
+        <li>
+          Possess strong written and verbal English communication skills.
+        </li>
+        <li>
+          Have experience researching companies, decision-makers, and markets.
+        </li>
+        <li>
+          Are confident in taking follow-ups and maintaining client conversations.
+        </li>
+        <li>
+          Have experience using CRM tools and other sales software.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Required Experience and Qualifications:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          2–4 years of experience in business development or growth roles,
+          preferably in service-based companies.
+        </li>
+        <li>
+          Strong understanding of outbound sales, lead generation, and pipeline management.
+        </li>
+        <li>
+          Proven ability to build structured outreach systems and improve conversion metrics.
+        </li>
+        <li>
+          Genuine interest in brands, design, technology, and startup ecosystems.
+        </li>
+        <li>
+          Experience working with international clients (USA, UAE, UK) is a plus.
+        </li>
+        <li>
+          Prior experience in agencies, startups, or consulting businesses is an advantage.
+        </li>
+        <li>
+          Ability to take ownership of growth targets and work independently.
+        </li>
+      </ul>
+
+      <br />
+
+      <button
+        className={accordianStyles.apply_button}
+        onClick={() => openFormModule("bde")}
+      >
+        <strong>APPLY NOW</strong>
+      </button>
+    </>
+  ),
+},
+   {
+  title: "Business Development Intern",
+  type: "Internship",
+  mode: "In-office",
+  key: "bdei",
+  content: (
+    <>
+      <p>
+        We are looking for a Business Development Intern at Integra Magna
+        located in Indore. In this role, you will assist in initiating
+        conversations, building connections, and identifying new business
+        opportunities for the studio. This is a Internship, on-site role that requires you to be based in Indore, MP.
+
+
+      </p>
+
+      <br />
+
+      <h4>- Responsibilities and Duties:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Research and shortlist potential clients and industries for outreach.
+        </li>
+        <li>
+          Assist in LinkedIn outreach, cold emails, and lead discovery.
+        </li>
+        <li>
+          Help maintain a clean and structured lead database.
+        </li>
+        <li>
+          Support early conversations by drafting messages and sharing basic information.
+        </li>
+        <li>
+          Assist the team in gathering insights for pitches, proposals, and outreach content.
+        </li>
+        <li>
+          Track outreach progress using Google Sheets, Notion, or basic CRM tools.
+        </li>
+        <li>
+          Stay updated on trends in design, branding, startups, and marketing.
+        </li>
+        <li>
+          Coordinate basic communication when required across different time zones.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Only those candidates can apply who:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Are available for a full-time (in-office) internship in Indore.
+        </li>
+        <li>
+          Have 0–3 months of experience or are freshers/students seeking internship exposure.
+        </li>
+        <li>
+          Possess strong English communication skills (written and verbal).
+        </li>
+        <li>
+          Are comfortable researching, organizing data, and identifying opportunities.
+        </li>
+        <li>
+          Are genuinely curious about brands, business, design, and agency growth.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Required Experience and Qualifications:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Familiarity with LinkedIn, Google Workspace, or basic CRM tools.
+        </li>
+        <li>
+          Strong organizational skills and attention to detail.
+        </li>
+        <li>
+          Interest in lead generation, cold outreach, and B2B communication.
+        </li>
+        <li>
+          Internships or academic projects in marketing, outreach, or business (preferred but not mandatory).
+        </li>
+        <li>
+          Curiosity-driven mindset with willingness to learn and take initiative.
+        </li>
+        <li>
+          Ability to work independently while collaborating with the team.
+        </li>
+      </ul>
+
+      <br />
+
+      <button
+        className={accordianStyles.apply_button}
+        onClick={() => openFormModule("bdei")}
+      >
+        <strong>APPLY NOW</strong>
+      </button>
+    </>
+  ),
+},
+{
+  title: "Backend Development Intern",
+  type: "Internship",
+  mode: "In-office",
+  key: "bdi",
+  content: (
+    <>
+      <p>
+        We are looking for a Backend Development Intern at Integra Magna
+        located in Indore. In this role, you will work on building scalable
+        backend systems, APIs, and database architectures that power real-world
+        digital products. This is a full-time internship, on-site role that
+        requires you to be based in Indore, MP.
+      </p>
+
+      <br />
+
+      <h4>- Responsibilities and Duties:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Build and maintain RESTful APIs using Node.js and Express.
+        </li>
+        <li>
+          Design, manage, and optimize databases using PostgreSQL or MongoDB.
+        </li>
+        <li>
+          Develop a basic frontend (React or HTML/CSS) to display and consume data.
+        </li>
+        <li>
+          Implement CRUD operations across multiple real-world use cases.
+        </li>
+        <li>
+          Handle edge cases and error scenarios in API responses and data fetching.
+        </li>
+        <li>
+          Create and manage efficient server-side routes for optimized data access.
+        </li>
+        <li>
+          Deploy and maintain applications using platforms like Vercel, Railway, etc.
+        </li>
+        <li>
+          Collaborate with the team to ensure code quality, scalability, and performance.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Only those candidates can apply who:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Are available for a full-time (in-office) internship in Indore.
+        </li>
+        <li>
+          Have 0–6 months of experience or equivalent hands-on backend projects.
+        </li>
+        <li>
+          Have a strong understanding of JavaScript fundamentals.
+        </li>
+        <li>
+          Are self-motivated and eager to learn modern backend technologies.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Required Experience and Qualifications:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Strong understanding of Node.js and Express.js.
+        </li>
+        <li>
+          Hands-on experience with PostgreSQL or MongoDB.
+        </li>
+        <li>
+          Familiarity with React or frontend fundamentals (HTML/CSS).
+        </li>
+        <li>
+          Clear understanding of RESTful APIs or GraphQL architecture.
+        </li>
+        <li>
+          Basic understanding of deployment workflows and version control (Git).
+        </li>
+        <li>
+          Bonus: Experience with WordPress, Shopify, or similar platforms.
+        </li>
+      </ul>
+
+      <br />
+
+      <button
+        className={accordianStyles.apply_button}
+        onClick={() => openFormModule("bdi")}
+      >
+        <strong>APPLY NOW</strong>
+      </button>
+    </>
+  ),
+},
+{
+  title: "SEO Intern",
+  type: "Internship",
+  mode: "In-office",
+  key: "sei",
+  content: (
+    <>
+      <p>
+        We are looking for an SEO Intern at Integra Magna located in Indore.
+        In this role, you will assist in improving website visibility, search
+        rankings, and overall digital performance through structured SEO
+        strategies. This is a full-time internship, on-site role that requires
+        you to be based in Indore, MP.
+      </p>
+
+      <br />
+
+      <h4>- Responsibilities and Duties:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Assist in executing on-page and off-page SEO activities under guidance.
+        </li>
+        <li>
+          Support keyword research, search intent analysis, and basic competitor audits.
+        </li>
+        <li>
+          Help optimize website pages, blogs, and landing pages for rankings and readability.
+        </li>
+        <li>
+          Use keyword research tools such as Google Keyword Planner, Ahrefs, or SEMrush.
+        </li>
+        <li>
+          Assist in tracking keyword positions, indexing issues, and basic technical SEO tasks.
+        </li>
+        <li>
+          Support internal linking, metadata optimization, and content structure improvements.
+        </li>
+        <li>
+          Learn how to evaluate SEO performance using real performance metrics.
+        </li>
+        <li>
+          Collaborate with content, design, and development teams to implement SEO best practices.
+        </li>
+        <li>
+          Test, observe, and learn from SEO experiments and algorithm updates.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Only those candidates can apply who:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Are available for a full-time (in-office) internship in Indore.
+        </li>
+        <li>
+          Have 0–6 months of experience or are eager to build a career in SEO.
+        </li>
+        <li>
+          Enjoy analyzing data, spotting patterns, and understanding search behavior.
+        </li>
+        <li>
+          Have good knowledge of Excel or Google Sheets.
+        </li>
+        <li>
+          Have an interest in SEO content writing and performance marketing.
+        </li>
+      </ul>
+
+      <br />
+
+      <h4>- Required Experience and Qualifications:</h4>
+
+      <br />
+
+      <ul>
+        <li>
+          Basic understanding of how search engines, users, and content connect.
+        </li>
+        <li>
+          Familiarity with keyword research tools such as Google Keyword Planner, Ahrefs, or SEMrush.
+        </li>
+        <li>
+          Strong attention to detail and analytical mindset.
+        </li>
+        <li>
+          Personal blog, website, or SEO experiments (preferred but not mandatory).
+        </li>
+      <li>
+  Students pursuing Bachelor&apos;s or Master&apos;s degree in Digital Marketing or related fields.
+</li>
+      </ul>
+
+      <br />
+
+      <button
+        className={accordianStyles.apply_button}
+        onClick={() => openFormModule("sei")}
+      >
+        <strong>APPLY NOW</strong>
+      </button>
+    </>
+  ),
+},
     {
       title: "UX/UI Designer",
       type: "Internship",

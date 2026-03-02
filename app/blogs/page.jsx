@@ -1,11 +1,8 @@
-import BlogsClient from "./BlogsClient";
-import { notFound } from "next/navigation";
 export const dynamic = 'force-dynamic';
 
 import BlogsClient from "./BlogsClient";
 import { notFound } from "next/navigation";
 
-async function getAllBlogs() {
 async function getAllBlogs() {
   try {
     const res = await fetch(
@@ -20,6 +17,7 @@ async function getAllBlogs() {
     return [];
   }
 }
+
 async function getFeaturedBlogs() {
   try {
     const res = await fetch(

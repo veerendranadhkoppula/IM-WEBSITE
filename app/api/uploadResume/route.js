@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { google } from 'googleapis';
 import { Readable } from 'stream';
+
+export const dynamic = 'force-dynamic';
 
 // Load your Google Drive API credentials
 const KEYFILEPATH = path.join(process.cwd(), '/keys/google-drive-key.json');
@@ -10,6 +11,7 @@ const SCOPES = ['https://www.googleapis.com/auth/drive.file'];
 const FOLDER_ID = '1Kiati-0BMZtgYVZV6a0xtm8YU8LZpQiB'; // Replace with your folder ID
 
 export async function POST(req) {
+  const { google } = await import('googleapis');
   // Ensure the request Content-Type is multipart/form-data
   if (!req.headers.get('content-type')?.includes('multipart/form-data')) {
     return NextResponse.json(

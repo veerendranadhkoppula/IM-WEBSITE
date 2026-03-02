@@ -1,9 +1,9 @@
 {
   "name": "Integra Magna",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
+    "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
@@ -13,8 +13,6 @@
     "@gsap/react": "^2.1.1",
     "@lottiefiles/react-lottie-player": "^3.6.0",
     "@nextui-org/accordion": "^2.0.40",
-    "@nextui-org/system": "^2.4.6",
-    "@nextui-org/theme": "^2.4.5",
     "@prismicio/client": "^7.13.1",
     "@prismicio/next": "^1.7.1",
     "@prismicio/react": "^2.9.1",
@@ -44,7 +42,6 @@
     "react-lottie": "^1.2.10",
     "rive-react": "^4.18.2",
     "split-type": "^0.3.4",
-    "tailwindcss": "^4.2.1",
     "uploadthing": "^7.4.4"
   },
   "devDependencies": {

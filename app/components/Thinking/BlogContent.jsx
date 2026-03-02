@@ -41,9 +41,10 @@ const LexicalRenderer = ({ node }) => {
       return <li className={styles.listItem}>{children}</li>;
     case "autolink":
     case "link":
+      const linkUrl = node.fields?.url || node.url || "#";
       return (
         <a
-          href={node.url}
+          href={linkUrl}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
@@ -53,6 +54,8 @@ const LexicalRenderer = ({ node }) => {
       );
     case "quote":
       return <blockquote className={styles.blockquote}>{children}</blockquote>;
+    case "horizontalrule":
+      return <hr className={styles.horizontalRule} />;
 
     // Handle Custom Blocks (BlocksFeature)
     case "block":

@@ -38,6 +38,7 @@ export default async function sitemap() {
     { url: `${BASE_URL}/work/taskey`, priority: 0.65 },
     { url: `${BASE_URL}/work/hari-keshri`, priority: 0.65 },
     { url: `${BASE_URL}/work/marriott`, priority: 0.65 },
+    { url: `${BASE_URL}/blogs`, priority: 0.7 },
   ].map((route) => ({
     ...route,
     lastModified: new Date(),
@@ -56,10 +57,10 @@ export default async function sitemap() {
   }));
 
   // /blogs listing only appears when there is at least one published post
-  const blogListingRoute =
-    publishedBlogs.length > 0
-      ? [{ url: `${BASE_URL}/blogs`, lastModified: new Date(), priority: 0.7 }]
-      : [];
+  // const blogListingRoute =
+  //   publishedBlogs.length > 0
+  //     ? [{ url: `${BASE_URL}/blogs`, lastModified: new Date(), priority: 0.7 }]
+  //     : [];
 
-  return [...staticRoutes, ...blogListingRoute, ...blogRoutes];
+  return [...staticRoutes, ...blogRoutes];
 }

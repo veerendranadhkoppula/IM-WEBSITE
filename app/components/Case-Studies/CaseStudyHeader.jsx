@@ -1,19 +1,17 @@
 // /components/Header.jsx
-import React, { useEffect, useState, useRef } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { useRouter } from 'next/router';
-import TransitionLink from "@/app/components/TransitionLink"
-import casestudyStyles from '@/app/styles/Case-Study.module.css';
+import { useRouter } from "next/router";
+import TransitionLink from "@/app/components/TransitionLink";
+import casestudyStyles from "@/app/styles/Case-Study.module.css";
 
-import gsap from 'gsap';
+import gsap from "gsap";
 const imagePaths = {
-
-  casestudyNavBarBlur: '/assets/images/header/casestudy-navbar-blur.svg',
-  casestudyArrowBack: '/assets/images/header/casestudy-arrowback.svg',
+  casestudyNavBarBlur: "/assets/images/header/casestudy-navbar-blur.svg",
+  casestudyArrowBack: "/assets/images/header/casestudy-arrowback.svg",
 };
-
 
 // Utility function to format the page name
 const formatPageName = (href) => {
@@ -42,11 +40,11 @@ function CaseStudyHeader() {
   // const pageName = router.pathname.split('/').filter(Boolean).pop() || 'Integra Magna'; // Default name if no specific page
   const pathname = usePathname(); // Get current pathname
 
-// Update page name dynamically
-useEffect(() => {
-  const formattedName = formatPageName(pathname);
-  setPageName(formattedName);
-}, [pathname]);
+  // Update page name dynamically
+  useEffect(() => {
+    const formattedName = formatPageName(pathname);
+    setPageName(formattedName);
+  }, [pathname]);
 
   // Scroll detection
   useEffect(() => {
@@ -56,15 +54,13 @@ useEffect(() => {
       setScrollPosition(currentPosition);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);
-
 
   useEffect(() => {
     const marqueeElements = gsap.utils.toArray(".anim-marqueeText");
     // console.log(refContext.current);
-
 
     gsap.to(marqueeElements, {
       xPercent: -100,
@@ -74,13 +70,10 @@ useEffect(() => {
     });
   }, []);
 
-
-
   // GSAP hover effects
   useEffect(() => {
     const applyHoverEffects = () => {
       if (window.innerWidth > 960) {
-
         headerLink.current.forEach((element) => {
           const link = element.querySelector("span");
           if (!link) return;
@@ -95,11 +88,19 @@ useEffect(() => {
 
             // GSAP hover animations
             container.addEventListener("mouseover", () => {
-              gsap.to(container.querySelectorAll("span"), { y: "-100%", duration: 0.3, ease: "power1.out" });
+              gsap.to(container.querySelectorAll("span"), {
+                y: "-100%",
+                duration: 0.3,
+                ease: "power1.out",
+              });
             });
 
             container.addEventListener("mouseout", () => {
-              gsap.to(container.querySelectorAll("span"), { y: "0", duration: 0.3, ease: "power1.out" });
+              gsap.to(container.querySelectorAll("span"), {
+                y: "0",
+                duration: 0.3,
+                ease: "power1.out",
+              });
             });
           }
         });
@@ -107,8 +108,8 @@ useEffect(() => {
     };
 
     applyHoverEffects();
-    window.addEventListener('resize', applyHoverEffects);
-    return () => window.removeEventListener('resize', applyHoverEffects);
+    window.addEventListener("resize", applyHoverEffects);
+    return () => window.removeEventListener("resize", applyHoverEffects);
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -116,7 +117,7 @@ useEffect(() => {
   return (
     <div className="main-header">
       <div
-        className={`scroll-header ${isScrollingDown ? 'hide-scroll-header' : 'show-scroll-header'}`}
+        className={`scroll-header ${isScrollingDown ? "hide-scroll-header" : "show-scroll-header"}`}
         data-header="scroll"
         data-view="0"
       >
@@ -124,14 +125,22 @@ useEffect(() => {
           <div data-links="Integra Magna">
             <TransitionLink href="/" data-page-name="Integra Magna">
               <div className="logo">
-                <img src="/assets/images/header/blending-logo.svg" className="imglogo" alt="Integra Magna Logo" />
+                <img
+                  src="/assets/images/header/blending-logo.svg"
+                  className="imglogo"
+                  alt="Integra Magna Logo"
+                />
               </div>
             </TransitionLink>
           </div>
 
           <div className="contact-link">
             <div data-links="Contact">
-              <TransitionLink href="/contact" data-page-name="Contact" className="contact-link-a">
+              <TransitionLink
+                href="/contact"
+                data-page-name="Contact"
+                className="contact-link-a"
+              >
                 Contact
               </TransitionLink>
             </div>
@@ -150,28 +159,40 @@ useEffect(() => {
       </div>
 
       <div
-        className={`logo-icon-container ${isScrollingDown ? 'hide-scroll-header' : 'show-scroll-header'}`}
+        className={`logo-icon-container ${isScrollingDown ? "hide-scroll-header" : "show-scroll-header"}`}
         data-header="scroll"
         data-view="0"
       >
         <div data-links="Integra Magna">
           <TransitionLink href="/" data-page-name="Integra Magna">
-            <img src="/assets/images/header/logonameblend.svg" className="imglogo" alt="Integra Magna Logo" />
+            <img
+              src="/assets/images/header/logonameblend.svg"
+              className="imglogo"
+              alt="Integra Magna Logo"
+            />
           </TransitionLink>
         </div>
       </div>
 
       <div
-        className={`logo-icon-container ${isScrollingDown ? 'hide-scroll-header' : 'show-scroll-header'}`}
+        className={`logo-icon-container ${isScrollingDown ? "hide-scroll-header" : "show-scroll-header"}`}
         data-header="scroll"
         data-view="0"
       >
-        <img src="./assets/images/header/integra-magna-logo.svg" className="imglogo" style={{ opacity: "0" }} alt="Integra Magna Logo" />
+        <img
+          src="./assets/images/header/integra-magna-logo.svg"
+          className="imglogo"
+          style={{ opacity: "0" }}
+          alt="Integra Magna Logo"
+        />
       </div>
 
       <div className="case_nav_holder" data-header="noscroll" data-view="0">
-        <TransitionLink href="/work" passHref>
-          <ul className="case_nav_back_arrow" style={{ backgroundImage: `url(${imagePaths.casestudyArrowBack})` }} >
+        <TransitionLink href="/work">
+          <ul
+            className="case_nav_back_arrow"
+            style={{ backgroundImage: `url(${imagePaths.casestudyArrowBack})` }}
+          >
             <span className="case_nav_item">
               <svg
                 width="15"
@@ -191,74 +212,100 @@ useEffect(() => {
           </ul>
         </TransitionLink>
         <ul className={casestudyStyles.caseNavLinks}>
-
           <span className={casestudyStyles.caseNavItem}>
             <div className={casestudyStyles.cTextMarquee}>
-              <div className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}>
+              <div
+                className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}
+              >
                 {pageName}&nbsp;&#9642;&nbsp;
               </div>
-              <div className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}>
+              <div
+                className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}
+              >
                 {pageName}&nbsp;&#9642;&nbsp;
-
               </div>
-              <div className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}>
+              <div
+                className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}
+              >
                 {pageName}&nbsp;&#9642;&nbsp;
-
               </div>
-              <div className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}>
+              <div
+                className={`${casestudyStyles.cTextMarquee__text} anim-marqueeText`}
+              >
                 {pageName}&nbsp;&#9642;&nbsp;
-
               </div>
             </div>
           </span>
         </ul>
       </div>
 
-
-      <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+      <div className={`sidebar ${isSidebarOpen ? "sidebar-open" : ""}`}>
         <div className="sidebar-container">
           <div style={{ height: "60px" }}></div>
           <ul className="sidebar-navlinks">
             {[
-              { href: '/work', label: 'Work' },
-              { href: '/services', label: 'Services' },
-              { href: '/thinking', label: 'Thinking' },
-              { href: '/career', label: 'Career' },
-              { href: '/about', label: 'About' },
-              { href: '/contact', label: 'Contact' },
+              { href: "/work", label: "Work" },
+              { href: "/services", label: "Services" },
+              { href: "/thinking", label: "Thinking" },
+              { href: "/career", label: "Career" },
+              { href: "/about", label: "About" },
+              { href: "/contact", label: "Contact" },
             ].map((link) => (
-              <li key={link.href} className="nav-item" data-links={link.label} data-menu-hover>
+              <li
+                key={link.href}
+                className="nav-item"
+                data-links={link.label}
+                data-menu-hover
+              >
                 <TransitionLink href={link.href}>
-                  <span onClick={() => setIsSidebarOpen(false)}>{link.label}</span>
+                  <span onClick={() => setIsSidebarOpen(false)}>
+                    {link.label}
+                  </span>
                 </TransitionLink>
               </li>
             ))}
           </ul>
           <ul className="social-media-links">
             <li className="social-media">
-              <a href="https://www.instagram.com/integra.magna/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/integra.magna/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Ig
               </a>
             </li>
             <li className="social-media">
-              <a href="https://www.linkedin.com/company/integramagna/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/company/integramagna/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 In
               </a>
             </li>
             <li className="social-media">
-              <a href="https://twitter.com/Integra_Magna/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/Integra_Magna/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 X
               </a>
             </li>
             <li className="social-media">
-              <a href="https://www.behance.net/integra_magna/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.behance.net/integra_magna/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Be
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 

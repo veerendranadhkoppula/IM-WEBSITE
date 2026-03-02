@@ -1,16 +1,14 @@
 "use client";
-import styles from '@/app/styles/Thinking.module.css'
-import { useEffect, useRef, useState } from 'react';
+import styles from "@/app/styles/Thinking.module.css";
+import { useEffect, useRef, useState } from "react";
 import TransitionLink from "@/app/components/TransitionLink";
 import projects from "@/app/json/thinkingProjects.json";
 import blogs from "@/app/json/thinkingBlogs.json";
-import NewsletterSubscribe from '../Newsletter/Newsletter';
+import NewsletterSubscribe from "../Newsletter/Newsletter";
+import Link from "next/link";
 
 export default function Feature() {
-
-
-
-  const [activeCategory, setActiveCategory] = useState('work'); // Default category
+  const [activeCategory, setActiveCategory] = useState("work"); // Default category
   const [selectedWork, setSelectedWork] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0); // Index for current project
 
@@ -18,9 +16,7 @@ export default function Feature() {
   const blogsRefs = useRef([]);
 
   const [transitioning, setTransitioning] = useState(false); // Control smooth transition
-  const [displayedCategory, setDisplayedCategory] = useState('work'); // For display:block/none
-
-
+  const [displayedCategory, setDisplayedCategory] = useState("work"); // For display:block/none
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,7 +29,7 @@ export default function Feature() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     // Observe project refs
@@ -86,35 +82,45 @@ export default function Feature() {
     setCurrentIndex(prevIndex);
   };
 
-
   return (
     <div className={styles.thinkingContainer}>
-
       <div className={styles.thinkingMore}>
         <div className={styles.radioSection}>
           <div className={styles.radioButton}>
-            <button id="btn_submit"
-              className={`${styles.workCategory} ${activeCategory === 'work' ? styles.active : ''
-                }`}
-              onClick={() => handleCategoryChange('work')}
+            <button
+              id="btn_submit"
+              className={`${styles.workCategory} ${
+                activeCategory === "work" ? styles.active : ""
+              }`}
+              onClick={() => handleCategoryChange("work")}
             >
               Work
             </button>
-            <button id="btn_submit"
+            <Link
+              href="/blogs"
+              className={`${styles.blogCategory} ${
+                activeCategory === "blogs" ? styles.active : ""
+              }`}
+            >
+              Blog
+            </Link>
+            {/* <button id="btn_submit"
               className={`${styles.blogCategory} ${activeCategory === 'blogs' ? styles.active : ''
                 }`}
               onClick={() => handleCategoryChange('blogs')}
             >
               Blog
-            </button>
+            </button> */}
           </div>
         </div>
 
         {/* Works Section */}
         <div
-          className={`${styles.moreContainer} ${activeCategory === 'work' ? styles.visible : styles.hidden
-            } ${transitioning ? styles.transitioning : ''} ${displayedCategory === 'work' ? 'display' : ''
-            }  `}
+          className={`${styles.moreContainer} ${
+            activeCategory === "work" ? styles.visible : styles.hidden
+          } ${transitioning ? styles.transitioning : ""} ${
+            displayedCategory === "work" ? "display" : ""
+          }  `}
         >
           <div className={styles.moreHeading}>
             <h4>MORE WORK</h4>
@@ -137,16 +143,23 @@ export default function Feature() {
                 {project.thumbnail.length === 1 ? (
                   // Render a single image
                   <div className={styles.projectImage}>
-                    <img src={project.thumbnail[0]} alt={project.alt} loading="lazy" />
+                    <img
+                      src={project.thumbnail[0]}
+                      alt={project.alt}
+                      loading="lazy"
+                    />
                   </div>
                 ) : (
                   // Render a stack for multiple images
                   <div className={`${styles.projectStack}`}>
                     {project.thumbnail.slice(0, 2).map((image, idx) => {
                       // Apply random transformations only to the first image
-                      const randomRotate = idx === 0 ? Math.random() * (10 - -10) + -10 : 0; // Random rotation only for the top image
-                      const randomX = idx === 0 ? Math.random() * (5 - -5) + -5 : 0; // Random translateX only for the top image
-                      const randomY = idx === 0 ? Math.random() * (0 - -10) + 4 : 0; // Random translateY only for the top image
+                      const randomRotate =
+                        idx === 0 ? Math.random() * (10 - -10) + -10 : 0; // Random rotation only for the top image
+                      const randomX =
+                        idx === 0 ? Math.random() * (5 - -5) + -5 : 0; // Random translateX only for the top image
+                      const randomY =
+                        idx === 0 ? Math.random() * (0 - -10) + 4 : 0; // Random translateY only for the top image
                       return (
                         <img
                           key={idx}
@@ -161,19 +174,19 @@ export default function Feature() {
                       );
                     })}
                   </div>
-
                 )}
               </a>
             ))}
           </div>
-
         </div>
 
         {/* Blogs Section */}
         <div
-          className={`${styles.blogContainer} ${activeCategory === 'blogs' ? styles.visible : styles.hidden
-            } ${transitioning ? styles.transitioning : ''}   ${displayedCategory === 'blogs' ? 'display' : ''
-            }`}
+          className={`${styles.blogContainer} ${
+            activeCategory === "blogs" ? styles.visible : styles.hidden
+          } ${transitioning ? styles.transitioning : ""}   ${
+            displayedCategory === "blogs" ? "display" : ""
+          }`}
         >
           <div className={styles.moreHeading}>
             <h4>BLOGS</h4>
@@ -212,33 +225,25 @@ export default function Feature() {
             ))}
           </div> */}
 
-
-
           <div className={styles.blogWaiting}>
-
             <div className={styles.waitingMain}>
               <div className={styles.waitingText}>
-                <h2 className={styles.waitingHeading}>Stay tuned for more exciting content coming soon!</h2>
+                <h2 className={styles.waitingHeading}>
+                  Stay tuned for more exciting content coming soon!
+                </h2>
               </div>
               <NewsletterSubscribe />
-
             </div>
-
           </div>
-
-
         </div>
       </div>
 
       {/* Popup */}
       {selectedWork && (
         <div className={styles.popup} data-lenis-prevent>
-          <div className={styles.popupContent} >
+          <div className={styles.popupContent}>
             <div className={styles.workInternalHeader}>
-              <button
-                className={styles.closeButton}
-                onClick={handleClosePopup}
-              >
+              <button className={styles.closeButton} onClick={handleClosePopup}>
                 <span className={styles.closeIcon}>
                   <svg
                     width="19"
@@ -273,131 +278,152 @@ export default function Feature() {
               </div>
 
               {/* Conditional Rendering for Popup Grid */}
-              {
-                selectedWork.images.map((image, index) => {
-                  if (image.type === "square") {
-                    return (
-                      <div key={index} className={styles.popupSingleImage}>
-                        {image.mediaType === "video" ? (
+              {selectedWork.images.map((image, index) => {
+                if (image.type === "square") {
+                  return (
+                    <div key={index} className={styles.popupSingleImage}>
+                      {image.mediaType === "video" ? (
+                        <video
+                          autoPlay
+                          playsInline
+                          webkit-playsinline
+                          muted
+                          loop
+                          controls={false}
+                          src={image.src}
+                          alt={`Video ${index + 1}`}
+                          className={styles.singleVideo}
+                        />
+                      ) : (
+                        <img
+                          src={image.src}
+                          alt={`Image ${index + 1}`}
+                          className={styles.singleImage}
+                        />
+                      )}
+                    </div>
+                  );
+                } else if (image.type === "double") {
+                  return (
+                    <div key={index} className={styles.popupTwoImages}>
+                      {image.src.map((subImage, subIndex) =>
+                        subImage.mediaType === "video" ? (
                           <video
+                            key={subIndex}
                             autoPlay
                             playsInline
                             webkit-playsinline
                             muted
                             loop
                             controls={false}
-                            src={image.src}
-                            alt={`Video ${index + 1}`}
-                            className={styles.singleVideo}
+                            src={subImage.src}
+                            alt={`Video ${index + 1}-${subIndex + 1}`}
+                            className={styles.twoVideo}
                           />
                         ) : (
                           <img
-                            src={image.src}
-                            alt={`Image ${index + 1}`}
-                            className={styles.singleImage}
+                            key={subIndex}
+                            src={subImage.src}
+                            alt={`Image ${index + 1}-${subIndex + 1}`}
+                            className={styles.twoImage}
                           />
-                        )}
-                      </div>
-                    );
-                  } else if (image.type === "double") {
-                    return (
-                      <div key={index} className={styles.popupTwoImages}>
-                        {image.src.map((subImage, subIndex) =>
-                          subImage.mediaType === "video" ? (
-                            <video
-                              key={subIndex}
-                              autoPlay
-                              playsInline
-                              webkit-playsinline
-                              muted
-                              loop
-                              controls={false}
-                              src={subImage.src}
-                              alt={`Video ${index + 1}-${subIndex + 1}`}
-                              className={styles.twoVideo}
-                            />
-                          ) : (
-                            <img
-                              key={subIndex}
-                              src={subImage.src}
-                              alt={`Image ${index + 1}-${subIndex + 1}`}
-                              className={styles.twoImage}
-                            />
-                          )
-                        )}
-                      </div>
-                    );
-                  } else if (image.type === "landscape") {
-                    return (
-                      <div key={index} className={styles.popupLandscape}>
-                        {image.mediaType === "video" ? (
-                          <video
-                            autoPlay
-                            playsInline
-                            webkit-playsinline
-                            muted
-                            loop
-                            controls={false}
-                            src={image.src}
-                            alt={`Video ${index + 1}`}
-                            className={styles.landscapeVideo}
-                          />
-                        ) : (
-                          <img
-                            src={image.src}
-                            alt={`Image ${index + 1}`}
-                            className={styles.landscapeImage}
-                          />
-                        )}
-                      </div>
-                    );
-                  } else {
-                    // Default case if type is not recognized
-                    return (
-                      <div key={index} className={styles.popupGridItem}>
-                        {image.mediaType === "video" ? (
-                          <video
-                            autoPlay
-                            playsInline
-                            webkit-playsinline
-                            muted
-                            loop
-                            controls={false}
-                            src={image.src}
-                            alt={`Video ${index + 1}`}
-                            className={styles.defaultVideo}
-                          />
-                        ) : (
-                          <img
-                            src={image.src}
-                            alt={`Image ${index + 1}`}
-                            className={styles.defaultImage}
-                          />
-                        )}
-                      </div>
-                    );
-                  }
-                })
-              }
-
-
-
+                        ),
+                      )}
+                    </div>
+                  );
+                } else if (image.type === "landscape") {
+                  return (
+                    <div key={index} className={styles.popupLandscape}>
+                      {image.mediaType === "video" ? (
+                        <video
+                          autoPlay
+                          playsInline
+                          webkit-playsinline
+                          muted
+                          loop
+                          controls={false}
+                          src={image.src}
+                          alt={`Video ${index + 1}`}
+                          className={styles.landscapeVideo}
+                        />
+                      ) : (
+                        <img
+                          src={image.src}
+                          alt={`Image ${index + 1}`}
+                          className={styles.landscapeImage}
+                        />
+                      )}
+                    </div>
+                  );
+                } else {
+                  // Default case if type is not recognized
+                  return (
+                    <div key={index} className={styles.popupGridItem}>
+                      {image.mediaType === "video" ? (
+                        <video
+                          autoPlay
+                          playsInline
+                          webkit-playsinline
+                          muted
+                          loop
+                          controls={false}
+                          src={image.src}
+                          alt={`Video ${index + 1}`}
+                          className={styles.defaultVideo}
+                        />
+                      ) : (
+                        <img
+                          src={image.src}
+                          alt={`Image ${index + 1}`}
+                          className={styles.defaultImage}
+                        />
+                      )}
+                    </div>
+                  );
+                }
+              })}
             </div>
             {/* Navigation Arrows */}
             <div className={styles.popupNavigation}>
               <button className={styles.arrowLeft} onClick={handlePrevious}>
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" width={32} height={32} viewBox="0 0 40 40">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_2"
+                  data-name="Layer 2"
+                  width={32}
+                  height={32}
+                  viewBox="0 0 40 40"
+                >
                   <g id="Layer_1-2" data-name="Layer 1">
-                    <path fill="#363636" d="M0,20c0,11,9,20,20,20s20-9,20-20S31,0,20,0,0,9,0,20h0Z" />
-                    <path fill="#fff" d="M10.59,19.39c-.35.35-.35.87,0,1.21l5.55,5.55c.35.35.87.35,1.21,0s.35-.87,0-1.21l-4.94-4.94,4.94-4.94c.35-.35.35-.87,0-1.21s-.87-.35-1.21,0c0,0-5.55,5.55-5.55,5.55ZM11.2,20.87h18.47v-1.73H11.2v1.73Z" />
+                    <path
+                      fill="#363636"
+                      d="M0,20c0,11,9,20,20,20s20-9,20-20S31,0,20,0,0,9,0,20h0Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M10.59,19.39c-.35.35-.35.87,0,1.21l5.55,5.55c.35.35.87.35,1.21,0s.35-.87,0-1.21l-4.94-4.94,4.94-4.94c.35-.35.35-.87,0-1.21s-.87-.35-1.21,0c0,0-5.55,5.55-5.55,5.55ZM11.2,20.87h18.47v-1.73H11.2v1.73Z"
+                    />
                   </g>
                 </svg>
               </button>
               <button className={styles.arrowRight} onClick={handleNext}>
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" width={32} height={32} viewBox="0 0 40 40">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_2"
+                  data-name="Layer 2"
+                  width={32}
+                  height={32}
+                  viewBox="0 0 40 40"
+                >
                   <g id="Layer_1-2" data-name="Layer 1">
-                    <path fill="#363636" d="M40,20C40,9,31,0,20,0S0,9,0,20s9,20,20,20,20-9,20-20h0Z" />
-                    <path fill="#fff" d="M29.41,20.61c.35-.35.35-.87,0-1.21l-5.55-5.55c-.35-.35-.87-.35-1.21,0s-.35.87,0,1.21l4.94,4.94-4.94,4.94c-.35.35-.35.87,0,1.21s.87.35,1.21,0c0,0,5.55-5.55,5.55-5.55ZM28.8,19.13H10.33v1.73h18.47v-1.73Z" />
+                    <path
+                      fill="#363636"
+                      d="M40,20C40,9,31,0,20,0S0,9,0,20s9,20,20,20,20-9,20-20h0Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M29.41,20.61c.35-.35.35-.87,0-1.21l-5.55-5.55c-.35-.35-.87-.35-1.21,0s-.35.87,0,1.21l4.94,4.94-4.94,4.94c-.35.35-.35.87,0,1.21s.87.35,1.21,0c0,0,5.55-5.55,5.55-5.55ZM28.8,19.13H10.33v1.73h18.47v-1.73Z"
+                    />
                   </g>
                 </svg>
               </button>

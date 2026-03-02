@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { animatePageOut } from "@/animations";
 
-export default function TransitionLink({ href, label, children }) {
+export default function TransitionLink({ href, label, children, ...props }) {
   const router = useRouter();
   const pathname = usePathname();
   // const searchParams = useSearchParams();
@@ -23,24 +23,22 @@ export default function TransitionLink({ href, label, children }) {
 
   // Determine if the link should be disabled
   const isCurrentUrl = url === href;
-// console.log("isCurrentUrl: ", url);
-// console.log("href: ", href);
-
+  // console.log("isCurrentUrl: ", url);
+  // console.log("href: ", href);
 
   return (
-    <Link href={href} passHref legacyBehavior>
-      <a
-        onClick={!isCurrentUrl ? handleClick : undefined}
-        style={{
-          pointerEvents: isCurrentUrl ? "none" : "auto",
-          cursor: isCurrentUrl ? "default" : "pointer",
-          // borderBottom: isCurrentUrl ? "1px solid black" : "none", 
-          textDecoration: isCurrentUrl ? "underline" : "none",
-        }}
-      >
-        
-        {children || label}
-      </a>
+    <Link
+      href={href}
+      onClick={!isCurrentUrl ? handleClick : undefined}
+      style={{
+        pointerEvents: isCurrentUrl ? "none" : "auto",
+        cursor: isCurrentUrl ? "default" : "pointer",
+        textDecoration: isCurrentUrl ? "underline" : "none",
+        ...props.style,
+      }}
+      {...props}
+    >
+      {children || label}
     </Link>
   );
 }

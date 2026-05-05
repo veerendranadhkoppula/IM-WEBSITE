@@ -3,7 +3,7 @@ const BASE_URL = "https://www.integramagna.com";
 async function getBlogSlugs() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_PAYLOAD_API_URL}/api/posts?limit=200&sort=-publishedAt&depth=0`,
+      `${process.env.NEXT_PUBLIC_PAYLOAD_API_URL}/api/posts?limit=200&sort=-publishedAt`,
       { next: { revalidate: 3600 } }, // re-fetch at most once per hour
     );
     if (!res.ok) return [];

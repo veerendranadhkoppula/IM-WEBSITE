@@ -1,11 +1,14 @@
 
 .homeSection {
-  min-height: 103vh;
+  min-height: 102vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 640px) and (max-width: 1400px) {
   .homeSection {
-    min-height: 80vh;
+    min-height: 65vh;
   }
 }
 

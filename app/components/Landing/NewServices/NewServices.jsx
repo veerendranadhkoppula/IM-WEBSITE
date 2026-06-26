@@ -65,7 +65,7 @@ const SERVICES = [
   },
 ]
 
-const TRANS = 0.35
+const TRANS = 0.55
 const STAGGER = 0.05
 
 const ServiceSection = memo(function ServiceSection({ sectionRef, bgRefs, titleRefs, listRefs, descRefs, imageRefs, whiteOverlayRef, onStartProject }) {
@@ -193,7 +193,7 @@ const NewServices = () => {
         if (ref) gsap.set(ref, { fontSize: inactiveFS, color: '#4E4E4E' })
       })
       gsap.set(bgRefs.current.slice(1), { opacity: 0 })
-      gsap.set(listRefs.current.slice(1), { opacity: 0, y: 20 })
+      gsap.set(listRefs.current.slice(1), { opacity: 0 })
       gsap.set(descRefs.current.slice(1), { opacity: 0 })
       gsap.set(whiteOverlayRef.current, { opacity: 0 })
       imageRefs.current.slice(1).forEach((ref) => {
@@ -227,23 +227,22 @@ const NewServices = () => {
 
         const seg = gsap.timeline()
 
-        seg.to(bgRefs.current[from], { opacity: 0, duration: TRANS, ease: 'none' }, 0)
-           .to(bgRefs.current[to], { opacity: 1, duration: TRANS, ease: 'none' }, 0)
+        seg.to(bgRefs.current[from], { opacity: 0, duration: TRANS, ease: 'power2.inOut' }, 0)
+           .to(bgRefs.current[to], { opacity: 1, duration: TRANS, ease: 'power2.inOut' }, 0)
 
-        if (imageRefs.current[from]) seg.to(imageRefs.current[from], { opacity: 0, duration: TRANS, ease: 'none' }, 0)
-        if (imageRefs.current[to]) seg.to(imageRefs.current[to], { opacity: 1, duration: TRANS, ease: 'none' }, 0)
+        if (imageRefs.current[from]) seg.to(imageRefs.current[from], { opacity: 0, duration: TRANS, ease: 'power2.inOut' }, 0)
+        if (imageRefs.current[to]) seg.to(imageRefs.current[to], { opacity: 1, duration: TRANS, ease: 'power2.inOut' }, 0)
 
-        seg.to(titleRefs.current[from], { fontSize: inactiveFS, color: '#4E4E4E', duration: TRANS, ease: 'power1.inOut' }, STAGGER)
-           .to(titleRefs.current[to], { fontSize: activeFS, color: '#FFFFFF', duration: TRANS, ease: 'power1.inOut' }, STAGGER)
+        seg.to(titleRefs.current[from], { fontSize: inactiveFS, color: '#4E4E4E', duration: TRANS, ease: 'power2.inOut' }, STAGGER)
+           .to(titleRefs.current[to], { fontSize: activeFS, color: '#FFFFFF', duration: TRANS, ease: 'power2.inOut' }, STAGGER)
 
-        // Fast exit then enter — 0.01 gap keeps blank moment imperceptible
-        seg.to(listRefs.current[from], { opacity: 0, y: -8, duration: 0.1, ease: 'power3.in' }, STAGGER * 2)
-        seg.to(listRefs.current[to], { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, '>+0.01')
+        seg.to(listRefs.current[from], { opacity: 0, duration: 0.15, ease: 'power2.in' }, STAGGER * 2)
+        seg.to(listRefs.current[to], { opacity: 1, duration: 0.32, ease: 'power2.out' }, '>+0.01')
 
-        seg.to(descRefs.current[from], { opacity: 0, duration: 0.1, ease: 'power3.in' }, STAGGER * 3)
-        seg.to(descRefs.current[to], { opacity: 1, duration: 0.22, ease: 'power2.out' }, '>+0.01')
+        seg.to(descRefs.current[from], { opacity: 0, duration: 0.15, ease: 'power2.in' }, STAGGER * 3)
+        seg.to(descRefs.current[to], { opacity: 1, duration: 0.32, ease: 'power2.out' }, '>+0.01')
 
-        const lastEnd = STAGGER * 3 + 0.1 + 0.01 + 0.22
+        const lastEnd = STAGGER * 3 + 0.15 + 0.01 + 0.32
         seg.to({}, { duration: 1 - lastEnd })
 
         tl.add(seg)

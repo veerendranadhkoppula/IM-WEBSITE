@@ -21,7 +21,6 @@ import Contact from "@/app/components/Landing/Contact/Contact";
 // import Approach from "@/app/components/Landing/Approach/Approach";
 import HomeBlogs from "../components/Landing/HomeBlogs/HomeBlogs";
 import NewServices from "../components/Landing/NewServices/NewServices";
-import LogosLanding from "../components/Landing/LogosLanding/LogosLanding";
 import Ideas from "../components/Landing/Ideas/Ideas";
 import Team from "../components/Landing/Team/Team";
 import Acknowledged from "../components/Landing/Acknowledged/Acknowledged";
@@ -218,7 +217,6 @@ export default function Home() {
       <div className={landingStyles.content}>
         <div className={landingStyles.homeSection}>
           <NewLanding />
-          <LogosLanding />
         </div>
 
         <NewZoomingVideo />

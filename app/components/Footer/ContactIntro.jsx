@@ -8,14 +8,14 @@ export default function Intro() {
   return (
     <div>
           {/* <Form /> */}
-          <section>
+          {/* <section>
             <div className={`${contactStyles.Our_story} f-upper-section`}>
               <h2>What is Integra Magna?</h2>
               <h1>
                 <div><TransitionLink href="/about"><u>Our Story</u></TransitionLink></div>
               </h1>
             </div>
-          </section>
+          </section> */}
 
     </div>
   )

@@ -10,7 +10,7 @@
     padding:
         clamp(80px, 8vw, 120px)
         clamp(24px, 9vw, 115px)
-        0px
+         clamp(80px, 8vw, 120px)
          clamp(24px, 9vw, 115px)
 }
 
@@ -364,8 +364,8 @@
     .main {
         padding-right: 0;
         padding-top: 0px;
-         padding-left: 24px;
         padding-bottom: 80px;
+        padding-left: 24px;
     }
 
     .MainConatiner {

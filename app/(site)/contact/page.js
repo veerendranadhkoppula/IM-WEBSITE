@@ -18,6 +18,11 @@ import subscribeImage from "@/app/assets/subscribe-form/subscribe-us-01.png";
 import SlideUpText from "@/app/components/SlideUpText";
 import ViewporTextAnim from "@/app/components/ViewporTextAnim";
 import Popup from "@/app/(site)/contact/Popup";
+import Landing from "@/app/components/NewContact/Contact/Contact";
+import Acknowledged from "@/app/components/NewContact/Acknowledged/Acknowledged";
+import ClutchSection from "@/app/components/NewContact/ClutchSection/ClutchSection";
+import FAQS from "@/app/components/NewContact/FAQS/FAQS";
+
 const Contact = () => {
 
   useEffect(() => {
@@ -90,19 +95,23 @@ const Contact = () => {
       </Head>
 
       <div id="content">
-        {/* Hero Section */}
-        <div className={contactStyles.contact_hero_conntainer}>
+        <Landing />
+        <ClutchSection />
+        <FAQS />
+        <Acknowledged />
+
+        {/* <div className={contactStyles.contact_hero_conntainer}>
           <h1 className={`${contactStyles.heading_container} initialTransition`} data-mobile-off="">
             <SlideUpText text="Ready to do big things? Fill out our form below and tell us about your vision." delay={0.9} />
           </h1>
-        </div>
+        </div> */}
    
-        {/* Form Component */}
-        <div className={contactStyles.form_import}>
+
+        {/* <div className={contactStyles.form_import}>
           <Form />
-        </div>
-        {/* Partner with Us Section */}
-        <div className={contactStyles.Partner_container}>
+        </div> */}
+
+        {/* <div className={contactStyles.Partner_container}>
           <h2 className="initialTransition">
             <SlideUpText text="Partner with us to build the future." />
           </h2>
@@ -128,10 +137,10 @@ const Contact = () => {
 
             </a>
           </h1>
-        </div>
+        </div> */}
 
-        {/* Passionate Designer Section */}
-        <div className={contactStyles.passionate_designer_container}>
+    
+        {/* <div className={contactStyles.passionate_designer_container}>
           <figure>
             <Image src={passionateImg} alt="Integra Magna Team discussing a project" />
           </figure>
@@ -144,10 +153,9 @@ const Contact = () => {
               </TransitionLink>
             </div>
           </article>
-        </div>
+        </div> */}
 
-        {/* Join Us Section */}
-        <div className={`${contactStyles.Join_Us_container} f-upper-section`}>
+        {/* <div className={`${contactStyles.Join_Us_container} f-upper-section`}>
           <div className={`${contactStyles.Join_Us} selectedTrans`}>
             <h1>Join us @ Integra Magna</h1>
             <div data-links="Career">
@@ -181,13 +189,13 @@ const Contact = () => {
           </div>
 
 
-        </div>
+        </div> */}
 
 
 
 
 
-        <section className={contactStyles.subs_form} id="myForm" style={{ display: 'none' }}>
+        {/* <section className={contactStyles.subs_form} id="myForm" style={{ display: 'none' }}>
           <div className={contactStyles.form_close_button_c}>
             <button
               type="button"
@@ -237,7 +245,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Form */}
+          
               <form className={contactStyles.form_main} id="subscribForm" onSubmit={handleSubmit}>
                 {!subscribed ? (
                   <>
@@ -259,11 +267,11 @@ const Contact = () => {
                 )}
               </form>
 
-              {/* {message && <p>{message}</p>}  */}
+              {message && <p>{message}</p>} 
 
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <section>
             <div className={`${contactStyles.Our_story} f-upper-section`}>

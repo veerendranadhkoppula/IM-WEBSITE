@@ -123,7 +123,7 @@ export default function Content() {
                 Privacy Policy
               </TransitionLink>
 
-              <p className={styles.copyright}>Copyright © 2026 Integra Magna</p>
+              <p className={styles.copyright}>© 2026 Integra Magna</p>
             </div>
 
           </div>

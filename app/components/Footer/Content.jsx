@@ -111,10 +111,6 @@ export default function Content() {
             </div>
 
             <div className={styles.bottom}>
-              <TransitionLink href="/privacy-policy" className={styles.privacyLink}>
-                Privacy Policy
-              </TransitionLink>
-
               <div className={styles.tagline}>
                 <span className={styles.taglineWord}>DESIGN</span>
                 <span className={styles.dot} />
@@ -122,6 +118,10 @@ export default function Content() {
                 <span className={styles.dot} />
                 <span className={styles.taglineWord}>IMPACT</span>
               </div>
+
+              <TransitionLink href="/privacy-policy" className={styles.privacyLink}>
+                Privacy Policy
+              </TransitionLink>
 
               <p className={styles.copyright}>Copyright © 2026 Integra Magna</p>
             </div>

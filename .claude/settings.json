@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const s = require\\('./node_modules/sharp/package.json'\\); console.log\\('sharp:', s.version\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/payload/package.json'\\); console.log\\('payload:', p.version\\)\")"
+    ]
+  }
+}

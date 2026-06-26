@@ -31,7 +31,8 @@ export default buildConfig({
     },
     push: true,
   }),
-  sharp,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sharp: sharp as any,
   plugins: [
     importExportPlugin({
       collections: [

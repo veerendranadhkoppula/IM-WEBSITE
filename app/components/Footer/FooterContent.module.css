@@ -256,14 +256,14 @@
 
 @media (max-width: 959px) {
   .overlay {
-    padding: 46px 24px 24px;
+    padding: 103px 24px 22px;
     gap: 0;
     justify-content: space-between;
   }
 
   .top {
     flex-direction: column;
-    gap: 50px;
+    gap: 56px;
   }
 
   .topLeft {
@@ -281,7 +281,7 @@
 
   .topRight {
     max-width: 100%;
-    gap: 50px;
+    gap: 56px;
   }
 
   .questionSection {
@@ -294,6 +294,7 @@
 
   .questionHeading {
     font-size: 20px;
+    color: #848484;
   }
 
   .questionDesc {
@@ -326,6 +327,7 @@
 
   .sectionLabel {
     font-size: 20px;
+    color: #848484;
   }
 
   .emailLink {
@@ -342,23 +344,18 @@
 
   .bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
-    padding-top: 50px;
-  }
-
-  .privacyLink {
-    font-size: 14px;
-    margin-bottom: 80px;
+    padding-top: 56px;
   }
 
   .tagline {
     position: relative;
     left: auto;
     transform: none;
-    align-self: center;
     gap: 8px;
     padding-bottom: 9px;
+    margin-bottom: 8px;
   }
 
   .tagline::after {
@@ -380,9 +377,18 @@
     height: 4px;
   }
 
+  .privacyLink {
+    font-size: 12px;
+    font-weight: 500;
+    color: #848484;
+    text-decoration: underline;
+    margin-bottom: 6px;
+  }
+
   .copyright {
-    font-size: 14px;
-    align-self: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #848484;
     margin-top: 6px;
   }
 }

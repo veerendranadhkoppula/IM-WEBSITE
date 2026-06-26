@@ -45,7 +45,7 @@ const Team = () => {
               with global brands. With over 10 years of hands-on experience &
               a passionate team, we craft tailor-made solutions by combining
               design, data, & technology to build business that drives growth
-              & win markets. In a world addicted to aesthetics, we chose
+              & win markets.<br /> <br /> In a world addicted to aesthetics, we chose
               depth. Every colour, typeface, layout, and interaction we craft
               is grounded in user psychology, accessibility standards,
               industry context, and competitive analysis. We don&apos;t design to

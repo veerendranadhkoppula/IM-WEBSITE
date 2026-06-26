@@ -18,7 +18,7 @@ import StartSection from "@/app/components/Landing/StartSection/StartSection";
 import ClutchSection from "@/app/components/Landing/ClutchSection/ClutchSection";
 import NewLanding from "@/app/components/Landing/NewLanding/NewLanding";
 import Contact from "@/app/components/Landing/Contact/Contact";
-import Approach from "@/app/components/Landing/Approach/Approach";
+// import Approach from "@/app/components/Landing/Approach/Approach";
 import HomeBlogs from "../components/Landing/HomeBlogs/HomeBlogs";
 import NewServices from "../components/Landing/NewServices/NewServices";
 import LogosLanding from "../components/Landing/LogosLanding/LogosLanding";
@@ -250,7 +250,7 @@ export default function Home() {
         <Ideas />
         <CTASection />
         <Team />
-        <Approach />
+        {/* <Approach /> */}
 
         <ClutchSection />
 

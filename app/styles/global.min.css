@@ -1233,3 +1233,9 @@ textarea::-webkit-input-placeholder {
     height: 100vh;
     width: 100vw;
 }
+
+@media screen and (max-width: 960px) {
+    .footer_container {
+        height: 100dvh;
+    }
+}

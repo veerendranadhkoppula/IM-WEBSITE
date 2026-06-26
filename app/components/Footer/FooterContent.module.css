@@ -1,0 +1,388 @@
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(48px, 8vw, 100px);
+  padding: clamp(60px, 10vw, 150px) clamp(24px, 8.7vw, 125px) clamp(30px, 3.5vw, 50px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-width: none;
+  z-index: 1;
+}
+
+.overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(60px, 12.5vw, 180px);
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navCol li a,
+.navCol li span {
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 34px);
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.navCol li a:hover {
+  opacity: 0.7;
+}
+
+.topRight {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 5.5vw, 80px);
+  max-width: 420px;
+}
+
+.questionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.questionText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.questionHeading {
+  font-family: var(--font-pretendard);
+  font-weight: 400;
+  font-size: clamp(28px, 2.8vw, 40px);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.questionDesc {
+  font-family: var(--font-pretendard);
+  font-weight: 400;
+  font-size: clamp(16px, 1.7vw, 24px);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7.5px 8px 7.5px 18px;
+  border-radius: 83px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ctaBtn span {
+  font-family: var(--font-pretendard);
+  font-weight: 400;
+  font-size: 20px;
+  color: #101820;
+  white-space: nowrap;
+}
+
+.ctaArrow {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+  border-radius: 60px;
+  background: #101820;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaArrow svg {
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover .ctaArrow svg {
+  transform: rotate(45deg);
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.socialIcon:hover {
+  opacity: 0.6;
+}
+
+.writeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionLabel {
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.emailLink {
+  font-family: var(--font-pretendard);
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 34px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.emailLink:hover {
+  opacity: 0.7;
+}
+
+.connectSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(24px, 4.2vw, 60px);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.socialLinks a:hover {
+  opacity: 0.6;
+}
+
+.bottom {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.privacyLink {
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.privacyLink:hover {
+  opacity: 0.7;
+}
+
+.tagline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+.taglineWord {
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #F87498;
+  flex-shrink: 0;
+}
+
+.copyright {
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+  font-size: 20px;
+  color: #848484;
+}
+
+@media (max-width: 959px) {
+  .overlay {
+    padding: 46px 24px 24px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .topLeft {
+    gap: 68px;
+  }
+
+  .navCol {
+    gap: 16px;
+  }
+
+  .navCol li a,
+  .navCol li span {
+    font-size: 20px;
+  }
+
+  .topRight {
+    max-width: 100%;
+    gap: 50px;
+  }
+
+  .questionSection {
+    gap: 20px;
+  }
+
+  .questionText {
+    gap: 10px;
+  }
+
+  .questionHeading {
+    font-size: 20px;
+  }
+
+  .questionDesc {
+    font-size: 14px;
+  }
+
+  .ctaBtn {
+    padding: 5.5px 6px 5.5px 10px;
+    gap: 10px;
+  }
+
+  .ctaBtn span {
+    font-size: 14px;
+  }
+
+  .ctaArrow {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+
+  .ctaArrow svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .writeSection {
+    gap: 10px;
+  }
+
+  .sectionLabel {
+    font-size: 20px;
+  }
+
+  .emailLink {
+    font-size: 24px;
+  }
+
+  .connectSection {
+    gap: 10px;
+  }
+
+  .socialLinks {
+    gap: 40px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 50px;
+  }
+
+  .privacyLink {
+    font-size: 14px;
+    margin-bottom: 80px;
+  }
+
+  .tagline {
+    position: relative;
+    left: auto;
+    transform: none;
+    align-self: center;
+    gap: 8px;
+    padding-bottom: 9px;
+  }
+
+  .tagline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5px;
+    background: #ffffff;
+  }
+
+  .taglineWord {
+    font-size: 12px;
+  }
+
+  .dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .copyright {
+    font-size: 14px;
+    align-self: center;
+    margin-top: 6px;
+  }
+}

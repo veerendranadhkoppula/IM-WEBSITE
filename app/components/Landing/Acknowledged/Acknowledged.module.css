@@ -1,0 +1,345 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+       padding:
+        0
+        clamp(24px, 9vw, 115px)
+        clamp(80px, 12vw, 200px)
+        clamp(24px, 9vw, 115px);
+}
+.MainConatiner{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: clamp(26px, 3vw, 43px);
+    width: 100%;
+
+}
+.Top{
+    display: flex;
+    justify-content: left;
+}
+.Top h3{
+       font-size: var(--fs-34);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+.stylish{
+    font-family: var( --font-awesome-serif);
+     color: #101820;
+    font-weight: 400;
+    margin: 0;
+      font-size: var(--fs-34);
+}
+.bottom{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+}
+.Awardsss{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 93px;
+    width: 100%;
+    padding:
+  clamp(15px, 4vw, 50px)
+  clamp(22px, 4vw, 52px)
+  clamp(15px, 3vw, 35px)
+  clamp(19px, 3vw, 41px);
+  border: 1px solid #101820;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.awardstop{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+}
+.awardsSvg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.awardstop p,
+.awardstop h4{
+    font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+.awardsbottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    gap: 2px;
+}
+.awardsbottomleft{
+    display: flex;
+    justify-content: left;
+}
+.awardsbottomleft h5{ 
+font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+.awardsbottomright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63px;
+    height: 63px;
+    background-color: #101820;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.awardsbottomright svg {
+  transition: transform 0.3s ease;
+}
+
+.awardsbottomright:hover svg {
+  transform: rotate(50deg);
+}
+.twocard{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    gap: 30px;
+}
+.clutch{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 107px;
+    background-color: #101820;
+    padding:
+  clamp(18px, 4vw, 50px)
+  10px
+  clamp(18px, 4vw, 48px)
+  clamp(15px, 3vw, 40px);
+  border: 1px solid #101820;
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.clutchtop{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+}
+.clutchSvg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.clutchtop p{
+    font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #FFFFFF;
+    font-weight: 400;
+    margin: 0;
+}
+.clutchbottom{
+    display: flex;
+    justify-content: left;
+}
+.clutchbottom p{
+     font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #FFFFFF;
+    font-weight: 400;
+    margin: 0;
+}
+.behance{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 107px;
+    background-color: #fff;
+    padding:
+  clamp(18px, 4vw, 50px)
+  10px
+  clamp(18px, 4vw, 48px)
+  clamp(15px, 3vw, 40px);
+  border: 1px solid #101820;
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.behanceSvg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.behancetop{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+}
+.behancetop p{
+    font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+.behancebottom{
+    display: flex;
+    justify-content: left;
+}
+.behancebottom p{
+     font-size: var(--fs-30);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+@media (min-width: 641px) and (max-width: 959px) {
+    .bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .twocard {
+        gap: 20px;
+    }
+    .Awardsss {
+        gap: 30px;
+    }
+    .awardstop svg {
+        width: 200px;
+        height: auto;
+    }
+    .awardsbottomright {
+        width: 48px;
+        height: 48px;
+    }
+    .clutch, .behance {
+        gap: 30px;
+    }
+    .clutchtop svg {
+        width: 120px;
+        height: auto;
+    }
+    .behancetop svg {
+        width: 55px;
+        height: auto;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1299px) {
+    .awardstop svg {
+        width: clamp(200px, 22vw, 317px);
+        height: auto;
+    }
+    .clutchtop svg {
+        width: clamp(110px, 12vw, 176px);
+        height: auto;
+    }
+    .behancetop svg {
+        width: clamp(55px, 6vw, 79px);
+        height: auto;
+    }
+    .awardsbottomright {
+        width: clamp(48px, 5vw, 63px);
+        height: clamp(48px, 5vw, 63px);
+    }
+}
+
+@media (max-width: 640px){
+    .main{
+        padding: 0px 24px 53px 24px;
+    }
+.MainConatiner{
+    gap: 26px;
+}
+.Top h3, .stylish{
+    font-size: 24px
+}
+.bottom{
+    flex-direction: column;
+    gap: 10px;
+}
+.Awardsss{
+    padding: 15px 22px 15px 19px;
+    gap: 20px;
+}
+.awardstop{
+    gap: 10px;
+}
+.awardstop svg{
+    width: 132px;
+    height: 21px;
+}
+.awardstop h4{
+    font-size: 14px;
+}
+.awardsbottomleft h5{
+    font-size: 14px;
+}
+.awardsbottomright{
+    width: 30px;
+    height: 30px;
+
+}
+.awardsbottomright svg{
+    width: 11.5px;
+    height: 14px;
+}
+.twocard{
+    gap: 10px;
+}
+.clutch{
+    padding: 18px 15px 17px 15px;
+    gap: 40px;
+}
+.clutchtop{
+    gap: 11px;
+}
+.clutchtop svg{
+    width: 64px;
+    height: 18px;
+}
+.clutchtop p{
+    font-size: 12px;
+}
+.clutchbottom p {
+    font-size: 12px;
+}
+.behance{
+    padding: 18px 15px 17px 15px;
+    gap: 40px;
+}
+.behancetop{
+    gap: 11px;
+}
+.behancetop svg{
+    width: 30px;
+    height: 18px;
+}
+.behancetop p{
+    font-size: 12px;
+}
+.behancebottom p {
+    font-size: 12px;
+}
+}

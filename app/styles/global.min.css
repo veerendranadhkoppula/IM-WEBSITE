@@ -195,7 +195,7 @@ webp {
 }
 
 @font-face {
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     src: url("/assets/fonts/ideamet.woff");
 }
 @font-face {
@@ -257,7 +257,7 @@ html {
     width: 100vw;
     overflow-x: hidden;
     background-color: #fff;
-    font-family: ideamet, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-pretendard);
     color: #101820;
 }
 
@@ -338,7 +338,7 @@ h4,
 h5,
 h6,
 p {
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500
 }
 
@@ -414,7 +414,7 @@ input {
     background: 0 0;
     border-color: none;
     border: none;
-    font: ideamet
+    font-family: var(--font-pretendard)
 }
 
 .form_container_section {
@@ -422,7 +422,7 @@ input {
     background: #fff;
     display: flex;
     align-items: center;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     z-index: 2;
     position: relative
@@ -456,7 +456,7 @@ input {
         background: #fff;
         display: flex;
         align-items: center;
-        font-family: ideamet;
+        font-family: var(--font-pretendard);
         font-weight: 500;
         z-index: 10;
         position: relative
@@ -478,7 +478,7 @@ input {
     text-align: left;
     color: grey;
     line-height: 1.5;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     font-size: var(--fs-24)
 }
@@ -489,7 +489,7 @@ input {
 }
 
 .footer {
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     text-align: left;
     position: relative
 }
@@ -510,7 +510,7 @@ input {
 .footer_p span>input {
     color: #757575;
     border-radius: 0;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-size: var(--fs-36);
     font-weight: 500;
     background-color: transparent;
@@ -529,7 +529,7 @@ input {
     max-height: 170px;
     color: #757575;
     font-size: var(--fs-36);
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     background-color: transparent;
     border: none;
@@ -595,7 +595,7 @@ textarea::-webkit-input-placeholder {
     border-radius: 10px;
     color: rgba(136, 136, 136, .8);
     font-size: 1.7vw;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -640,7 +640,7 @@ textarea::-webkit-input-placeholder {
     position: relative;
     overflow: hidden;
     background-color: #000;
-    font-family: ideamet
+    font-family: var(--font-pretendard)
 }
 
 .integra_magna_img {
@@ -964,7 +964,7 @@ textarea::-webkit-input-placeholder {
     background-color: rgba(0, 0, 0, .5);
     align-items: center;
     justify-content: center;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     overflow-y: hidden;
 
     z-index: 99999 !important;
@@ -1052,7 +1052,7 @@ textarea::-webkit-input-placeholder {
 .pop_form_content p {
     width: inherit;
     line-height: 1.55;
-    font-family: ideamet, Arial, sans-serif;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     color: #808080;
     font-size: var(--fs-24)

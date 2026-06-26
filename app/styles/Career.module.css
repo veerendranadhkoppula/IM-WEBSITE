@@ -471,7 +471,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 200px 115px;
-    font-family: ideamet
+    font-family: var(--font-pretendard)
 }
 
 .Where_braand_container h1 {
@@ -554,7 +554,7 @@
     height: auto;
     margin: 100px auto;
     padding-bottom: 5vw;
-    font-family: ideamet
+    font-family: var(--font-pretendard)
 }
 
 .set {

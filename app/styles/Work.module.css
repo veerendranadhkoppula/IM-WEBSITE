@@ -1,6 +1,6 @@
 .workHeaderSection {
     padding: 180px 115px;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     padding-bottom: 60px;
 }
 
@@ -82,7 +82,7 @@
 
 .workPageGridSection {
     padding: 0 115px;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     display: flex;
     gap: 90px;
     flex-direction: column;

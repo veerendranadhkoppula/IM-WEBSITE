@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Pretendard Variable';
+  src: url('/assets/fonts/PretendardVariable-Latin.woff2') format('woff2');
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Awesome Serif';
+  src: url('/assets/fonts/AwesomeSerifItalic-LightReg.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Awesome Serif';
+  src: url('/assets/fonts/AwesomeSerifItalic-MdExraTall.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Awesome Serif';
+  src: url('/assets/fonts/AwesomeSerifItalic-SemBdTall.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Awesome Serif';
+  src: url('/assets/fonts/AwesomeSerifItalic-ExtraTall.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Awesome Serif';
+  src: url('/assets/fonts/AwesomeSerifItalic-BdExraTall.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Awesome Serif Fallback';
+  src: local('Georgia Italic'), local('Georgia');
+  font-style: italic;
+  size-adjust: 95%;
+  ascent-override: 90%;
+  descent-override: 22%;
+}
+:root {
+  --font-pretendard: 'Pretendard Variable', sans-serif;
+  --font-awesome-serif: 'Awesome Serif', 'Awesome Serif Fallback', Georgia, serif;
+  --fs-30: clamp(0.88rem, 1.01vi + 0.66rem, 1.88rem);
+  --fs-64: clamp(2rem, 2.03vi + 1.57rem, 4rem);
+  --fs-48: clamp(1.5rem, 1.52vi + 1.18rem, 3rem);
+  --fs-46: clamp(1.25rem, 1.64vi + 0.91rem, 2.88rem);
+  --fs-36: clamp(1.25rem, 1vi + 1.05rem, 2.25rem);
+  --fs-32: clamp(1.25rem, 0.75vi + 1.09rem, 2.00rem);
+  --fs-25: clamp(0.88rem, 0.69vi + 0.73rem, 1.56rem);
+  --fs-24: clamp(1rem, 0.5vi + 0.9rem, 1.5rem);
+  --fs-56: clamp(1.5rem, 2.03vi + 1.07rem, 3.5rem);
+  --fs-16: clamp(0.88rem, 0.13vi + 0.85rem, 1rem);
+  --fs-20: clamp(1.13rem, 0.13vi + 1.1rem, 1.25rem);
+  --fs-40: clamp(1.13rem, 1.39vi + 0.83rem, 2.5rem);
+  --fs-26: clamp(1.13rem, 0.51vi + 1.02rem, 1.63rem);
+  --fs-34: clamp(1.31rem, 0.82vi + 1.14rem, 2.13rem);
+  --color-bg: #f5f5f5;
+  --color-text: #222;
+  --color-accent: #0070f3;
+}

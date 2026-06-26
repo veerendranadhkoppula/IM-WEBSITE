@@ -6,468 +6,429 @@
     --fs-24: clamp(1rem, 0.5vi + 0.9rem, 1.5rem);
     --fs-20: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
     --fs-16: clamp(0.75rem, 0.25vi + 0.7rem, 1rem);
-  }
-  
-  /* Base header styles */
-  .main-header {
-      width: 100%;
-      z-index: 1;
+}
+
+.main-header {
+    width: 100%;
+    z-index: 1;
+}
+
+/* ── Scroll hide/show ── */
+.hide-scroll-header {
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+}
+.show-scroll-header {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+[data-header] {
+    transition: all .5s ease-in-out;
+}
+
+/* ── Scroll-header bar ── */
+.scroll-header {
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 30px auto;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+}
+
+/* ── Mobile: reset scroll-header ── */
+@media screen and (max-width: 960px) {
+    .scroll-header {
+        mix-blend-mode: normal;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        background: none;
+        margin: 0;
+        padding: 12px 0;
     }
-    
-    /* Hide the elements when scrolling down (Desktop only) */
-    @media screen and (min-width: 960px) {
-      .hide-scroll-header {
-        transform: translateY(-200%);
-        transition: transform 0.3s ease-in-out;
-      }
-    
-      .show-scroll-header {
-        transform: translateY(0);
-        transition: transform 0.3s ease-in-out;
-      }
-    
-      .scroll-header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        /* z-index: 999; */
-      }
-    
-      .logo-icon-container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        /* z-index: 998; */
-      }
+    .logo-icon-container {
+        display: none;
     }
-    
-    /* On mobile (less than 960px), keep the header sticky */
-    @media screen and (max-width: 959px) {
-      .scroll-header,
-      .logo-icon-container {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-      }
+}
+
+/* ── Desktop/mobile logo switch ── */
+.mobile-logo { display: none; }
+@media screen and (max-width: 960px) {
+    .desktop-logo { display: none; }
+    .mobile-logo  { display: block; }
+}
+
+/* ── Logo container ── */
+.logo-contact-container {
+    display: flex;
+    width: calc(100% - 2 * 115px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imglogo {
+    width: 160px;
+    z-index: 1000 !important;
+}
+
+/* ── Logo icon container (top-left, desktop only) ── */
+.logo-icon-container {
+    position: fixed;
+    padding: 0 115px;
+    margin: 30px auto;
+    z-index: 999 !important;
+    top: 0;
+}
+
+/* ── Center pill nav (exact reference values) ── */
+.nav-holder {
+    position: fixed;
+    left: 25%;
+}
+
+.nav-holder {
+    z-index: 1000;
+    margin: 30px auto;
+    display: flex;
+    font-family: var(--font-pretendard);
+    width: 50%;
+    font-size: var(--fs-20);
+    font-weight: 500;
+    justify-content: center;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    height: 55px;
+    padding: 0 38px;
+    border-radius: 27.5px;
+    border: 1.5px solid #ececec;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.47) 0%, rgba(118, 118, 118, 0) 100%);
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-weight: 600;
+    color: #404040;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navlinks li {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    overflow: hidden;
+    line-height: 1.48;
+    gap: .5px;
+}
+
+.nav-item span {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font-pretendard);
+    text-decoration: none;
+    color: #404040 !important;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-item > span {
+    display: flex !important;
+    align-items: center;
+}
+
+a {
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item a {
+    text-decoration: none !important;
+    color: #404040 !important;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font-pretendard);
+}
+
+.nav-item .active {
+    text-decoration: underline;
+}
+
+.navlinks .nav-item .active {
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* ── WhatsApp CTA (desktop right, exact reference values) ── */
+.sales-cta-wrapper {
+    position: fixed;
+    top: 0;
+    right: 115px;
+    z-index: 1001;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    padding: 3px 14.51px 3px 3px;
+    border-radius: 27.5px;
+    background: #ffffff;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(180deg, #82EEB0 0%, #047835 100%) border-box;
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+    text-decoration: none !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.whatsapp-icon-wrap {
+    width: 31px;
+    height: 31px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #82EEB0 0%, #047835 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 6px 6px;
+    flex-shrink: 0;
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+}
+
+.whatsapp-icon-wrap svg {
+    width: 20px;
+    height: 20px;
+}
+
+.whatsapp-cta-text {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 16px;
+    color: #101820;
+    line-height: 1;
+}
+
+.whatsapp-cta-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: calc(4.85px - 13px);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-cta:hover .whatsapp-cta-arrow {
+    transform: rotate(45deg);
+}
+
+/* ── Mobile open button (original styles — Menu/Close text) ── */
+.openButton {
+    z-index: 1001 !important;
+    display: none;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.openButton button {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-20);
+    font-weight: 500 !important;
+}
+
+.menu_button_container {
+    text-decoration: underline;
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-20);
+    font-weight: 500 !important;
+}
+
+.menu_button_container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: width .3s;
+    text-decoration: underline;
+}
+
+/* ── Tablet ── */
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+    .logo-icon-container {
+        padding: 0 60px;
     }
-    
-    .imglogo {
-      width: 160px;
+    .logo-contact-container {
+        width: calc(100% - 2 * 60px);
     }
-    
-    .nav-holder {
-      position: fixed;
-      top: 0;
-      z-index: 997;
+    .sales-cta-wrapper {
+        right: 60px;
     }
-    
-    
-  .hidden {
-    display: none
-  }
-  
-  
-  
-  
-  
-  .header-logo {
-      width: 160px;
-      /* mix-blend-mode: difference */
-  }
-  
-  .header-logo img {
-      /* mix-blend-mode: difference */
-  }
-  
-  
-  .scroll-header {
-      position: fixed;
-      justify-content: center;
-      top: 0;
-      display: flex;
-      align-items: center;
-      z-index: 1000;
-      mix-blend-mode: difference;
-      background: #ffffff; 
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 30px auto;
-      align-items: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      width: 100%
-  }
-  
-  [data-header] {
-      transition: all .5s ease-in-out
-  }
-  
-  .logo-contact-container {
-      display: flex;
-      width: calc(100% - 2 * 115px);
-      justify-content: space-between;
-      align-items: center
-  }
-  
-  .imglogo {
-      width: 160px;
-      z-index: 1000 !important
-  }
-  
-  .nav-holder {
-      position: fixed;
-      left: 25%
-  }
-  
-  .logo-icon-container {
-      position: fixed;
-      padding: 0 115px;
-      margin: 30px auto;
-      z-index: 999 !important;
-      top: 0
-  }
-  
-  .contact-link::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: #fff;
-      transition: width .3s;
-      text-decoration: underline
-  }
-  
-  .menu_button_container::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: #fff;
-      transition: width .3s;
-      text-decoration: underline
-  }
-  
-  .contact-link {
-      color: #fff;
-      font-family: ideamet;
-      font-size: var(--fs-20);
-      font-weight: 500 !important
-  }
-  
-  @media screen and (min-width:960px) and (max-width:1200px) {
-      .logo-icon-container {
-          padding: 0 60px
-      }
-  
-      .logo-contact-container {
-          width: calc(100% - 2 * 60px)
-      }
-  }
-  
-  .nav-holder {
-      z-index: 900;
-      margin: 30px auto;
-      display: flex;
-      font-family: ideamet;
-      width: 50%;
-      font-size: var(--fs-20);
-      font-weight: 500;
-      justify-content: center;
-      z-index: 1000
-  }
-  .scroll{
-      height: 100vh;
-      width: 100%;
-      
-  }
-  
-  .navlinks {
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border-radius: 8px;
-      color: #101820;
-      aspect-ratio: 573/58;
-      font-family: ideamet;
-      width: 573px;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      background: url("../components/Header/nav-bar-outline.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      padding: 0;
-      background-size: contain;
-      overflow: hidden
-  }
-  
-  .navlinks li {
-      display: inline-block;
-      display: flex;
-      align-items: center;
-      height: 100%;
-      flex-direction: column;
-      justify-content: center
-  }
-  
-  .link-container {
-      display: flex;
-      flex-direction: column;
-      height: 40%;
-      overflow: hidden;
-      line-height: 1.48;   
-      gap: .5px
-  }
-  
-  .nav-item span {
-      font-weight: 500;
-      text-decoration: none;
-      color: #000 !important;
-      -webkit-tap-highlight-color: transparent;
-      display: flex;
-      height: 100%;
-      align-items: center
-  }
-  
-  .menuButton:not([data-menu-hover]) span,
-  .nav-item:not([data-menu-hover]) span {
-      /* text-decoration: underline; */
-      /* pointer-events: none */
-  }
-  
-  .nav-item>span {
-      display: flex !important;
-      align-items: center
-  }
-  
-  a {
-      background-color: transparent;
-      cursor: pointer
-  }
-  /* Add this to your existing CSS */
-  .nav-item .active {
-      text-decoration: underline; /* Underline the active link */
-      /* font-weight: bold; */
+    .navlinks {
+        gap: 22px;
+        padding: 0 24px;
     }
-    .navlinks .nav-item .active {
-        text-decoration: underline; /* Underline the active link */
-        pointer-events: none; /* Disable clicking on the active link */
-        cursor: default; /* Change cursor to default for inactive appearance */
-      }
-      
-    
-    /* For the hover effect */
-    .link-container span.hovered {
-      /* Additional styling for hovered state */
-    }
-    
-  .openButton {
-      z-index: 1001 !important;
-      display: none;
-      background: #fff;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent
-  }
-  
-  .openButton button {
-      font-family: ideamet;
-      font-size: var(--fs-20);
-      font-weight: 500 !important
-  }
-  
-  .menu_button_container {
-      text-decoration: underline;
-      font-family: ideamet;
-      font-size: var(--fs-20);
-      font-weight: 500 !important
-  }
-  
-  @media screen and (min-width:640px) and (max-width:1200px) {
-      .navlinks {
-          width: 473px
-      }
-  }
-  
-  @media screen and (min-width:320px) and (max-width:960px) {
-      .nav-holder {
-          display: none
-      }
-  
-      .logo-contact-container {
-          width: calc(100% - 2 * 25px)
-      }
-  
-      .logo-icon-container {
-          padding: 0 25px
-      }
-  
-      .imglogo {
-          width: 110px;
-          z-index: 1000 !important
-      }
-  
-      .contact-link {
-          display: none;
-          font-weight: 500 !important
-      }
-  
-      .openButton {
-          z-index: 1001 !important;
-          display: block
-      }
-  
-      .openButton button {
-          z-index: 1001 !important;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          -webkit-tap-highlight-color: transparent
-      }
-  }
-  
-  /* Sidebar base styles */
-  .sidebar {
-      position: fixed;
-      top: -120%;
-      right: 0;
-      height: 100vh;
-      width: 100vw;
-      z-index: 999;
-      background-color: rgba(255, 255, 255, .6);
-      -webkit-backdrop-filter: blur(25px);
-      backdrop-filter: blur(25px);
-      z-index: 98;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: top 1s ease-in-out; /* Faster transition */
-    }
-    
-    /* Sidebar open state */
-    .sidebar-open {
-      top: 0; /* Bring sidebar into view */
-    }
-    
-    .sidebar-container {
-      width: calc(100vw - 40px);
-      /* height: calc(100vh - 70px); */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 150px;
-    }
-    
-    /* Ensure the sidebar remains hidden on larger screens */
-    @media screen and (min-width: 960px) {
-      .sidebar {
+}
+
+/* ── Desktop: hide sidebar ── */
+@media screen and (min-width: 960px) {
+    .sidebar {
         display: none !important;
-      }
     }
-    
-  
-  
-  .sidebar_bg {
-      position: absolute;
-      left: -2vh;
-      top: -2vh;
-      width: 110vw;
-      height: 110vh;
-      background-color: rgba(255, 255, 255, .4);
-      backdrop-filter: blur(10px)
-  }
-  
-  
-  .sidebar-navlinks {
-      list-style: none;
-      height: 60%
-  }
-  
-  .sidebar-navlinks>.nav-item>a {
-      font-size: var(--fs-64);
-  }
-  
-  @media screen and (min-width:960px) {
-      .sidebar {
-          display: none !important
-      }
-  
-      .sidebar_bg {
-          display: none
-      }
-  }
-  
-  
-  @media screen and (min-width:320px) and (max-width:960px) {
-      .social-media-links {
-          list-style: none;
-          display: flex;
-          width: 200px;
-          justify-content: space-around;
-          padding: 10px;
-          border-bottom: solid #d9d9d9 1px
-      }
-  
-      .social-media-links li {
-          margin-right: 20px
-      }
-  
-      .social-media-links li a {
-          text-decoration: none;
-          color: #101820 !important
-      }
-  
-      .social-media {
-          display: flex;
-          align-items: center;
-          overflow: hidden;
-          font-weight: 500
-      }
-  
-      .nav-item {
-          overflow: hidden;
-          height: 60px;
-          display: flex;
-          align-items: center
-      }
-  }
-  
-  .sidebar-navlinks {
-      list-style: none;
-      height: 60%
-  }
-  
-  .clientele_heading {
-      font-size: var(--fs-36);
-      font-weight: 500
-  }
-  
-  .left-align {
-      justify-content: left
-  }
-  
-  #scroll-animate {
-      overflow: hidden
-  }
-  
-  #scroll-animate-main {
-      width: 100%;
-      left: 0
-  }
-  
-  #heightPage,
-  #heightScroll {
-      width: .47vw;
-      top: 0;
-      position: absolute;
-      z-index: 99
-  }
-  
-  #heightPage {
-      left: 0
-  }
-  
-  #heightScroll {
-      right: 0
-  }
-  
+}
+
+/* ── Mobile sidebar (full-screen overlay — original behavior) ── */
+.sidebar {
+    position: fixed;
+    top: -120%;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 98;
+    background-color: rgba(255, 255, 255, .6);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 1s ease-in-out;
+}
+
+.sidebar-open {
+    top: 0;
+}
+
+.sidebar-container {
+    width: calc(100vw - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 150px;
+}
+
+.sidebar-navlinks {
+    list-style: none;
+    height: 60%;
+}
+
+.sidebar-navlinks > .nav-item > a {
+    font-size: var(--fs-64);
+}
+
+/* ── Mobile layout (original styles) ── */
+@media screen and (min-width: 320px) and (max-width: 960px) {
+    .nav-holder {
+        display: none;
+    }
+    .logo-contact-container {
+        width: calc(100% - 2 * 25px);
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-icon-container {
+        padding: 0 25px;
+    }
+    .imglogo {
+        width: 110px;
+        z-index: 1000 !important;
+    }
+    .openButton {
+        z-index: 1001 !important;
+        display: block;
+        background: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: #101820;
+    }
+    .openButton button {
+        z-index: 1001 !important;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        color: #101820;
+        -webkit-text-fill-color: #101820;
+    }
+    .menu_button_container {
+        color: #101820;
+        -webkit-text-fill-color: #101820;
+        text-decoration: underline;
+    }
+    .menu_button_container::after {
+        display: none;
+    }
+    .sales-cta-wrapper {
+        display: none;
+    }
+    .nav-item {
+        overflow: hidden;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-item span {
+        font-size: 24px;
+    }
+    .social-media-links {
+        list-style: none;
+        display: flex;
+        width: 200px;
+        justify-content: space-around;
+        padding: 10px;
+        border-bottom: solid #d9d9d9 1px;
+    }
+    .social-media-links li {
+        margin-right: 20px;
+    }
+    .social-media-links li a {
+        text-decoration: none;
+        color: #101820 !important;
+    }
+    .social-media {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        font-weight: 500;
+    }
+}
+
+.hidden {
+    display: none;
+}

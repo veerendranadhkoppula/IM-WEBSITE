@@ -1,0 +1,229 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffff;
+    box-sizing: border-box;
+  padding:
+  180px
+  clamp(24px, 9vw, 115px)
+  0
+  clamp(24px, 9vw, 115px);
+}
+.MainContainer{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+}
+.left{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    min-width: 0;
+}
+.leftTop{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+.leftTop p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #4E4E4E;
+    margin: 0;
+    font-family: var(--font-pretendard);
+}
+.dot{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #F87498;
+}
+.leftBottom{
+    display: flex;
+    justify-content: left;
+}
+.leftBottom h1{
+    font-size: var(--fs-64);
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    font-family: var(--font-awesome-serif);
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 clamp(200px, 30vw, 420px);
+}
+.spectrumCanvas{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.right{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-end;
+    flex: 1;
+    min-width: 0;
+}
+.rightTop{
+    display: flex;
+    justify-content: right;
+}
+.rightTop h2{
+    font-size: var(--fs-64);
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    text-align: right;
+    font-family: var(--font-awesome-serif);
+}
+.rightBottom{
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.subtext {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4E4E4E;
+    margin: 0;
+    text-align: right;
+    font-family: var(--font-pretendard);
+}
+.ctanew{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #000000;
+    border-radius: 83px;
+    border: none;
+    cursor: pointer;
+    padding: 7.5px 8px 7.5px 18px;
+}
+.ctanew p{
+    font-size: var(--fs-20);
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: var(--font-pretendard);
+}
+.svgicon{
+    display: flex;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.svgicon:hover {
+    background-color: #FFB600;
+}
+.svgicon svg {
+  transition: transform 0.3s ease;
+}
+
+.svgicon:hover svg {
+  transform: rotate(50deg);
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .main {
+        padding: 120px 60px 0 60px;
+    }
+    .leftBottom h1 {
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.15;
+    }
+    .svgicon{
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+    .svgicon svg{
+        width: 12px;
+        height: 12px;
+    }
+    .rightTop h2 {
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.15;
+    }
+    .middle {
+        flex: 0 0 clamp(160px, 25vw, 300px);
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+        padding: 100px 24px 80px 24px;
+    }
+    .MainContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .left {
+        width: 100%;
+        flex: unset;
+        gap: 12px;
+    }
+    .leftTop {
+        gap: 8px;
+    }
+    .leftTop p {
+        font-size: 12px;
+    }
+    .leftBottom h1 {
+        font-size: 32px;
+    }
+    .middle {
+        flex: unset;
+        width: clamp(180px, 60vw, 260px);
+        align-self: center;
+        margin: 0 auto;
+    }
+    .spectrumCanvas {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+        flex: unset;
+        gap: 18px;
+        align-items: flex-end;
+    }
+    .rightTop h2 {
+        font-size: 32px;
+        text-align: right;
+    }
+    .ctanew {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+    .ctanew p {
+        font-size: 14px;
+    }
+    .svgicon {
+        width: 24px;
+        height: 24px;
+    }
+    .svgicon svg {
+        width: 11px;
+        height: 12px;
+    }
+}

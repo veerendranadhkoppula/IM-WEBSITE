@@ -5,7 +5,7 @@ import Footer from './Footer2';
 export default function FinalFooter() {
     return (
         <>
-            <Intro />
+            {/* <Intro /> */}
             <Footer />
         </>
     )

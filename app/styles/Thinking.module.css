@@ -59,7 +59,7 @@ body.no-scroll {
 .heroHeading h1 {
   color: #2D2D2D;
   font-size: var(--fs-100);
-  font-family: benermeriahBold;
+  font-family: var(--font-pretendard);
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
@@ -71,7 +71,7 @@ body.no-scroll {
   font-size: var(--fs-36);
   font-weight: 400;
   max-width: 13em;
-  font-family: benermeriah;
+  font-family: var(--font-pretendard);
   line-height: 51.75px;
 }
 
@@ -116,7 +116,7 @@ body.no-scroll {
   font-feature-settings: 'cpsp' on;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  font-family: benermeriahBold;
+  font-family: var(--font-pretendard);
 }
 
 .featureHeading p {
@@ -162,7 +162,7 @@ body.no-scroll {
   font-feature-settings: 'cpsp' on;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  font-family: benermeriahBold;
+  font-family: var(--font-pretendard);
 }
 
 .moreHeading p {

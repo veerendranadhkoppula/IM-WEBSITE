@@ -2,7 +2,7 @@
     width: 100%;
     background-color: white;
     height: 100%;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     display: flex;
     justify-content: center;

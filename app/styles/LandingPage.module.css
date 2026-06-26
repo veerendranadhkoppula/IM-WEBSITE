@@ -1,9 +1,12 @@
-@font-face {
-    font-family: Campton1;
-    src: url("../../public/assets/fonts/camptonvariable.ttf") format("truetype");
-    font-weight: 300 900;
-    font-display: swap;
-    font-style: normal;
+
+.homeSection {
+  min-height: 103vh;
+}
+
+@media (min-width: 640px) and (max-width: 1400px) {
+  .homeSection {
+    min-height: 80vh;
+  }
 }
 
 .site_container_padding {
@@ -41,7 +44,7 @@
 }
 
 .heading_text {
-    font-family: Campton1;
+    font-family: var(--font-pretendard);
     line-height: 0.85;
     text-transform: uppercase;
     user-select: none;
@@ -192,7 +195,7 @@ line-height: 0;
     }
 
     .heading_text {
-        font-family: ideamet;
+        font-family: var(--font-pretendard);
         line-height: 0;
         text-transform: uppercase;
         user-select: none;
@@ -396,7 +399,7 @@ line-height: 0;
 }
 .typwrite_text {
     font-size: var(--fs-64);
-    font-family: ideamet, Arial, sans-serif;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     text-align: left;
   }
@@ -740,12 +743,12 @@ line-height: 0;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     padding: 115px;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
 }
 
 .s_holder_small_display {
     display: none;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     background-color: #fff;
     z-index: 2;
 }

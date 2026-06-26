@@ -29,7 +29,7 @@
         padding-bottom: 20px;
         font-size: var(--fs-36) !important;
         font-weight: 500;
-        font-family: ideamet
+        font-family: var(--font-pretendard)
     }
 
     .Partner_container h2 {

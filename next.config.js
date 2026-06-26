@@ -1,16 +1,25 @@
 // next.config.js
+const path = require('path')
+
 const nextConfig = {
   turbopack: {},
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg|swf|avi|riv)$/,
-      type: "asset/resource",
+      type: 'asset/resource',
       generator: {
-        filename: "static/media/[name].[hash][ext]", // Customizes the output path
+        filename: 'static/media/[name].[hash][ext]',
       },
-    });
-    return config;
+    })
+    // Explicit alias so webpack can always find the Payload config
+    config.resolve = config.resolve || {}
+    config.resolve.alias = config.resolve.alias || {}
+    config.resolve.alias['@payload-config'] = path.resolve(__dirname, 'payload.config.ts')
+    return config
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = async () => {
+  const { withPayload } = await import('@payloadcms/next/withPayload')
+  return withPayload(nextConfig)
+}

@@ -328,7 +328,7 @@
 .text_Heading_Only {
     padding: 210px 115px;
     font-size: 64px;
-    font-family: ideamet, Arial, sans-serif;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     text-wrap: wrap
 }
@@ -751,7 +751,7 @@
     text-decoration: none;
     width: 100%;
     align-items: center;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     gap: 15px;
     font-size: var(--fs-20);
     font-weight: 500;
@@ -765,7 +765,7 @@
     color: #101820;
     aspect-ratio: 1/1;
     height: 58px;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     list-style: none;
     display: flex;
     text-align: center;
@@ -785,7 +785,7 @@
     border-radius: 8px;
     color: #101820;
     padding: 0;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     aspect-ratio: 223/58;
     overflow: hidden;
     padding-left: 15px;
@@ -825,7 +825,7 @@
 
 .cTextMarquee__text {
     font-style: normal;
-    font-family: ideamet;
+    font-family: var(--font-pretendard);
     font-weight: 500;
     will-change: transform;
     flex-shrink: 0;

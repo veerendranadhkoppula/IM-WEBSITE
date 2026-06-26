@@ -1,0 +1,253 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding:
+        clamp(80px, 12vw, 190px)
+        clamp(24px, 9vw, 115px)
+         0px
+        clamp(24px, 9vw, 115px);
+}
+
+.MainContainer {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: clamp(40px, 6vw, 91px);
+    width: 100%;
+}
+
+.Top {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.Top h4 {
+    font-size: var(--fs-34);
+    font-family: var(--font-pretendard);
+    color: #101820;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Top h5 {
+    font-family: var(--font-awesome-serif);
+    color: #101820;
+    font-weight: 500;
+    font-size: var(--fs-34);
+    margin: 0;
+}
+
+.emblaWrapper {
+    width: 100%;
+}
+
+.emblaViewport {
+    overflow: visible;
+    width: 100%;
+}
+
+.emblaContainer {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(35px, 8vw, 116px);
+    align-items: center;
+    width: 100%;
+}
+
+.emblaSlide {
+    flex: 1;
+    min-width: 0;
+}
+
+.pills {
+    display: none;
+}
+
+.card {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cardtop {
+    display: flex;
+    justify-content: left;
+}
+
+.cardbottom {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardbottom h4 {
+    font-size: var(--fs-26);
+    font-family: var(--font-awesome-serif);
+    color: #101820;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cardbottom p {
+    font-size: 16px;
+    font-family: var(--font-pretendard);
+    color: #4E4E4E;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .main{
+        padding: 80px 24px;
+    }
+    .MainContainer{
+        gap: 40px;
+    }
+    .Top h4,
+    .Top h5 {
+        font-size: 24px;
+    }
+
+    .emblaWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .emblaViewport {
+        overflow: hidden;
+    }
+
+    .emblaContainer {
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .emblaSlide {
+        flex: 0 0 75%;
+        min-width: 0;
+    }
+
+    .card {
+        gap: 20px;
+    }
+
+    .cardbottom {
+        gap: 10px;
+    }
+
+    .cardbottom h4 {
+        font-size: 20px;
+    }
+
+    .cardbottom p {
+        font-size: 14px;
+    }
+
+    .pills {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .pillActive {
+        width: 45px;
+        height: 6px;
+        border-radius: 44px;
+        background-color: #4E4E4E;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: width 0.3s ease, border-radius 0.3s ease;
+    }
+
+    .pillInactive {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #4E4E4E;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: width 0.3s ease, border-radius 0.3s ease;
+    }
+}
+@media (min-width:641px) and (max-width: 940px){
+    .emblaWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .emblaViewport {
+        overflow: hidden;
+    }
+
+    .emblaContainer {
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .emblaSlide {
+        flex: 0 0 75%;
+        min-width: 0;
+    }
+
+    .card {
+        gap: 20px;
+    }
+
+    .cardbottom {
+        gap: 10px;
+    }
+
+    .cardbottom h4 {
+        font-size: 20px;
+    }
+
+    .cardbottom p {
+        font-size: 14px;
+    }
+
+    .pills {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .pillActive {
+        width: 45px;
+        height: 6px;
+        border-radius: 44px;
+        background-color: #4E4E4E;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: width 0.3s ease, border-radius 0.3s ease;
+    }
+
+    .pillInactive {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #4E4E4E;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: width 0.3s ease, border-radius 0.3s ease;
+    }
+}

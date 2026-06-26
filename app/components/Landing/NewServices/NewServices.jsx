@@ -65,10 +65,10 @@ const SERVICES = [
   },
 ]
 
-const TRANS = 0.3
-const STAGGER = 0.02
+const TRANS = 0.35
+const STAGGER = 0.05
 
-const ServiceSection = memo(function ServiceSection({ sectionRef, bgRefs, titleRefs, listRefs, descRefs, imageRefs, onStartProject }) {
+const ServiceSection = memo(function ServiceSection({ sectionRef, bgRefs, titleRefs, listRefs, descRefs, imageRefs, whiteOverlayRef, onStartProject }) {
   return (
     <div ref={sectionRef} className={styles.main}>
       {SERVICES.map((service, i) => (
@@ -80,6 +80,7 @@ const ServiceSection = memo(function ServiceSection({ sectionRef, bgRefs, titleR
         />
       ))}
 
+      <div ref={whiteOverlayRef} className={styles.whiteOverlay} />
       <div className={styles.MainContainer}>
         <div className={styles.left}>
           <div className={styles.lefttop}>
@@ -177,6 +178,7 @@ const NewServices = () => {
   const listRefs = useRef([])
   const descRefs = useRef([])
   const imageRefs = useRef([])
+  const whiteOverlayRef = useRef(null)
   const [popupOpen, setPopupOpen] = useState(false)
   const openPopup = useCallback(() => setPopupOpen(true), [])
 
@@ -193,6 +195,7 @@ const NewServices = () => {
       gsap.set(bgRefs.current.slice(1), { opacity: 0 })
       gsap.set(listRefs.current.slice(1), { opacity: 0, y: 20 })
       gsap.set(descRefs.current.slice(1), { opacity: 0 })
+      gsap.set(whiteOverlayRef.current, { opacity: 0 })
       imageRefs.current.slice(1).forEach((ref) => {
         if (ref) gsap.set(ref, { opacity: 0 })
       })
@@ -205,9 +208,16 @@ const NewServices = () => {
           start: 'top top',
           end: `+=${totalScroll}`,
           pin: true,
-          scrub: isMobile ? 0.5 : 1.2,
+          scrub: isMobile ? 1.0 : 1.2,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onLeave: () => {
+            if (isMobile) return
+            gsap.to(whiteOverlayRef.current, { opacity: 1, duration: 0.5, ease: 'power2.inOut', overwrite: true })
+          },
+          onEnterBack: () => {
+            gsap.to(whiteOverlayRef.current, { opacity: 0, duration: 0.35, ease: 'power1.inOut', overwrite: true })
+          },
         },
       })
 
@@ -223,21 +233,22 @@ const NewServices = () => {
         if (imageRefs.current[from]) seg.to(imageRefs.current[from], { opacity: 0, duration: TRANS, ease: 'none' }, 0)
         if (imageRefs.current[to]) seg.to(imageRefs.current[to], { opacity: 1, duration: TRANS, ease: 'none' }, 0)
 
-        seg.to(titleRefs.current[from], { fontSize: inactiveFS, color: '#4E4E4E', duration: TRANS, ease: 'none' }, STAGGER)
-           .to(titleRefs.current[to], { fontSize: activeFS, color: '#FFFFFF', duration: TRANS, ease: 'none' }, STAGGER)
+        seg.to(titleRefs.current[from], { fontSize: inactiveFS, color: '#4E4E4E', duration: TRANS, ease: 'power1.inOut' }, STAGGER)
+           .to(titleRefs.current[to], { fontSize: activeFS, color: '#FFFFFF', duration: TRANS, ease: 'power1.inOut' }, STAGGER)
 
-        seg.to(listRefs.current[from], { opacity: 0, y: -20, duration: TRANS, ease: 'none' }, STAGGER * 2)
-           .to(listRefs.current[to], { opacity: 1, y: 0, duration: TRANS, ease: 'none' }, STAGGER * 2)
+        // Fast exit then enter — 0.01 gap keeps blank moment imperceptible
+        seg.to(listRefs.current[from], { opacity: 0, y: -8, duration: 0.1, ease: 'power3.in' }, STAGGER * 2)
+        seg.to(listRefs.current[to], { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, '>+0.01')
 
-        seg.to(descRefs.current[from], { opacity: 0, duration: TRANS, ease: 'none' }, STAGGER * 3)
-           .to(descRefs.current[to], { opacity: 1, duration: TRANS, ease: 'none' }, STAGGER * 3)
+        seg.to(descRefs.current[from], { opacity: 0, duration: 0.1, ease: 'power3.in' }, STAGGER * 3)
+        seg.to(descRefs.current[to], { opacity: 1, duration: 0.22, ease: 'power2.out' }, '>+0.01')
 
-        seg.to({}, { duration: 1 - STAGGER * 3 - TRANS })
+        const lastEnd = STAGGER * 3 + 0.1 + 0.01 + 0.22
+        seg.to({}, { duration: 1 - lastEnd })
 
         tl.add(seg)
       }
 
-      tl.to({}, { duration: 0.3 })
     }, sectionRef)
 
     return () => ctx.revert()
@@ -252,6 +263,7 @@ const NewServices = () => {
         listRefs={listRefs}
         descRefs={descRefs}
         imageRefs={imageRefs}
+        whiteOverlayRef={whiteOverlayRef}
         onStartProject={openPopup}
       />
       <ContactPopup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />

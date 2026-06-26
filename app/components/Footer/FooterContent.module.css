@@ -256,8 +256,8 @@
 
 @media (max-width: 959px) {
   .overlay {
-    padding: 70px 24px 18px;
-    gap: 0;
+    padding: 100px 24px 22px;
+    gap: 53px;
     justify-content: space-between;
   }
 

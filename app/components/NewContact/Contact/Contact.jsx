@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import styles from './Contact.module.css'
 import Image from 'next/image'
 import Misbah from './founder.png'
@@ -27,7 +26,6 @@ const CheckSVG = () => (
 )
 
 const Contact = () => {
-  const router = useRouter()
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -37,6 +35,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   const validateField = (name, value) => {
     if (name === 'fullName') {
@@ -77,7 +76,7 @@ const Contact = () => {
     const error = validateField(name, value)
     setErrors((prev) => ({ ...prev, [name]: error }))
     if (value.trim()) {
-      fetch('/api/branding-partial', {
+      fetch('/api/contact-partial', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -115,7 +114,7 @@ const Contact = () => {
     setSubmitting(true)
     setSubmitError('')
     try {
-      const res = await fetch('/api/branding-forms', {
+      const res = await fetch('/api/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -126,8 +125,15 @@ const Contact = () => {
         }),
       })
       if (!res.ok) throw new Error('Submission failed')
+      const sessionId = localStorage.getItem('partial_session')
+      if (sessionId) {
+        fetch(`/api/contact-partial?sessionId=${encodeURIComponent(sessionId)}`, { method: 'DELETE' }).catch(() => {})
+      }
       localStorage.removeItem('partial_session')
-      router.push('/branding/thank-you')
+      setSubmitting(false)
+      setSubmitted(true)
+      setFormData({ fullName: '', email: '', projectType: '', message: '' })
+      setTimeout(() => setSubmitted(false), 3000)
     } catch {
       setSubmitError('Something went wrong. Please try again.')
       setSubmitting(false)
@@ -260,7 +266,7 @@ const Contact = () => {
                 </div>
                 {submitError && <span className={styles.errorMsg}>{submitError}</span>}
                 <div className={styles.ctaRow}>
-                  <button type="submit" className={styles.cta} disabled={submitting}>
+                  <button type="submit" className={styles.cta} disabled={submitting || submitted}>
                     <span className={styles.ctaText}>{submitting ? 'Sending…' : 'Start a conversation'}</span>
                     <span className={styles.ctaArrow}>
                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,6 +275,9 @@ const Contact = () => {
                     </span>
                   </button>
                 </div>
+                {submitted && (
+                  <p className={styles.successMsg}>Message sent! We&apos;ll get back to you within 24 hours.</p>
+                )}
               </form>
             </div>
           </div>

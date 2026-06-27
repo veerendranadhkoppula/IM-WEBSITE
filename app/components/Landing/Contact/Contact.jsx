@@ -146,7 +146,10 @@ const handleBlur = (e) => {
         fetch(`/api/contact-partial?sessionId=${encodeURIComponent(sessionId)}`, { method: 'DELETE' }).catch(() => {})
       }
       localStorage.removeItem('partial_session')
+      setSubmitting(false)
       setSubmitted(true)
+      setFormData({ fullName: '', company: '', email: '', phone: '', message: '' })
+      setTimeout(() => setSubmitted(false), 3000)
     } catch {
       setSubmitError('Something went wrong. Please try again.')
       setSubmitting(false)
@@ -243,13 +246,7 @@ const handleBlur = (e) => {
                 </h2>
                 <p>No pitch. No agency jargon. Just honest brand advice.</p>
               </div>
-              {submitted ? (
-                <div className={styles.successMsg}>
-                  <p>Thanks for submitting!</p>
-                  <p>We&apos;ll get back to you shortly.</p>
-                </div>
-              ) : null}
-              {!submitted && <form className={styles.form} onSubmit={handleSubmit} noValidate>
+              <form className={styles.form} onSubmit={handleSubmit} noValidate>
                 <div className={styles.formRow}>
                   <div className={styles.fieldWrap}>
                     <input
@@ -318,7 +315,7 @@ const handleBlur = (e) => {
                 </div>
                 {submitError && <span className={styles.errorMsg}>{submitError}</span>}
                 <div className={styles.ctaRow}>
-                  <button type="submit" className={`${styles.cta} ${!isCtaEnabled ? styles.ctaMuted : ''}`} disabled={submitting || !isCtaEnabled}>
+                  <button type="submit" className={`${styles.cta} ${!isCtaEnabled ? styles.ctaMuted : ''}`} disabled={submitting || submitted || !isCtaEnabled}>
                     <span className={styles.ctaText}>{submitting ? 'Sending…' : 'Claim My Free Brand Audit'}</span>
                     <span className={styles.ctaArrow}>
                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -327,7 +324,10 @@ const handleBlur = (e) => {
                     </span>
                   </button>
                 </div>
-              </form>}
+                {submitted && (
+                  <p className={styles.successMsg}>Message sent! We&apos;ll get back to you shortly.</p>
+                )}
+              </form>
             </div>
 
           </div>

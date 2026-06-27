@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/navigation'
 import styles from './ContactPopup.module.css'
 const getOrCreateSessionId = () => {
   let id = localStorage.getItem('partial_session')
@@ -11,7 +10,6 @@ const getOrCreateSessionId = () => {
   return id
 }
 const ContactPopup = ({ isOpen, onClose }) => {
-  const router = useRouter()
   const [formData, setFormData] = useState({
     fullName: '',
     company: '',
@@ -22,6 +20,7 @@ const ContactPopup = ({ isOpen, onClose }) => {
   const [errors, setErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
   const popupRef = useRef(null)
 
   useEffect(() => {
@@ -90,7 +89,7 @@ const handleBlur = (e) => {
 
   // partial capture
   if (value.trim()) {
-    fetch('/api/branding-partial', {
+    fetch('/api/contact-partial', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -136,7 +135,7 @@ const handleBlur = (e) => {
     setSubmitError('')
 
     try {
-      const res = await fetch('/api/branding-forms', {
+      const res = await fetch('/api/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -147,9 +146,19 @@ const handleBlur = (e) => {
           message: formData.message,
         }),
       })
-   if (!res.ok) throw new Error('Submission failed')
-localStorage.removeItem('partial_session')
-router.push('/branding/thank-you')
+      if (!res.ok) throw new Error('Submission failed')
+      const sessionId = localStorage.getItem('partial_session')
+      if (sessionId) {
+        fetch(`/api/contact-partial?sessionId=${encodeURIComponent(sessionId)}`, { method: 'DELETE' }).catch(() => {})
+      }
+      localStorage.removeItem('partial_session')
+      setSubmitting(false)
+      setSubmitted(true)
+      setFormData({ fullName: '', company: '', email: '', phone: '', message: '' })
+      setTimeout(() => {
+        setSubmitted(false)
+        onClose()
+      }, 3000)
     } catch {
       setSubmitError('Something went wrong. Please try again.')
       setSubmitting(false)
@@ -252,7 +261,7 @@ router.push('/branding/thank-you')
           </div>
           {submitError && <span className={styles.errorMsg}>{submitError}</span>}
           <div className={styles.ctaRow}>
-            <button type="submit" className={styles.cta} disabled={submitting}>
+            <button type="submit" className={styles.cta} disabled={submitting || submitted}>
               <span className={styles.ctaText}>
                 {submitting ? 'Sending…' : 'Claim My Free Brand Audit'}
               </span>
@@ -275,6 +284,11 @@ router.push('/branding/thank-you')
               </span>
             </button>
           </div>
+          {submitted && (
+            <p style={{ marginTop: '12px', fontSize: '14px', fontWeight: 500, color: '#101820', fontFamily: 'var(--font-pretendard)', textAlign: 'center' }}>
+              Message sent! We&apos;ll get back to you shortly.
+            </p>
+          )}
         </form>
       </div>
     </div>

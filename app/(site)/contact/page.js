@@ -69,7 +69,7 @@ const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
-        setSubscribed(true); // Mark as subscribed
+        setSubscribed(true); 
         setMessage('Subscription successful!');
       } else {
         setMessage('Subscription failed. Please try again.');

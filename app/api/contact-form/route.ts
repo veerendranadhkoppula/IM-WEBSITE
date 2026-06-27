@@ -4,7 +4,7 @@ import config from '@payload-config'
 
 export async function POST(req: NextRequest) {
   try {
-    const { fullName, email, company, phone, message } = await req.json()
+    const { fullName, email, company, phone, projectType, message } = await req.json()
 
     if (!fullName || !email) {
       return NextResponse.json(
@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
         company: company || '',
         email,
         phone: phone || '',
+        projectType: projectType || '',
         message: message || '',
       },
     })

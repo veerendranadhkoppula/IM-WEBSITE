@@ -155,7 +155,13 @@ const handleBlur = (e) => {
         fetch(`/api/contact-partial?sessionId=${encodeURIComponent(sessionId)}`, { method: 'DELETE' }).catch(() => {})
       }
       localStorage.removeItem('partial_session')
+      setSubmitting(false)
       setSubmitted(true)
+      setFormData({ fullName: '', company: '', email: '', phone: '', message: '' })
+      setTimeout(() => {
+        setSubmitted(false)
+        onClose()
+      }, 3000)
     } catch {
       setSubmitError('Something went wrong. Please try again.')
       setSubmitting(false)
@@ -195,12 +201,6 @@ const handleBlur = (e) => {
           <p>No pitch. No agency jargon. Just honest brand advice.</p>
         </div>
 
-        {submitted ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '48px 24px', textAlign: 'center', minHeight: '180px' }}>
-            <p style={{ fontSize: '22px', fontWeight: 500, color: '#101820', margin: 0, fontFamily: 'var(--font-pretendard)' }}>Thanks for submitting!</p>
-            <p style={{ fontSize: '16px', fontWeight: 400, color: '#4e4e4e', margin: 0, fontFamily: 'var(--font-pretendard)' }}>We&apos;ll get back to you shortly.</p>
-          </div>
-        ) : (
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
           <div className={styles.formRow}>
             <div className={styles.fieldWrap}>
@@ -291,8 +291,12 @@ const handleBlur = (e) => {
               </span>
             </button>
           </div>
+          {submitted && (
+            <p style={{ marginTop: '12px', fontSize: '14px', fontWeight: 500, color: '#101820', fontFamily: 'var(--font-pretendard)', textAlign: 'center' }}>
+              Message sent! We&apos;ll get back to you shortly.
+            </p>
+          )}
         </form>
-        )}
       </div>
     </div>
   )

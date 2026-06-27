@@ -392,6 +392,15 @@
     transform: rotate(45deg);
 }
 
+.successMsg {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101820;
+  font-family: var(--font-pretendard);
+  text-align: right;
+}
+
 @media (max-width: 640px) {
   .main {
     padding: 80px 24px 80px;

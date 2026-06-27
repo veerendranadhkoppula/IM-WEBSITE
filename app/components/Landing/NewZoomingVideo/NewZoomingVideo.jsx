@@ -70,13 +70,8 @@ const NewZoomingVideo = () => {
   const closePopup = () => setPopupVisible(false)
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY })
+    setCursorVisible(true)
   }
-
-  useEffect(() => {
-    const handleScroll = () => setCursorVisible(false)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   useEffect(() => {
     const video = showreelRef.current

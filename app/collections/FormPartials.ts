@@ -34,6 +34,7 @@ export const FormPartials: CollectionConfig = {
         { name: 'phone', label: 'Phone', type: 'text' },
       ],
     },
+    { name: 'projectType', label: 'Project Type', type: 'text' },
     { name: 'message', label: 'Message', type: 'textarea' },
     {
       name: 'lastField',

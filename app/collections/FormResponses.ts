@@ -25,17 +25,21 @@ const notifyByEmail = async (doc: Record<string, unknown>) => {
               <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.fullName}</td>
             </tr>
             <tr>
-              <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Company</td>
-              <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.company || '—'}</td>
-            </tr>
-            <tr>
               <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Email</td>
               <td style="padding:10px 12px;border:1px solid #e5e5e5"><a href="mailto:${doc.email}">${doc.email}</a></td>
             </tr>
-            <tr>
+            ${doc.company ? `<tr>
+              <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Company</td>
+              <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.company}</td>
+            </tr>` : ''}
+            ${doc.phone ? `<tr>
               <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Phone</td>
-              <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.phone || '—'}</td>
-            </tr>
+              <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.phone}</td>
+            </tr>` : ''}
+            ${doc.projectType ? `<tr>
+              <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Project Type</td>
+              <td style="padding:10px 12px;border:1px solid #e5e5e5">${doc.projectType}</td>
+            </tr>` : ''}
             <tr>
               <td style="padding:10px 12px;background:#f9f9f9;border:1px solid #e5e5e5;font-weight:600">Message</td>
               <td style="padding:10px 12px;border:1px solid #e5e5e5;white-space:pre-wrap">${doc.message || '—'}</td>
@@ -54,7 +58,7 @@ export const FormResponses: CollectionConfig = {
   slug: 'form-responses',
   admin: {
     useAsTitle: 'fullName',
-    defaultColumns: ['fullName', 'company', 'email', 'phone', 'createdAt'],
+    defaultColumns: ['fullName', 'email', 'company', 'projectType', 'createdAt'],
     group: 'Forms',
   },
   access: {
@@ -78,6 +82,7 @@ export const FormResponses: CollectionConfig = {
         { name: 'phone', label: 'Contact Number', type: 'text' },
       ],
     },
+    { name: 'projectType', label: 'Project Type', type: 'text' },
     { name: 'message', label: 'Message', type: 'textarea' },
   ],
   timestamps: true,

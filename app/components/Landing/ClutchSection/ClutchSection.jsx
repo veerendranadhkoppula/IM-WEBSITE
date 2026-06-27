@@ -141,15 +141,12 @@ const ClutchSection = () => {
     if (cursorRef.current) {
       cursorRef.current.style.left = `${e.clientX}px`;
       cursorRef.current.style.top  = `${e.clientY}px`;
-    }
-  }, []);
-
-  const handleMouseEnter = useCallback(() => {
-    if (cursorRef.current) {
       cursorRef.current.style.visibility = 'visible';
       cursorRef.current.style.opacity    = '1';
     }
   }, []);
+
+  const handleMouseEnter = useCallback(() => {}, []);
 
   const handleMouseLeave = useCallback(() => {
     if (cursorRef.current) {
@@ -157,16 +154,6 @@ const ClutchSection = () => {
       cursorRef.current.style.opacity    = '0';
     }
   }, []);
-useEffect(() => {
-  const handleScroll = () => {
-    if (cursorRef.current) {
-      cursorRef.current.style.visibility = 'hidden';
-      cursorRef.current.style.opacity    = '0';
-    }
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
 
   useEffect(() => {
     if (!emblaApi) return;

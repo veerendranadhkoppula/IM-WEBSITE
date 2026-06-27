@@ -252,16 +252,9 @@ const ProjectsGrid = () => {
 
   const closePopup = useCallback(() => setSelectedProject(null), []);
   const handleMouseMove = (e) => {
-    setCursorPosition({
-      x: e.clientX,
-      y: e.clientY,
-    });
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+    setCursorVisible(true);
   };
-  useEffect(() => {
-    const handleScroll = () => setCursorVisible(false);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   const handleNext = useCallback(() => {
     const next = (currentIndex + 1) % projects.length;
     setSelectedProject(projects[next]);
@@ -319,7 +312,6 @@ const ProjectsGrid = () => {
                 key={index}
                 className={`${styles.card} ${index === 1 || index === 2 ? styles.hideOnMobile : ""}`}
                 onClick={() => openPopup(project, index)}
-                onMouseEnter={() => setCursorVisible(true)}
                 onMouseLeave={() => setCursorVisible(false)}
                 onMouseMove={handleMouseMove}
               >

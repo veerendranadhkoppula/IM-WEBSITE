@@ -153,7 +153,6 @@ const NewZoomingVideo = () => {
             type="button"
             onClick={openPopup}
             className={styles.videoContainer}
-            onMouseEnter={() => setCursorVisible(true)}
             onMouseLeave={() => setCursorVisible(false)}
             onMouseMove={handleMouseMove}
             aria-label="Play Integra Magna showreel"

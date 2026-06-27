@@ -150,7 +150,7 @@
         height: 11px;
     }
 }
-@media (min-width:641px) and (max-width: 1024){
+@media (min-width:641px) and (max-width: 1024px){
     .main{
         padding-top: 90px;
     }

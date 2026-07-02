@@ -89,6 +89,10 @@ const Contact = () => {
     }
   }
 
+  const isCtaEnabled =
+    formData.fullName.trim().length > 0 &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+
   const handleChange = (e) => {
     const { name, value } = e.target
     if (name === 'fullName') {
@@ -266,7 +270,7 @@ const Contact = () => {
                 </div>
                 {submitError && <span className={styles.errorMsg}>{submitError}</span>}
                 <div className={styles.ctaRow}>
-                  <button type="submit" className={styles.cta} disabled={submitting || submitted}>
+                  <button type="submit" className={`${styles.cta} ${!isCtaEnabled ? styles.ctaMuted : ''}`} disabled={submitting || submitted || !isCtaEnabled}>
                     <span className={styles.ctaText}>{submitting ? 'Sending…' : 'Start a conversation'}</span>
                     <span className={styles.ctaArrow}>
                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

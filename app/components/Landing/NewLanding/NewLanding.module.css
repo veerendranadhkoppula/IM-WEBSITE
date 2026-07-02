@@ -167,7 +167,7 @@ height: 100%;
   width: 100%;
   background-color: #fff;
   box-sizing: border-box;
-  padding: clamp(0px, 9vw, 0px) clamp(40px, 6vw, 80px) clamp(24px, 9vw, 115px);
+  padding: clamp(0px, 9vw, 0px) clamp(40px, 6vw, 115px) clamp(24px, 9vw, 115px);
 }
 
 .logosContainer {

@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100vh;
   background-color: #ffff;
   box-sizing: border-box;
-  padding: clamp(80px, 12vw, 160px) 
+  padding: clamp(80px, 12vw, 120px) 
   clamp(24px, 9vw, 115px)
   0 ;
 }
@@ -182,9 +183,10 @@
 
 .logoItem img,
 .logoImage {
-  width: auto;
+  /* width: auto;
   height: auto;
-  object-fit: contain;
+  max-height: 58px; */
+  object-fit: cover;
 }
 
 .rightWrapper {
@@ -392,6 +394,12 @@
     transform: rotate(45deg);
 }
 
+.ctaMuted {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .successMsg {
   margin-top: 12px;
   font-size: 14px;
@@ -404,6 +412,7 @@
 @media (max-width: 640px) {
   .main {
     padding: 80px 24px 80px;
+    height: auto;
   }
 
   .MainContainer {
@@ -487,6 +496,7 @@
   .lefttwoTopleft img {
     width: 94px;
     height: 94px;
+    object-fit: cover;
   }
 
   .lefttwoTopright {
@@ -567,20 +577,24 @@
     gap: 40px;
   }
 
-  .logoImage {
+  /* .logoImage {
     height: 35px;
-  }
+  } */
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
   .MainContainer {
     gap: 30px;
   }
+  .main{
+     height: auto;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 900px) {
   .main {
     padding-bottom: 0px;
+     height: auto;
   }
 
   .MainContainer {

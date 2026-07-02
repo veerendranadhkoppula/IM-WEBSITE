@@ -123,6 +123,10 @@ const handleBlur = (e) => {
     }
   }
 
+  const isCtaEnabled =
+    formData.fullName.trim().length > 0 &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     const validationErrors = validate()
@@ -261,7 +265,7 @@ const handleBlur = (e) => {
           </div>
           {submitError && <span className={styles.errorMsg}>{submitError}</span>}
           <div className={styles.ctaRow}>
-            <button type="submit" className={styles.cta} disabled={submitting || submitted}>
+            <button type="submit" className={`${styles.cta} ${!isCtaEnabled ? styles.ctaMuted : ''}`} disabled={submitting || submitted || !isCtaEnabled}>
               <span className={styles.ctaText}>
                 {submitting ? 'Sending…' : 'Claim My Free Brand Audit'}
               </span>

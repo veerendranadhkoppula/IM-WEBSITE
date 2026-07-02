@@ -1,5 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import Image from "next/legacy/image";
 import TransitionLink from "@/app/components/TransitionLink";
 
@@ -22,6 +26,9 @@ import Landing from "@/app/components/NewContact/Contact/Contact";
 import Acknowledged from "@/app/components/NewContact/Acknowledged/Acknowledged";
 import ClutchSection from "@/app/components/NewContact/ClutchSection/ClutchSection";
 import FAQS from "@/app/components/NewContact/FAQS/FAQS";
+import StartSection from "@/app/components/NewContact/StartSection/StartSection";
+import Rooted from "../../components/NewContact/Rooted/Rooted";
+import ContactApproach from "../../components/NewContact/ContactApproach/ContactApproach";
 
 const Contact = () => {
 
@@ -85,6 +92,48 @@ const Contact = () => {
     setIsPopupOpen((prev) => !prev);
   };
 
+  const darkZoneRef = useRef(null);
+  const darkOverlayRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Entry: white → black as the dark zone (Rooted + ContactApproach) scrolls into view
+      gsap.fromTo(
+        darkOverlayRef.current,
+        { opacity: 1 },
+        {
+          opacity: 0,
+          ease: 'power1.inOut',
+          scrollTrigger: {
+            trigger: darkZoneRef.current,
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: 0.8,
+          },
+        }
+      );
+      // Exit: black → white as the dark zone scrolls out toward ClutchSection.
+      // immediateRender: false prevents this tween's from-state (opacity:0) from
+      // overriding the entry tween's from-state (opacity:1) on the same frame at init.
+      gsap.fromTo(
+        darkOverlayRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          ease: 'power1.inOut',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: darkZoneRef.current,
+            start: 'bottom 70%',
+            end: 'bottom 10%',
+            scrub: 0.8,
+          },
+        }
+      );
+    }, darkZoneRef);
+    return () => ctx.revert();
+  }, []);
+
 
   return (
     <>
@@ -96,7 +145,23 @@ const Contact = () => {
 
       <div id="content">
         <Landing />
+        <div ref={darkZoneRef} style={{ position: 'relative' }}>
+          <div
+            ref={darkOverlayRef}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundColor: '#ffffff',
+              opacity: 1,
+              pointerEvents: 'none',
+              zIndex: 50,
+            }}
+          />
+          <Rooted />
+          <ContactApproach />
+        </div>
         <ClutchSection />
+        <StartSection />
         <FAQS />
         <Acknowledged />
 

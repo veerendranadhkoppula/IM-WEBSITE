@@ -96,6 +96,8 @@
 .service_main_heading {
     font-size: var(--fs-36);
     z-index: 11;
+    display: flex;
+    justify-content: left;
     background-color: transparent !important;
 }
 .mobileContent ul{

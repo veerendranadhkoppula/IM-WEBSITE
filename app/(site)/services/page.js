@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import PinnedSectionRight from '@/app/components/Services/PinnedSectionRight';
 import SlideUpText from "@/app/components/SlideUpText";
 import MovingShape from "@/app/components/Services/MovingShape"
+import ClutchSection from "@/app/components/NewContact/ClutchSection/ClutchSection"
 
 // Lazy load Testimonial and Footer components for better performance
 const Testimonial = dynamic(() => import('@/app/components/Testimonial/Testimonial'), { ssr: false });
@@ -103,7 +104,8 @@ const Services = () => {
         {/* Pinned section ( it's a component you already built) */}
         <PinnedSectionRight />
 
-        <Testimonial />
+        {/* <Testimonial /> */}
+        <ClutchSection />
         <section className="f-upper-section">
           <div className="line_container site-container-padding">
             <div className="div_line"></div>

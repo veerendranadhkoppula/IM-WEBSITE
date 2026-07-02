@@ -188,7 +188,7 @@
   }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1200px) {
   .MainContainer {
     flex-direction: column;
     gap: 40px;
